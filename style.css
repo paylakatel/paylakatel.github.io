@@ -1,0 +1,180 @@
+body {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+  text-align: left;
+  font-size: 1.1em;
+  position: relative;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+/* NAVIGATION BAR */
+.nav ul {
+  list-style: none;
+  text-align: left;
+  padding: 0px;
+  padding-bottom: 2%;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  max-height: 100px;
+}
+.nav li {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 50px;
+  padding-right: 20px;
+  float: left;
+  display: inline;
+  color: #170F11;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #170F11;
+  display: block;
+}
+ 
+.nav a:hover {
+  color: #0097ff;
+}
+ 
+.nav a.active {
+  color: #E2FCEF;
+  cursor: default;
+}
+
+#name {
+	float: right;
+	padding-right: 0px;
+}
+
+/* HOME PAGE */
+#imgNasa {
+	width: 100%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* MAPS AND PROJECTS */
+#mapNav ul {
+	vertical-align: left;
+  display: block;
+  list-style-type: none;
+  text-align: left;
+  padding: 0px;
+  padding-bottom: 2%;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  max-height: 100px;
+}
+
+#mapNav li {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+  font-style: bold;
+  color: #170F11;
+}
+ 
+#mapNav a {
+  text-decoration: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  color: #170F11;
+  display: block;
+}
+ 
+#mapNav a:hover {
+  color: #0097ff;
+}
+ 
+#mapNav a.active {
+  color: #E2FCEF;
+  cursor: default;
+}
+
+/* FOOTER */
+#connect {
+	font-family: 'Open Sans Condensed', sans-serif;
+  	font-size: 1.2em;
+}
+
+
+.footer, .push {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  font-size: 1.1em;
+  height: 4em;
+}
+
+/* TRAVEL */
+#map_canvas {
+  width: 100%;
+  height: 500px;
+}
+
+#euroimgs {
+  max-width: 100%;
+  display: block;
+}
+
+/* RESUME */
+#resume {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.logo { 
+  position: relative;
+  left: -3%;
+  display: inline;
+  width: 11%;
+  vertical-align: text-top;
+  z-index: -1;
+}
+
+.jobs {
+  text-indent: -7%;
+  overflow: visible;
+}
+
+#skills {
+  font-family: 'Crimson Text', serif;
+  list-style-type: circle;
+  font-size: 1.1em;
+}
+
+.explain {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.0em;
+}
+
+/* GHANA IMAGES */ 
+.figures {
+  font-weight: 700;
+}
