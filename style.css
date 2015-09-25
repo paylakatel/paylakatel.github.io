@@ -86,11 +86,9 @@ h1 {
   list-style-type: none;
   text-align: left;
   padding: 0px;
-  padding-bottom: 2%;
   margin: 0;
   overflow: hidden;
   width: 100%;
-  max-height: 100px;
 }
 
 #mapNav li {
