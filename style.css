@@ -96,6 +96,15 @@ h1 {
   font-size: 1.2em;
   font-style: bold;
   color: #170F11;
+
+}
+
+#mapNav p {
+  font-family: 'Crimson Text', serif;
+  font-size: .7em;
+  margin-bottom: 1%;
+  margin-top: .5%;
+  overflow: visible;
 }
  
 #mapNav a {
@@ -149,16 +158,32 @@ h1 {
 
 .logo { 
   position: relative;
-  left: -3%;
+  left: -2%;
   display: inline;
-  width: 11%;
-  vertical-align: text-top;
+  width: 10%;
+  vertical-align: middle;
   z-index: -1;
 }
 
 .jobs {
-  text-indent: -7%;
+  text-indent: -5%;
   overflow: visible;
+  height: 1%;
+  margin: .3%;
+}
+
+.research {
+  text-indent: 0;
+  text-align: left;
+  overflow: visible;
+  height: 1%;
+  margin: 0;
+}
+
+.desc { 
+  margin-top: .07%;
+  margin-bottom: 3%;
+  left: 0%;
 }
 
 #skills {
