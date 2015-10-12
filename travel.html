@@ -75,9 +75,8 @@
 
 		        google.maps.event.addListener(marker, 'click', (function(marker, i) {
 		            return function() {
-		                var content=SA_locations[i][0]+'<br><img src="'+SA_locations[i][3]+'" style="width:300px;">';
+		                var content=SA_locations[i][0];
 		                home_infowindow.close()
-		                clark_infowindow.close()
 		                infowindow.setContent(content);
 		                infowindow.open(map, marker);
 				            }
@@ -94,9 +93,8 @@
 
 		         google.maps.event.addListener(marker, 'click', (function(marker, i) {
 		            return function() {
-		                var content=europe_locations[i][0]+'<br><img src="'+europe_locations[i][3]+'" style="width:300px;">';
+		                var content=europe_locations[i][0];
 		                home_infowindow.close()
-		                clark_infowindow.close()
 		                infowindow.setContent(content);
 		                infowindow.open(map, marker);
 				            }
@@ -122,11 +120,7 @@
 		                clark_infowindow.open(map,clark);
   					});*/
 				
-			var homecontent = 'Acton, MA'+'<br><img src="'+'https://docs.google.com/uc?export=download&id=0B1021HT3npbQOXVGbk5KWmRHSmM'+'" style="width:300px;">';
-
-			var home_infowindow = new google.maps.InfoWindow({
-      			content: homecontent
-  				});
+			var homecontent = 'Acton, MA';
 
 			var home = new google.maps.Marker({
 			    position: acton,
@@ -136,8 +130,11 @@
 			    optimized: false,
 			    });
 
+			var home_infowindow = new google.maps.InfoWindow({
+      			content: homecontent,
+  				});
+
 				google.maps.event.addListener(home, 'click', function() {
-						clark_infowindow.close()
 		                home_infowindow.open(map,home);
   					});
 			};
