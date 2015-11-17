@@ -41,7 +41,7 @@
 	var map;
 		function initialize(){
 
-			var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+			var styles = [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}]
 
 
 			var mapOptions = {
@@ -66,25 +66,25 @@
 			/*var school = 'https://docs.google.com/uc?export=download&id=0B1021HT3npbQNEQxLTJZTTVQa3c';*/
 
 			for (i = 0; i < SA_locations.length; i++) {  
-		        marker = new google.maps.Marker({
+		        	var SA_marker = new google.maps.Marker({
 		            position: new google.maps.LatLng(SA_locations[i][1], SA_locations[i][2]),
 		            map: map,
 		            icon: footprint,
 		            optimized: false,
 		        });
 
-		        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		        google.maps.event.addListener(SA_marker, 'click', (function(SA_marker, i) {
 		            return function() {
 		                var content=SA_locations[i][0];
 		                home_infowindow.close()
 		                infowindow.setContent(content);
-		                infowindow.open(map, marker);
+		                infowindow.open(map, SA_marker);
 				            }
-				        })(marker, i));
+				        })(SA_marker, i));
 		    };
 		        
 		    for (i = 0; i < europe_locations.length; i++) {  
-		        marker = new google.maps.Marker({
+		        	marker = new google.maps.Marker({
 		            position: new google.maps.LatLng(europe_locations[i][1], europe_locations[i][2]),
 		            map: map,
 		            icon: footblue,
@@ -120,7 +120,7 @@
 		                clark_infowindow.open(map,clark);
   					});*/
 				
-			var homecontent = 'Acton, MA';
+			var homecontent = 'Home: Acton, MA';
 
 			var home = new google.maps.Marker({
 			    position: acton,

@@ -94,15 +94,15 @@ h1 {
 
 #mapNav li {
   font-family: 'Crimson Text', serif;
-  font-size: 1.2em;
+  font-size: 1.35em;
   font-style: bold;
   color: #170F11;
-
+  margin-top: 1.0em;
 }
 
 #mapNav p {
   font-family: 'Crimson Text', serif;
-  font-size: .7em;
+  font-size: 0.8em;
   margin-bottom: 1%;
   margin-top: .5%;
   overflow: visible;
@@ -201,8 +201,11 @@ h1 {
 
 /* GHANA IMAGES */ 
 .figures {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.05em;
 }
+
+
 
 /* EARTH IMAGES */ 
 
