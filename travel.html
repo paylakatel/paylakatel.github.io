@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300|Crimson+Text' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	</style>
   <script type="text/javascript" 
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ9GmC6VwJbRPaCMGKOtcszfRVRzN4X9o">
   </script>
@@ -100,25 +99,6 @@
 				            }
 				        })(marker, i));
 		    };
-
-		    /*var clarkcontent = 'Clark University'+'<br><img src="'+'https://docs.google.com/uc?export=download&id=0B1021HT3npbQdV92NVNqazNoaEU'+'" style="width:300px;">'
-
-		    var clark_infowindow = new google.maps.InfoWindow({
-      			content: clarkcontent
-  				});
-
-		    var clark = new google.maps.Marker({
-			    position: clark,
-			    map: map,
-			    title: 'Clark University',
-			    icon: school,
-			    optimized: false,
-			    });
-
-				google.maps.event.addListener(clark, 'click', function() {
-						home_infowindow.close()
-		                clark_infowindow.open(map,clark);
-  					});*/
 				
 			var homecontent = 'Home: Acton, MA';
 
@@ -166,9 +146,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 </head>
- </head>
  <body>
- <div id="wrapper">
+ <div class="wrapper">
 	<header>
 		<div class="nav">
 			<ul>

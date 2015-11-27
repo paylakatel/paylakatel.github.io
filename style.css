@@ -1,13 +1,13 @@
-body {
-  margin-right: 20%;
-  margin-left: 20%;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   min-height: 100%;
-  height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 p {
@@ -133,11 +133,13 @@ h1 {
 
 
 .footer, .push {
+  width: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
   font-size: 1.1em;
   height: 4em;
   font-weight: 300;
+  position: relative;
 }
 
 /* TRAVEL */
@@ -216,3 +218,65 @@ h1 {
   position: relative;
   font-weight: 700;
 }
+
+/* EARTHQUAKES */
+#map {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 500px;
+  position: relative;
+}
+
+.buttons_panel {
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow: hidden;
+  position: relative;
+}
+
+.buttons_panel ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.buttons_panel li {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 40px;
+  height: 50px;
+  padding-right: 20px;
+  float: left;
+  display: inline;
+}
+
+.buttons_panel img {
+  padding-top: 6%;
+  width: 25px;
+}
+
+.button {
+  background: #BABEBF;
+  padding: 4.5px 9px;
+  color: black;
+  font-size: 1em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 2px;
+  border-radius: 20px;
+}
+
+.button:hover {
+   border-top-color: #008DD5;
+   background: #008DD5;
+   color: white;
+   }
+
