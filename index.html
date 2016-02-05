@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kayla A. Patel</title>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300|Crimson+Text:400,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Kayla A. Patel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300|Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	<!--browser icon-->
+  <!--browser icon-->
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/Website/Images/beachicon/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./Images/beachicon/apple-touch-icon-114x114.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./Images/beachicon/apple-touch-icon-72x72.png" />
@@ -30,32 +33,51 @@
 		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 </head>
-	<body>
-	<div class="wrapper">
-	<header>
-		<div class="nav">
-			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="mapsandprojects.html">MAPS AND PROJECTS</a>
-				<li><a href="./docs/Resume_Oct2015.pdf" sizes="16x16">RESUME</a></li>
-				<li id="name">Kayla A. Patel</li>
-	  		</ul>
-	  	</div>
-	  </header>
-	  	 <div class="ImgMe">
-		    <img src="./Images/NasaPhoto_scaled.jpg" alt = ""/ width="100%">
-  		</div>
-	  	<p>
-			Thanks for stopping by! My name is Kayla and I am a recent graduate of Clark University with my <strong>M.S. in Geographic Information Science.</strong> I'm currently the <strong>Webmaster/GIS Technician</strong> for the <strong>Town of Acton, MA</strong>. <br><br>I built this site in an effort to teach myself html/css. Things are going okay so far, but this is all still a work in progress. Despite that, feel free to take a look around, and shoot me an email with questions or comments!
-		</p>
-		<div class="push"></div>
-	</div>
-	 <div class="footer">
-	  		kayla.a.patel@gmail.com | 
-	  		<a href="https://www.linkedin.com/in/kaylapatel">LinkedIn</a> | 
-			<a href="https://github.com/paylakatel">GitHub
-	  		</a> | 
-	 </div>	
 
+<body>
+<div class="container">
+	<nav class="navbar navbar-default" id="navbarKP">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="mapsandprojects.html">MAPS AND PROJECTS</a></li>
+        <li><a href="./docs/Resume_Feb2016.pdf" sizes="16x16" target="_blank">RESUME</a></li>  
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="name">
+        <li><a href="#">KAYLA A. PATEL</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid col-xs-12">
+	<img src="./Images/NasaPhoto.jpg" class="img-responsive center-block" alt="NASA Me">
+</div>
+
+<div class="col-xs-12">
+	<p>
+	<br>Thanks for stopping by! My name is Kayla and I am a recent graduate of Clark University with my <strong>M.S. in Geographic Information Science.</strong> I'm currently the <strong>Webmaster/GIS Technician</strong> for the <strong>Town of Acton, MA</strong>. On this site you'll find examples of past projects and work that I have completed. Feel free to send me an email with any questions or comments!<br><br>
+	</p>
+</div>
+<div id="push"></div>
+
+<footer id="footer">
+    <p>KAYLA.A.PATEL@GMAIL.COM  |  
+	<a href="https://www.linkedin.com/in/kaylapatel" target="_blank">LINKEDIN</a>  |  
+	<a href="https://github.com/paylakatel" target="_blank">GITHUB</a>  |  
+  <a href="https://twitter.com/paylakatel" target="_blank">TWITTER</a>
+	</a></p>
+</footer>
+
+
+</div>
 </body>
 </html>
