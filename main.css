@@ -70,8 +70,7 @@ h4 {
 
 /** Footer */
 
-#push {min-height: 75px;}
-#footer {bottom:0px; margin-top: 100px;}
+#footer {bottom:0px;}
 #footer p {text-align: center; font-family: 'Source Code Pro'; font-weight: 300; font-size: 1em; color: #515151;}
 #footer a {color: #515151;}
 #footer a:hover {color: #0097ff; text-decoration: none;}
@@ -128,10 +127,12 @@ verticle tabs
 
 #tabs {
   margin-top: 1%;
+  margin-left: 1%;
 }
 
 .tab-content {
   margin-top: -1.5%;
+  margin-right: 3%;
 }
 
 /*!
