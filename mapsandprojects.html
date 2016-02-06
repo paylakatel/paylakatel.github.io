@@ -11,10 +11,6 @@
   <link rel="stylesheet" type="text/css" href="./extra/github.css">
   <script src="./extra/rainbow.min.js"></script>
   <script src="./extra/python.js"></script>-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
-
   <!--browser icon-->
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/Website/Images/beachicon/apple-touch-icon-57x57.png" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./Images/beachicon/apple-touch-icon-114x114.png" />
@@ -73,8 +69,8 @@
     <li><a href="#ghana2" data-toggle="tab">Demographics of SSM</a></li>
     <li><a href="#develop" data-toggle="tab">NASA Develop</a></li>
     <!--<li><a href="#quakes" data-toggle="tab">Earthquakes</a></li>
+    <li><a href="#boston" data-toggle="tab">Boston Crime</a></li>-->
     <li><a href="#travel" data-toggle="tab">Travel Map</a></li>
-    <li><a href="#boston" data-toggle="tab">Boston crime</a></li>-->
   </ul>
 </div>
 <div class="col-sm-10 col-xs-7">
@@ -219,12 +215,44 @@ L8_ndpi.save(outname)</code></pre>
         
 
       </div>
-      <!--
-      <div class="tab-pane fade" id="quakes">
-        <div id="map"></div> 
-        <script type ="text/javascript" src="/Users/paylakatel/GIS/Website/paylakatel.github.io/quakes.js">
-        </script>
+      
+      <div class="tab-pane fade" id="travel">
+        <h2>Travel Map</h2>
+        <p>I have had the opportunity to travel to some amazing places! Below is a map that shows where I've been along with some pictures I took along the way.</p>
+        <div class="col-lg-12" id="travel-map"></div>
+
+        
+          <div class="col-md-6 col-xs-12 caption">
+            <hr><img src="./Images/hiker_scaled.jpg" class="img-responsive center-block" alt="Hiker">
+              <p>Zermatt, Switzerland</p><br><br>
+          </div>
+
+          <div class="col-md-6 col-xs-12 caption">
+            <hr><img src="./Images/purpledoor_scaled.jpg" class="img-responsive center-block" alt="Purple Door">
+              <p>Burano Island, Italy</p><br><br>
+          </div>
+
+          <div class="col-md-offset-1 col-md-10 col-xs-12 caption">
+            <img src="./Images/florence_scaled.jpg" class="img-responsive center-block" alt="Florence">
+              <p>Florence, Italy</p><br><br>
+          </div>
+
+          <div class="col-md-6 col-xs-12 caption">
+            <img src="./Images/camping_scaled.jpg" class="img-responsive center-block" alt="Camping">
+              <p>Chile/Argentina border</p><br><br>
+          </div>
+
+          <div class="col-md-6 col-xs-12 caption">
+            <img src="./Images/chileno_scaled.jpg" class="img-responsive center-block" alt="Chileno">
+              <p>Patagonia, Chile</p><br><br>
+          </div>
+
+          <div class="col-md-offset-1 col-md-10 col-xs-12 caption">
+            <img src="./Images/flower-italy.jpg" class="img-responsive center-block" alt="Flower">
+              <p>Cinque Terre, Italy</p><br><br>
+          </div>
       </div>
+      <!--
       <div class="tab-pane" id="travel">Travel Tab.</div>
       <div class="tab-pane" id="boston">Boston crime project.</div>
     </div>-->
@@ -242,6 +270,10 @@ L8_ndpi.save(outname)</code></pre>
 </footer>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
+<script src="./extra/travel.js"></script>
 
 </body>
 </html>
