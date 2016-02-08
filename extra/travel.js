@@ -34,14 +34,15 @@ $(document).ready(function () {
 
 			var styles = [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}]
 
-
+			var center = {lat: 13, lng: -23};
 			var mapOptions = {
 				div: '#travel-map',
 				zoom: 2,
-				center: new google.maps.LatLng(25.841850, -32.554921),
+				center: center,
 				mapTypeId: 'Styled',
 			};
 			map = new google.maps.Map(document.getElementById("travel-map"), mapOptions);
+			map.se
 
 			var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
     		map.mapTypes.set('Styled', styledMapType);
