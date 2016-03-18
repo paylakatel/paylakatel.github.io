@@ -1,78 +1,28 @@
 
-.container {
-  padding-right: 7%;
-  padding-left: 7%;
-}
+.container { padding-right: 5%; padding-left: 5%;}
 
 /** Reset some elements */
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 1.05em;
+p {font-family: 'Source Sans Pro', sans-serif; font-weight: 400; font-size: 1.05em;
+}
+a {color: #515151;}
+a:hover {color: #0097ff;text-decoration: none;}
+h2 {font-family: 'Source Sans Pro'; font-weight: 600; font-size: 2em;}
+h4 {font-family: 'Source Sans Pro'; font-weight: 400;}
+h5 {font-family: 'Source Sans Pro'; font-size: 1.1em; line-height: 140%;}
+.well {width: 98%; margin: auto; margin-bottom: 1%;}
+iframe { 
+    width: 100%;
+    outline: none;
+    border: none;
 }
 
-a {
-  color: #515151;
-}
-
-a:hover {
-  color: #0097ff;
-  text-decoration: none;
-}
-
-h2 {
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
-  font-size: 2em;
-}
-
-h4 {
-  font-family: 'Source Sans Pro';
-  font-weight: 400;
-}
-
-h5 {
-  font-family: 'Source Sans Pro';
-  font-size: 1.1em;
-  line-height: 140%;
-}
-
-.well {
-  width: 98%;
-  margin: auto;
-  margin-bottom: 1%;
-}
 /** Navbar */
-
-#navbarKP {
-  border: none;
-  background-color: white;
-  font-family: 'Source Code Pro';
-  font-weight: 300;
-  font-size: 1.1em;
-  padding-bottom: 0;
-  margin-bottom: 1%;
-
-}
-
-#navbarKP ul {
-  margin-left: -30px;
-}
-
-#navbarKP a {
-  color: #515151;
-}
-#navbarKP a:hover {
-  color: #0097ff;
-}
-
-#name a:hover {
-  color: #515151;
-}
-
-#name li {
-  margin-right: -12px;
-}
+#navbarKP {border: none; background-color: white; font-family: 'Source Code Pro'; font-weight: 300; font-size: 1.1em; padding-bottom: 0; margin-bottom: 1%;}
+#navbarKP ul {margin-left: -30px;}
+#navbarKP a {color: #515151;}
+#navbarKP a:hover {color: #0097ff;}
+#name a:hover {color: #515151;}
+#name li {margin-right: -12px;}
 
 /** Footer */
 
@@ -157,3 +107,99 @@ Travel Map
   width:100%;
   height: 500px;
  }
+
+/*!
+Edu map 
+*/
+#main-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+#metrics { 
+  width: 920px; 
+  margin: 0 auto 15px 0; 
+  font-family: 'Source Sans Pro'; 
+}
+#metrics #instruct { 
+    text-align: left; 
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto; 
+    float: center; 
+    width: 70%; 
+    font-size: 14px; 
+}
+
+#metrics h3 { font-size: 13px; font-family: 'Source Sans Pro', sans-serif; text-align: center; margin-bottom: 0; }
+#metrics ul { font-size: 12px; font-family: 'Source Sans Pro', sans-serif; margin-left: 0; padding: 0; }
+#metrics ul li { 
+    list-style: none; 
+    margin: 10px 10px 0 0; 
+    padding: 4px 0; 
+    display: inline-block;
+    width: 120px;
+    /*background: #e0e0e0;*/
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #e0e0e0;
+}
+#metrics ul li.bottom { margin-bottom: 0; }
+#metrics #edu { 
+    width: 70%;  
+    margin-right: auto; 
+    margin-left: auto;
+    float: right;
+  }
+
+#metrics .block-button { width: 80px; display: block; float:center; clear:both; }
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 200px;
+    padding: 10px;
+    font-size: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+}
+div.tooltip h3 { 
+  font-size: 12px; margin: 0 0 7px 0; 
+  line-height: 1.2em;
+}
+div.tooltip .line { clear: both; margin-top: 3px; font-size: 11px; }
+div.tooltip .symbol { float: left; width: 6px; height: 6px; margin: 3px 4px 0 0; }
+div.tooltip .val { float: right; width: 25px; text-align: right; margin-right: 4px; }
+div.tooltip .moe { float: right; color: #aaa; width: 30px; text-align: right; }
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+.button { fill: #FFF; border: 10px black; }
+.counties {
+  fill: #e0e0e0;
+}
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+}
+
+.counties path.selected {
+    stroke: #000;
+    stroke-width: 0.5px;
+}
+
+path.t_lhs, #metrics ul li.selected.t_lhs, .tooltip .t_lhs { fill: #f75a00; background: #f75a00; color: white;}
+path.t_hs, #metrics ul li.selected.t_hs, .tooltip .t_hs { fill: #99B900; background: #99B900; color: white;}
+path.t_asd, #metrics ul li.selected.t_asd, .tooltip .t_asd { fill: #21a4a2; background: #21a4a2; color: white; }
+path.t_ba, #metrics ul li.selected.t_ba, .tooltip .t_ba { fill: #834e71; background: #834e71; color: white; }
+path.NODATA { fill: #fff; }
+
+.clr { clear: both; }
+
+
+

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <title>Kayla A. Patel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +32,8 @@
 		<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
 		<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+<style id="custom-css-css">iframe.responsive{max-width:100%}.entry p small{font-size:.8em;line-height:1.2em}table td{border:1px solid #ccc;padding:14px}.entry table h4{font-size:1em;margin:0}</style>
 
 </head>
 
@@ -68,7 +70,7 @@
     <li class="active"><a href="#ghana1" data-toggle="tab">SSM and LSM in Ghana</a></li>
     <li><a href="#ghana2" data-toggle="tab">Demographics of SSM</a></li>
     <li><a href="#develop" data-toggle="tab">NASA Develop</a></li>
-    <!--<li><a href="#quakes" data-toggle="tab">Earthquakes</a></li>-->
+    <li><a href="#edu" data-toggle="tab">Education Level</a></li>
     <li><a href="#earthimages" data-toggle="tab">Earth Images</a></li>
     <li><a href="#travel" data-toggle="tab">Travel Map</a></li>
   </ul>
@@ -121,7 +123,7 @@
       <div class="tab-pane fade " id="ghana2">
         <h2>Demographics of small-scale mining in south-central Ghana</h2>
 
-        <h4>GIS for International Development, Spring 2015</h4><br>
+        <h4>GIS for International Development, Spring 2015<hr></h4><br>
 
         <p>In this analysis, I used the previously completed land cover classification from my master's thesis in conjunction with demographic data to assess the 46 districts in south-central Ghana. I located clusters of different variables using univariate and bivariate Local Indicators of Spatial Autocorrelation (LISA). The output maps from the project are shown below.<br><br>
 
@@ -158,7 +160,7 @@
       </div>
       <div class="tab-pane fade " id="develop">
         <h2>NASA Develop - North Carolina Ecological Forcasting</h2>
-        <h4>Summer 2015</h4><br>
+        <h4>Summer 2015<hr></h4><br>
 
         <p>My team worked with APNEP, Albemarle-Pamlico National Estuary Partnership, to try and develop a methodology that would allow the organization to more rapidly and consistently detect changes in wetlands throughout the watershed. We used Landsat-5, -7, and -8 data to analyze wetland health from 2000-2015 using a series of vegetation indicies. Image preprocessing and analysis was performed through a python script I wrote. Images and code snippets from the project are shown below.</p><hr>
 
@@ -215,7 +217,19 @@ L8_ndpi.save(outname)</code></pre>
         
 
       </div>
-      
+
+       <div class ="tab-pane fade" id="edu">
+        <!--<iframe src="edu1.html"></iframe>-->
+        <h2>Educational attainment of 18 to 24 year olds </h2>
+        <h4>Percent of young adult population at each education level per county<hr></h4>
+
+        <p>I am new to interactive web mapping and data visualization, and to make this map I followed a tutorial provided by Nathan Yau on Flowing Data. Below is a .jpg of what the map looks like, click <u><a href="edu.html">here</a></u> to see the full interactive version.</p>
+
+        <div class="col-md-12 col-xs-12">
+            <hr><img src="./Images/edu-map.png" class="img-responsive center-block" alt="Edu Map">
+        </div>  
+      </div>
+
       <div class ="tab-pane fade" id="earthimages">
         <h2>Earth Images</h2>
         <p>Not only does the data captured by NASA's earth observing satellites offer great opportunities for analysis, it also makes for some beautiful images. I used Landsat-8 data and GIMP, an open source image editing software, to create the statellite images seen below, and I think placing these images next to ground photos taken in those locations on the ground offers a really interesting perspective.<hr></p>
