@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Kayla A. Patel</title>
+  <title>Education Level</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -8,61 +8,8 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300|Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
 
 </head>
-<!--browser icon-->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/Website/Images/beachicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./Images/beachicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./Images/beachicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./Images/beachicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./Images/beachicon/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./Images/beachicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./Images/beachicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./Images/beachicon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="./Images/beachicon/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="./Images/beachicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="./Images/beachicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./Images/beachicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="./Images/beachicon/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
-</head>
 
 <body>
-<div class="container">
-  <nav class="navbar navbar-default" id="navbarKP">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="mapsandprojects.html">MAPS AND PROJECTS</a></li>
-        <li><a href="./docs/Resume_March2016.pdf" sizes="16x16" target="_blank">RESUME</a></li>  
-      </ul>
-      <ul class="nav navbar-nav navbar-right" id="name">
-        <li><a href="#">KAYLA A. PATEL</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container-fluid">
-<h2>Educational attainment of 18 to 24 year olds</h2>   
-<h4>Percent of young adult population at each education level per county<hr></h4>
-
-<p>The map below shows the education level of 18 to 24 year olds in 2014. The data comes from the American Community Survey five year estimates. Different education levels can be turned on and off based on user interests. When two or more levels are turned on the county is symbolized by the level with the maximum value in that county. The four levels of education are less than a high school diploma, a high school diploma (or an equivalent), an associate’s degree or some college, and a bachelor’s degree or higher.<br><br>
-
-I relied <i>heavily</i> on Nathan Yau's Flowing Data’s <u><a href="http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/"target="_blank">tutorial</a></u> to make this map. I’m new to interactive data visualizations and D3, and despite the dataset being main/only difference between my map and the tutorial, creating this map still proved to be challenging and a great learning experience. Along with the turtorial, Mike Bodstock's choropleth map <u><a href="https://bl.ocks.org/mbostock/4060606"target="_blank">example</a></u> also helped me get a handle on this and play around with different ways to create the map. I used R to wrangle the data into the format that I wanted (thanks again to Flowing Data for those R tutorials) and D3 to visualize it.<hr></p>
-
 <div id="map" class="col-xs-12">
 
 <div id="metrics">
@@ -106,22 +53,6 @@ I relied <i>heavily</i> on Nathan Yau's Flowing Data’s <u><a href="http://flow
 </div>
 </div>
 
-<div class="container-fluid"><hr>
-  <p>The map gives a sense of the geographic distribution of the general education level of young adults throughout the U.S. It makes it pretty clear that most young adults have made their way through high school and have gone beyond. Not surprisingly, the areas where the highest level of educational attainment for the majority of people is less than a high school degree tend to be in more rural areas, whereas people with the associate's degree or some college tend to live around cities.<br><br>
-
-  In the two counties I have spent the majority of my life in - Worcester and Middlesex, MA  - the majority of young adults have their associates degree or some college, which makes sense due to the age of the population examined here and the close proximity of colleges in and near the counties. </p><br><br>
-
-  <footer id="footer">
-      <p>KAYLA.A.PATEL@GMAIL.COM  |  
-    <a href="https://www.linkedin.com/in/kaylapatel">LINKEDIN</a>  |  
-    <a href="https://github.com/paylakatel">GITHUB
-    </a>  |  
-    <a href="https://twitter.com/paylakatel" target="_blank">TWITTER</a>
-    </a></p>
-  </footer>
-
-</div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -130,7 +61,7 @@ I relied <i>heavily</i> on Nathan Yau's Flowing Data’s <u><a href="http://flow
 <script>
 
 var width = 960,
-    height = 600,
+    height = 700,
     center = [width / 2, height / 2],
     defaultFill = "#e0e0e0";
 

@@ -2,6 +2,7 @@
 .container { padding-right: 5%; padding-left: 5%;}
 
 /** Reset some elements */
+html, body {height: 100%;}
 p {font-family: 'Source Sans Pro', sans-serif; font-weight: 400; font-size: 1.05em;
 }
 a {color: #515151;}
@@ -10,10 +11,19 @@ h2 {font-family: 'Source Sans Pro'; font-weight: 600; font-size: 2em;}
 h4 {font-family: 'Source Sans Pro'; font-weight: 400;}
 h5 {font-family: 'Source Sans Pro'; font-size: 1.1em; line-height: 140%;}
 .well {width: 98%; margin: auto; margin-bottom: 1%;}
-iframe { 
+#edumap {
+    height: 700px;
+    width: 960px;
+    position: relative;
+}
+iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 960px;
     width: 100%;
-    outline: none;
-    border: none;
 }
 
 /** Navbar */
