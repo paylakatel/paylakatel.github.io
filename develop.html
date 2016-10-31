@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kayla A. Patel</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand navbar-right" href="#">Kayla A. Patel</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Maps and Projects</a>
+                    </li>
+                    <li>
+                        <a href="./docs/Resume_March2016.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+ <h2>NASA Develop - North Carolina Ecological Forcasting</h2>
+        <h4>Summer 2015<hr></h4>
+
+        <p>My team worked with APNEP, Albemarle-Pamlico National Estuary Partnership, to try and develop a methodology that would allow the organization to more rapidly and consistently detect changes in wetlands throughout the watershed. We used Landsat-5, -7, and -8 data to analyze wetland health from 2000-2015 using a series of vegetation indicies. Image preprocessing and analysis was performed through a python script I wrote. Images and code snippets from the project are shown below.</p><hr>
+
+        <div class="col-xs-12 caption">
+            <img src="./Images/NCEco_studyarea.jpg" class="img-responsive center-block" alt="NCEco Study Area">
+              <p><strong>Fig. 1</strong> The study area of the project in North Carolina and southern Virginia.</p><hr>
+        </div>
+
+        <p>56 Landsat scenes were used in the analysis because we wanted an image from each season for each of the 15 years. The script calculates top of atmosphere reflectance and three vegetation indices on each Landsat scene to gain and understanding of wetland health across the region.</p>
+
+        <p>The code block below shows the function written for calculating NDPI (Normalized Difference Pigment Index), an index that is known for disinguishing wetland areas from other land cover types.</p>
+
+        <pre class="pre-scrollable"><code data-language="python">"""
+            The NDPI_8 function is used to calculate wetland extent on Landsat 8 data. The function does the same thing the
+            NDPI_457 function does but uses the Red and Blue bands corresponding to Landsat 8.
+
+            The function calculates this band ratio and saves the output as a new raster image.
+            """
+            def ndpi_8(Band2, Band4, outdir = False): #inputs should be TOA reflectance
+                
+            #Set the input bands to float
+            blue = arcpy.sa.Float(Band2)
+            red = arcpy.sa.Float(Band4)
+
+            #Calculate the GNDVI
+            L8_ndpi = (red-blue)/(red+blue)
+
+            #Create the output name and save the GNDVI tiff
+            name = Band2.split("\\")[-1]
+            GNDVI_name = name.replace("_B2","")
+
+            if outdir:
+                outname = core.create_outname(outdir, GNDVI_name, "ndpi", "tif")
+            else:
+                folder = Band7.replace(name, "")
+                outname = core.create_outname(folder, GNDVI_name, "ndpi", "tif")
+
+            L8_ndpi.save(outname)</code></pre>
+
+        <p>In addition to this function, Green NDVI (Green Normalized Difference Vegetation Index) and NDPI (Normalized Difference Pigment Index) were calculated on each scene. The indices allowed us to gain and understanding of how wetland health has changed over the time series.<hr></p>
+
+        <p>The final maps show study areas that identify changes in wetland health over the time series. NOAA C-CAP data is used to define wetland extent within the area of interest and then changes in the NDPI index are displayed below.</p>
+
+        <div class="col-sm-6 col-xs-12 caption">
+            <img src="./Images/Area2_CCAPand2000-2015.jpg" class="img-responsive center-block" alt="Output 1">
+              <p><strong>Fig. 1</strong> This area showed now change in wetland extent over the years, the vegetation health in the wetlands decreased over the course of the study period.</p><br><br>
+          </div>
+
+          <div class="col-md-6 col-xs-12 caption">
+            <img src="./Images/Area1_CCAPand2000-2015.jpg" class="img-responsive center-block" alt="Output 2">
+              <p><strong>Fig. 2</strong> This area experienced a decline in wetland extent thoughout the years as well changes in the overall vegetation health within the study area.</p><br><br>
+          </div>
+
+        
+
+      </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12 text-center footer">
+                   <p><hr><a class="fa fa-envelope-o" style="font-size:24px" href="mailto:kayla.a.patel@gmail.com" target="_blank"></a> 
+                    <a href="https://twitter.com/paylakatel" class="fa fa-twitter" style="font-size:24px" target="_blank"></a>  
+                    <a href="https://www.linkedin.com/in/kaylapatel" class="fa fa-linkedin" style="font-size:24px" target="_blank"></a>  
+                    <a href="https://github.com/paylakatel" class="fa fa-github" style="font-size:24px" target="_blank"></a></p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

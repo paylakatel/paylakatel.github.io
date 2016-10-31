@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kayla A. Patel</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand navbar-right" href="#">Kayla A. Patel</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Maps and Projects</a>
+                    </li>
+                    <li>
+                        <a href="./docs/Resume_March2016.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+	<h2>Demographics of small-scale mining in south-central Ghana</h2>
+
+        <h4>GIS for International Development, Spring 2015<hr></h4>
+
+        <p>In this analysis, I used the previously completed land cover classification from my master's thesis in conjunction with demographic data to assess the 46 districts in south-central Ghana. I located clusters of different variables using univariate and bivariate Local Indicators of Spatial Autocorrelation (LISA). The output maps from the project are shown below.<br><br>
+
+        The demographic data I focused on were the percent male, female, over 65, enrolled in education, monolingual, and illiterate populations within each district. I found that areas with a longer history of mining tend to have slightly more men than women, younger populations, low participation in education, more illiterate populations, and bilingual populations, while newer areas of mining tend to have older populations, more literate populations, and mono-lingual populations.</p>
+        <hr>
+        <div class="container-fluid">
+        <div class="col-md-6 col-xs-12 caption">
+          <img src="./Images/GISIntDev_StudyArea.png" class="img-responsive center-block" alt="Study Area">
+            <p><strong>Fig. 1</strong> The study area used in the analysis is shown with the districts that were analyzed highlighted in orange. The Landsat-8 footprint that defined the study area for the land cover analysis is shown as well. </p>
+        </div>
+
+        <div class="col-md-6 col-xs-12 caption">
+          <img src="./Images/GISIntDev_SSMperDistrict.png" class="img-responsive center-block" alt="Study Area">
+            <p><strong>Fig. 2</strong> The area in square kilometers of small-scale mining happening with in each district is shown here. The land cover classification data only went as far as the bounds of the Landsat scene, therefore there is likely an underestimation of the amount of small-scale mining occuring within the border districts.</p>
+        </div>
+        </div>
+        <hr>
+          <p><strong>Figures 3 and 4</strong> show the results of the analysis. Each variable is in a separate column, the first map shows the variable displayed in each district separated into six classes using natural breaks. The second map is the output of the univariate analysis, and the third map is the output of the bivariate analysis incorporating the area of small-scale mining in each district.<br><br>
+
+          When interpreting outputs from the LISA analyses, bright red areas are the centers of clusters with high-high relationships. In the univariate analysis this means the highlighted polygon has a high value of the variable of interest and is surrounded by other districts with high values of the same variable. In the bivariate analysis, a polygon highlighted in red means the district has a high area of small-scale mining surrounded by high values of the variable of interest. <br><br>
+
+          Light red areas indicate high-low relationships, a low value surrounding by high ones. Bright blue indicate low values surrounded by other low values, a low-low relationship, and light blue areas indicate a low-high relationship, low values surrounded by high ones.<p> <hr>
+
+          <div class="col-sm-6 col-xs-12 caption">
+            <img src="./Images/GISIntDev_OutputMaps1.png" class="img-responsive center-block" alt="Output 1">
+              <p><strong>Fig. 3</strong> The output maps for percent male, percent female, and over 65 are shown.</p>
+          </div>
+
+          <div class="col-md-6 col-xs-12 caption">
+            <img src="./Images/GISIntDev_OutputMaps2.png" class="img-responsive center-block" alt="Output 2">
+              <p><strong>Fig. 4</strong> The output maps for percent monolingual, percent enrolled in education, and percent illterate are shown.</p><br><br>
+          </div>
+
+      </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12 text-center footer">
+                    <p><hr><a class="fa fa-envelope-o" style="font-size:24px" href="mailto:kayla.a.patel@gmail.com" target="_blank"></a> 
+                    <a href="https://twitter.com/paylakatel" class="fa fa-twitter" style="font-size:24px" target="_blank"></a>  
+                    <a href="https://www.linkedin.com/in/kaylapatel" class="fa fa-linkedin" style="font-size:24px" target="_blank"></a>  
+                    <a href="https://github.com/paylakatel" class="fa fa-github" style="font-size:24px" target="_blank"></a></p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
