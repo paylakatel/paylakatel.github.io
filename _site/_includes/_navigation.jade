@@ -1,0 +1,10 @@
+//- Navigation
+
+nav.navigation
+  ul
+  
+  //- Loop through nav items in _harp.json 
+  
+  each item in navigation
+    li
+      a(href=item.link)=item.title

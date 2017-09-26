@@ -1,0 +1,8 @@
+{
+  "project_1": {
+    "title": "Project 1",
+    "categories": [ "test", "work"],
+    "date": "2017-09-25",
+    "image": "post1.jpg"
+  }
+}
