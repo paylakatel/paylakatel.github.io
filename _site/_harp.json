@@ -1,14 +1,7 @@
 {
-  "globals": {
-    "sitename": "Kayla A. Patel",
-    "description": "Personal website and portfolio",
-    "author": "Kayla A. Patel",
-    "email": "paylakatel@gmail.com",
-    "twitter": "@paylakatel",
-
-    "navigation": [
-      { "title": "Home", "link": "/" },
-      { "title": "Maps & Projects", "link": "/"}
-    ]
-  }
+    "globals": {
+        "sitename": "Kayla A. Patel",
+        "email": "paylakatel@gmail.com",
+        "twitter": "@paylakatel"
+    }
 }
