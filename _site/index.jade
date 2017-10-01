@@ -1,2 +1,8 @@
-h1 #{sitename}
-h3 This is yours to own. Enjoy.
+
+h1 Kayla A. Patel
+h4 Here we are
+
+ul
+  each project, slug in public.projects._data
+    li
+      a(href="/projects/#{ slug }") #{ project.title }
