@@ -1,8 +1,12 @@
 doctype
 html
     head
-        link(rel="stylesheet", href="main.css", type="text/css")
+        link(rel="stylesheet", href="css/main.css", type="text/css")
     body
+    != partial("_includes/_navigation.jade")
     h1 Kayla P. harp demo
     hr
     != yield
+    
+    script(src='js/_jquery/jquery.min.js')
+    script(src='js/_bootstrap/bootstrap.min.js') 
