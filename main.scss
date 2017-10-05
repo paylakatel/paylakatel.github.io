@@ -1,0 +1,9 @@
+@import "_components/_bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:400,600,700');
+
+$display-font: "Dancing Script", sans-serif;
+
+.navbar-brand {
+    font-size: 1.7em;
+    font-family: $display-font;
+}

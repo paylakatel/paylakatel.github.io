@@ -1,12 +1,14 @@
 doctype
 html
-    head
-        link(rel="stylesheet", href="css/main.css", type="text/css")
-    body
-    != partial("_includes/_navigation.jade")
-    h1 Kayla P. harp demo
-    hr
+  head
+    link(rel="stylesheet" href="main.css")
+  body
+    !=partial("_includes/_navigation.jade")
+    
     != yield
     
-    script(src='js/_jquery/jquery.min.js')
-    script(src='js/_bootstrap/bootstrap.min.js') 
+    
+    // jQuery
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    // bootstrap js
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
