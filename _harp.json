@@ -2,6 +2,12 @@
     "globals": {
         "sitename": "Kayla A. Patel",
         "email": "paylakatel@gmail.com",
-        "twitter": "@paylakatel"
+        "twitter": "@paylakatel",
+
+        "navigation": [
+            { "title" : "Home", "link" : "/" },
+            { "title" : "Maps and Projects", "link" : "/" },
+            { "title" : "Resume", "link" : "/"}
+        ]
     }
 }
