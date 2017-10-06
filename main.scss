@@ -1,19 +1,50 @@
 @import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:300,400,600');
 
 $display-font: "Dancing Script", sans-serif;
 $paragraph-font: "Source Sans Pro", sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 600;
+$blue: #0097ff;
 
-.body {
+body {
     font-family: $paragraph-font;
+
+    p {
+        font-size: 1.15em;
+        font-weight: $light;
+    }
+
+    a:hover { color: $blue; }
+
+    h1 {
+        font-family: $display-font;
+        font-size: 3.5em;
+    }
+
+    .portfolio-item { margin-bottom: 25px; }
 }
 
-.navbar-brand {
-    font-size: 1.7em;
-    font-family: $display-font;
-    float: right;
-}
 
 .navbar {
     font-family: $paragraph-font;
+    font-weight: 300;
+    font-size: 1.1em;
+    background-color: white;
+}
+
+.navbar-default .navbar-brand {
+    font-size: 1.7em;
+    font-family: $display-font;
+    color: $blue;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: $blue;
+}
+
+footer {
+    margin: 50px 0;
 }

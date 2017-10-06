@@ -1,16 +1,16 @@
 header
-    nav.navbar.navbar-default(role='navigation')
+    nav.navbar.navbar-default(role="navigation")
       .container
         // Brand and toggle get grouped for better mobile display
-        a.navbar-brand.navbar-right(href='#') Kayla A. Patel
+        a.navbar-brand.navbar-right(href="#") #{sitename}
         .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target="#nav1")
             span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
         // Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        #nav1.collapse.navbar-collapse
           ul.nav.navbar-nav
               each item in navigation
                   li

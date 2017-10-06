@@ -1,7 +1,0 @@
-{
-    "nav": {
-        "Home": {"title": "Home", "link": "/" },
-        "Maps and Projects": {"title": "Maps and Projects", "link": "/" },
-        "Resume": {"title": "Resume", "link": "/" }
-    }
-}
