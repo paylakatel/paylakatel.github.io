@@ -1,18 +1,41 @@
 .container
+
   .row
     .col-lg-12
       h1.page-header Welcome
+      
     .col-md-12.col-xs-12
-      p
+      p 
         | Thanks for stopping by! My name is Kayla, and I currently work for the City of Boston as a Data and Performance Analyst on the Citywide Analytics team. I graduated from Clark University with my M.S. in Geographic Information Science in August 2015, and my master's research focused on the spatial interactions of large and small-scale mining in Ghana. The work was published in 
         i Extractive Industries and Society
-        |  as an original research article in April 2016. On this site you'll find examples of projects and work that I have completed. Feel free to send me an email with questions or comments!
+        | as an original research article in April 2016. On this site you'll find examples of projects and work that I have completed. Feel free to send me an email with questions or comments!
         br
         br
-        a#projects
-      p
-        a.fa.fa-envelope-o(style='font-size:24px', href='mailto:kayla.a.patel@gmail.com', target='_blank')
-        a.fa.fa-twitter(href='https://twitter.com/paylakatel', style='font-size:24px', target='_blank')
-        a.fa.fa-linkedin(href='https://www.linkedin.com/in/kaylapatel', style='font-size:24px', target='_blank')
-        a.fa.fa-github(href='https://github.com/paylakatel', style='font-size:24px', target='_blank')
-      p
+        
+        !=partial("_includes/_contact.jade")
+
+  .row
+    .col-lg-12
+        h1.page-header Maps and Projects
+        
+  .row
+      .col-md-6.portfolio-item
+        a(href='article.html')
+          img.img-responsive.thumbnail(src='./images/article-thumb.png', alt='')
+        h3
+          a(href='article.html') Extraction in Ghana
+        p
+          | In January 2016 my master's thesis was accepted to 
+          i Extractive Industries and Society
+          | .
+      .col-md-6.portfolio-item
+        a(href='demo-ssm.html')
+          img.img-responsive.thumbnail(src='./images/intdev-thumb.png', alt='')
+        h3
+          a(href='demo-ssm.html') Demographics of small-scale mining in Ghana
+        p
+          | Examining how the demographics of districts are correlated with the presence of small-scale mining in south-central Ghana.
+
+    
+        
+        

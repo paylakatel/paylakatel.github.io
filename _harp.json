@@ -9,7 +9,18 @@
         ],
 
         "contact": [
-            { "title" : "email", "link": "paylakatel@gmail.com", "icon" : "fa-envelope-o" }
+            { "title" : "email",
+                "link": "paylakatel@gmail.com",
+                "icon" : " fa fa-envelope-o" },
+            { "title" : "twitter",
+                "link" : "https://twitter.com/paylakatel",
+                "icon" : "fa fa-twitter"},
+            { "title" : "linkedin",
+                "link" : "https://www.linkedin.com/in/kaylapatel",
+                "icon" : "fa fa-linkedin" },
+            { "title" : "github",
+                "link" : "https://github.com/paylakatel",
+                "icon" : "fa fa-github"}
         ]
     }
 }

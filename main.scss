@@ -16,12 +16,19 @@ body {
         font-weight: $light;
     }
 
-    a:hover { color: $blue; }
+    a { color: black; }
+
+    a:hover {
+        color: $blue;
+        text-decoration: none;
+     }
 
     h1 {
         font-family: $display-font;
         font-size: 3.5em;
     }
+
+    .fa { padding: 1px; font-size: 1.2em; }
 
     .portfolio-item { margin-bottom: 25px; }
 }

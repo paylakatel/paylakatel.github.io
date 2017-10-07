@@ -1,0 +1,15 @@
+{
+    "globals": {
+        "sitename": "Kayla A. Patel",
+
+        "navigation": [
+            { "title" : "Home", "link" : "/" },
+            { "title" : "Maps and Projects", "link" : "/" },
+            { "title" : "Resume", "link" : "/"}
+        ],
+
+        "contact": [
+            { "title" : "email", "link": "paylakatel@gmail.com", "icon" : "fa-envelope-o" }
+        ]
+    }
+}
