@@ -18,22 +18,25 @@
         .col-lg-12
             h1.page-header Maps and Projects
             
-    .row
+    .section.teasers
         .col-lg-12
         
-        each post in public.projects._data            
-            article.teaser
+        each project, slug in public.projects._data            
+            .col-md-6.portfolio-item
                 
                 //- Display image if available
             
-                //if post.image
-                    //.teaser-image
-                        //a(href="/blog/" + slug)
-                            //img(src="/blog/img/" + post.image alt=post.title)
+                if project.image
+                    .img-responsive.thumbnail
+                        a(href="/projects/" + slug + ".html")
+                            img(src="/projects/img/thumbs/" + project.image alt=project.title)
                 
-                .teaser-text
-                    h2.teaser-title
-                        a(href="/projects/" + post.link)=post.title
+                h3.project-title
+                        a(href="/projects/" + slug)=project.title
+                
+                p=project.subtitle
+                
+                
   
     
         

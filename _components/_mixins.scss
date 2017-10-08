@@ -1,3 +1,17 @@
+// brand on navbar
+@mixin brand {
+    font-size: 1.7em;
+    font-family: $display-font;
+    color: $blue;
+}
+
+// navbar font
+@mixin navbar-font {
+    font-family: $paragraph-font;
+    font-weight: $light;
+    font-size: 1.1em;
+}
+
 // paragraph font style
 @mixin paragraph {
     font-family: $paragraph-font;
@@ -5,20 +19,27 @@
     font-weight: $light;
 }
 
+// large title style
+@mixin title-large {
+    font-family: $display-font;
+    font-size: 3.5em;
+}
+
+@mixin title-small {
+    font-family: $paragraph-font;
+    font-size: 2em;
+    font-weight: $regular;
+}
+
 // link style
 @mixin links {
     & {
-        color: $blue;
+        color: black;
         text-decoration: none;
-        
-        &:visited {
-            color: $blue;
-        }
+
         &:hover {
             color: $blue;
-        }
-        &:active, &:focus {
-            color: $blue;
+            text-decoration: none;
         }
     }
 }

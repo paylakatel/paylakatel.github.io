@@ -1,19 +1,39 @@
 {
-    "Project_1": {
+    "article": {
         "title": "Extraction in Ghana",
-        "link" : "/",
-        "image": "post1.jpg"
+        "subtitle" : "Published master's thesis",
+        "image" : "article.png"
+
     },
 
-    "Project_2": {
-        "title": "Demographics of small-scale mining in Ghana",
-        "link" : "/",
+    "ib2030": {
+        "title": "Imagine Boston 2030 Metrics Dashboard",
+        "subtitle" : "Tracking Boston's progress",
         "image": "post2.jpg"
     },
 
-    "Project_3": {
+    "acton": {
+        "title": "Town of Acton Website Redesign",
+        "subtitle" : "Updating Town of Acton website.",
+        "image": "post2.jpg"
+    },
+
+    "demo-ssm": {
+        "title": "Demographics of small-scale mining in Ghana",
+        "subtitle" : "Examining how the demographics of districts are correlated with the presence of small-scale mining in south-central Ghana.",
+        "image": "post2.jpg"
+    },
+
+    "nasa": {
         "title": "NASA Develop",
-        "link" : "/",
+        "subtitle" : "Looking at wetland health in the Albemarle-Pamlico watershed over ten weeks with the NASA Develop program.",
         "image": "post3.jpg"
+    },
+
+    "earth_images": {
+        "title": "Earth Images",
+        "subtitle" : "Satellite imagery paired with images taken on the ground.",
+        "image": "earth_images.jpg"
     }
+
 }
