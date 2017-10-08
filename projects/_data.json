@@ -1,0 +1,19 @@
+{
+    "Project_1": {
+        "title": "Extraction in Ghana",
+        "link" : "/",
+        "image": "post1.jpg"
+    },
+
+    "Project_2": {
+        "title": "Demographics of small-scale mining in Ghana",
+        "link" : "/",
+        "image": "post2.jpg"
+    },
+
+    "Project_3": {
+        "title": "NASA Develop",
+        "link" : "/",
+        "image": "post3.jpg"
+    }
+}

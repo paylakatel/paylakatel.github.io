@@ -1,0 +1,24 @@
+// paragraph font style
+@mixin paragraph {
+    font-family: $paragraph-font;
+    font-size: 1.15em;
+    font-weight: $light;
+}
+
+// link style
+@mixin links {
+    & {
+        color: $blue;
+        text-decoration: none;
+        
+        &:visited {
+            color: $blue;
+        }
+        &:hover {
+            color: $blue;
+        }
+        &:active, &:focus {
+            color: $blue;
+        }
+    }
+}
