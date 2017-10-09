@@ -30,6 +30,11 @@ body {
 
     .page-header { @include title-large }
 
+    .portfolio-items {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
     .portfolio-item { margin-bottom: 25px; }
 
     footer { margin: 50px 0; }
