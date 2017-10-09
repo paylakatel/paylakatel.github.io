@@ -8,6 +8,7 @@ $light: 300;
 $regular: 400;
 $bold: 600;
 $blue: #0097ff;
+$grey: #B7B6B6;
 
 
 body {
@@ -26,7 +27,7 @@ body {
         .navbar-nav { li { a:hover { color: $blue } } }
     }
 
-    .fa { padding: 1px; font-size: 1.2em; }
+    .fa { padding: 1px; font-size: 1.5em; }
 
     .page-header { @include title-large }
 
@@ -35,7 +36,18 @@ body {
         flex-flow: row wrap;
     }
 
+    .thumbnail {
+        &:hover {
+            border-color: $grey;
+        }
+    }
+
     .portfolio-item { margin-bottom: 25px; }
 
-    footer { margin: 50px 0; }
+    .project-title { @include title-medium }
+
+    footer {
+        margin: 50px 0;
+        text-align: center;
+    }
 }

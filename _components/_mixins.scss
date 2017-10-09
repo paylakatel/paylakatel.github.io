@@ -15,20 +15,26 @@
 // paragraph font style
 @mixin paragraph {
     font-family: $paragraph-font;
-    font-size: 1.15em;
+    font-size: 1.25em;
     font-weight: $light;
 }
 
 // large title style
 @mixin title-large {
     font-family: $display-font;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 @mixin title-small {
     font-family: $paragraph-font;
     font-size: 2em;
     font-weight: $regular;
+}
+
+@mixin title-medium {
+    font-family: $paragraph-font;
+    font-size: 1.7em;
+    font-weight: $bold;
 }
 
 // link style
