@@ -28,10 +28,10 @@
                 
                 //- Display image if available
             
-                if project.image
+                if project.thumb
                     .img-responsive.thumbnail
                         a(href="/projects/" + slug)
-                            img(src="/projects/img/thumbs/" + project.image alt=project.title)
+                            img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
                 
                 h3.project-title
                         a(href="/projects/" + slug)=project.title

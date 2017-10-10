@@ -48,31 +48,31 @@
     "ib2030": {
         "title": "Imagine Boston 2030 Metrics Dashboard",
         "subtitle" : "Tracking Boston's progress",
-        "image": "ib2030.jpg"
+        "thumb": "ib2030.jpg"
     },
 
     "acton": {
         "title": "Town of Acton Website Redesign",
         "subtitle" : "Updating Town of Acton website.",
-        "image": "acton.jpg"
+        "thumb": "acton.jpg"
     },
 
     "demo-ssm": {
         "title": "Demographics of small-scale mining in Ghana",
         "subtitle" : "Examining how the demographics of districts are correlated with the presence of small-scale mining in south-central Ghana.",
-        "image": "demo-ssm.png"
+        "thumb": "demo-ssm.png"
     },
 
     "nasa_develop": {
         "title": "NASA Develop",
         "subtitle" : "Looking at wetland health in the Albemarle-Pamlico watershed over ten weeks with the NASA Develop program.",
-        "image": "nasa_develop.jpg"
+        "thumb": "nasa_develop.jpg"
     },
 
     "earth_images": {
         "title": "Earth Images",
         "subtitle" : "Satellite imagery paired with images taken on the ground.",
-        "image": "earth_images.jpg"
+        "thumb": "earth_images.jpg"
     }
 
 }

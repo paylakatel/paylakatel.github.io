@@ -2,5 +2,6 @@
 mixin image(file, alt, subtitle)
     .caption
         img(src="../projects/img/" + file alt=alt class="img-responsive")
+        strong=alt
         p=subtitle
     

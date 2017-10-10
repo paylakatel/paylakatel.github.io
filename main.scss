@@ -18,6 +18,8 @@ body {
 
     a { @include links }
 
+    h2 { font-weight: $bold; }
+
     .navbar {
         @include navbar-font;
         background-color: white;
@@ -48,8 +50,12 @@ body {
 
     .caption {
         p {
-            font-size: 1em; }
+            font-size: 1.12em; }
         }
+
+    .well {
+        p { font-size: 1.15em; }
+    }
 
     footer {
         margin: 50px 0;
