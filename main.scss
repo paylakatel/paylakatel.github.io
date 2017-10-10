@@ -46,6 +46,11 @@ body {
 
     .project-title { @include title-medium }
 
+    .caption {
+        p {
+            font-size: 1em; }
+        }
+
     footer {
         margin: 50px 0;
         text-align: center;
