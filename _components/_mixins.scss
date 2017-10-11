@@ -3,6 +3,7 @@
     font-size: 1.7em;
     font-family: $display-font;
     color: $blue;
+    text-decoration: none;
 }
 
 // navbar font
@@ -37,11 +38,24 @@
     font-weight: $bold;
 }
 
-// link style
+// paragraph link style
 @mixin links {
     & {
         color: black;
+        text-decoration: underline;
+
+        &:hover {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+}
+
+// navbar link style
+@mixin navbar-links {
+    & {
         text-decoration: none;
+        font-size: .85em;
 
         &:hover {
             color: $blue;

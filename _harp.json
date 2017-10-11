@@ -4,7 +4,7 @@
 
         "navigation": [
             { "title" : "Home", "link" : "/" },
-            { "title" : "Maps and Projects", "link" : "/" },
+            { "title" : "Maps and Projects", "link" : "/#projects" },
             { "title" : "Resume", "link" : "/"}
         ],
 

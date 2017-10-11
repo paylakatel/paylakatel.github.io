@@ -16,6 +16,8 @@ body {
 
     p { @include paragraph }
 
+    ul { @include paragraph }
+
     a { @include links }
 
     h2 { font-weight: $bold; }
@@ -26,10 +28,14 @@ body {
 
         .navbar-brand { @include brand }
 
-        .navbar-nav { li { a:hover { color: $blue } } }
+        .navbar-nav { li { a { @include navbar-links } } }
     }
 
-    .fa { padding: 1px; font-size: 1.5em; }
+    .fa {
+        padding: 1px;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
 
     .page-header { @include title-large }
 
