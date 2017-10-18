@@ -1,9 +1,4 @@
 @import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Source+Sans+Pro:300,400,600');
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,300,400,600,700,900');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,600,700,900');
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700i|Oleo+Script:700|Arima+Madurai:900');
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Roboto:300|Rubik:500');
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,700');
 @import "_components/mixins";
 
@@ -28,7 +23,7 @@ body {
 
     a { @include links }
 
-    h2 { font-weight: $bold; }
+    h2 { @include title-large }
 
     .navbar {
         @include navbar-font;

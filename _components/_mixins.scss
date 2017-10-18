@@ -17,7 +17,7 @@
 // paragraph font style
 @mixin paragraph {
     font-family: $paragraph-font;
-    font-size: 1.2em;
+    font-size: 16px;
     font-weight: $light;
     line-height: 1.5;
 }

@@ -26,8 +26,16 @@ include ../_includes/_mixins
         | the goals laid out in the plan. 
     hr
     
+    .col-md-6.col-xs-12.caption
+        +image("premature_mortality_chart.png")
+    
     h3 Press Coverage
     
+    each i in public.projects._data['ib2030']['press']
+        ul
+            li 
+                a(href=i.link)=i.title 
+                p=i.subtitle
     hr
     
     h3 How we built it

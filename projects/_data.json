@@ -48,7 +48,30 @@
     "ib2030": {
         "title": "Imagine Boston 2030 Metrics Dashboard",
         "subtitle" : "Tracking Boston's progress",
-        "thumb": "ib2030.jpg"
+        "thumb" : "ib2030.jpg",
+        "press" :
+            {
+                "metro_us" : {
+                    "title" : "Metro US",
+                    "link" : "https://www.metro.us/news/local-news/boston/imagine-boston-2030-data-dashboard"
+                },
+
+                "gov_tech" : {
+                    "title" : "GovTech",
+                    "link" : "http://www.govtech.com/civic/Imagine-Boston-2030-Dashboard-Seeks-to-Bolster-City-Government-Accountability.html"
+                },
+
+                "gnc" : {
+                    "title" : "GNC",
+                    "link" : "https://gcn.com/articles/2017/08/29/boston-dashboard.aspx"
+                },
+
+                "gov_tech_2" : {
+                    "title" : "GovTech 2",
+                    "link" : "http://www.govtech.com/civic/Tech-Tools-Dashboards-Help-Boston-Spark-Citizen-Interest-in-Open-Data.html",
+                    "subtitle" : "An article about the teams work with open data overall and the associated creation of dashboards and information tools."
+                }
+            }
     },
 
     "acton": {
