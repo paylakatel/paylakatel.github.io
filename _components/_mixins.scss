@@ -1,6 +1,6 @@
 // brand on navbar
 @mixin brand {
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 400;
     font-family: $display-font;
     color: $blue;
@@ -17,15 +17,9 @@
 // paragraph font style
 @mixin paragraph {
     font-family: $paragraph-font;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: $light;
     line-height: 1.5;
-}
-
-// large title style
-@mixin title-large {
-    font-family: $display-font;
-    font-size: 2.5em;
 }
 
 @mixin title-small {

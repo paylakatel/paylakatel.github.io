@@ -3,9 +3,9 @@ include ../_includes/_mixins
 .container
     +project_title("Imagine Boston 2030 Metrics Dashboard", "City of Boston, Summer 2017")
     
-    p The 
-        a(href="https://imagine.boston.gov/metrics-dashboard/") Imagine Boston 2030
-        |  plan was released in July 2017 as the City of Boston’s 
+    p The Imagine Boston 2030 
+        a(href="https://imagine.boston.gov/metrics-dashboard/") plan
+        |  was released in July 2017 as the City of Boston’s 
         | first long-term plan in 50 years. After hearing from more than 15,000 
         | residents, five major goals were outlined in the plan each of which are 
         | tracked through a series of different metrics: 
@@ -17,6 +17,11 @@ include ../_includes/_mixins
         li Promote a healthy environment and prepare for climate change  
         li Invest in open space, arts & culture, transportation, and 
             | infrastructure 
+    br     
+    +image_large("ib2030_heading.png", "Example tab header",
+            "Tab header for the Walkability tab.")
+    hr
+
     p  
         | Using R-Shiny, I developed a  
         a(href="https://analytics.boston.gov/app/imagine-boston") public-facing dashboard
@@ -24,18 +29,21 @@ include ../_includes/_mixins
         | displays data associated with each of the goals and metrics allowing 
         | users to quickly gain an understanding of how close we are to achieving 
         | the goals laid out in the plan. 
+        
+    p 
+        | The data for the dashboard was provided by the Boston Redevelopment Authority's 
+        | research division and is updated yearly or as more data becomes available. 
+        | The primary libraries used to build the dashboard are shinydashboard,
+        | leaflet, and plotly.
+    br     
+    +image_large("ib2030_premature_mortality.png", "Premature Mortality by Neighborhood",
+            "IB2030 dashboard's Premature Mortality by Neighborhood chart.")
     hr
     
-    .col-md-6.col-xs-12.caption
-        +image("premature_mortality_chart.png")
-    
-    h3 Press Coverage
+    h4.section-header Press Coverage
     
     each i in public.projects._data['ib2030']['press']
         ul
             li 
                 a(href=i.link)=i.title 
                 p=i.subtitle
-    hr
-    
-    h3 How we built it

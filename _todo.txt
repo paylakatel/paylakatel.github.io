@@ -1,0 +1,6 @@
+- make separator a mixin
+- set font sizes
+- finish updating IB2030 page
+- add information somewhere about FOSS4G volunteering - in intro??
+- migrate content for other pages
+- update earth images page with new photos

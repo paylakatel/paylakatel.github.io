@@ -11,4 +11,10 @@ mixin image(file, alt, subtitle)
         img(src="../projects/img/" + file alt=alt class="img-responsive")
         strong=alt
         p=subtitle
+        
+// large image mixin
+mixin image_large(file, alt, subtitle)
+    .caption
+        img(src="../projects/img/" + file alt=alt class="img-responsive")
+        p.img-subtitle=subtitle
     

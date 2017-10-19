@@ -1,14 +1,17 @@
 @import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,700|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:300,300i,400,400i,700,900');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
-$display-font: 'Pathway Gothic One', sans-serif;
-$paragraph-font: "Roboto", sans-serif;
+$display-font: 'Pacifico', sans-serif;
+$paragraph-font: "Source Sans Pro", sans-serif;
 $light: 300;
 $regular: 400;
+$black: 900;
 $bold: 700;
 $blue: #0097ff;
+//$blue: #eda371;
 $grey: #d0d0d0;
 
 
@@ -23,7 +26,20 @@ body {
 
     a { @include links }
 
-    h2 { @include title-large }
+    h1 {
+        font-family: $display-font;
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-family: $paragraph-font;
+        font-weight: $bold;
+    }
+
+    h3 {
+        font-family: $paragraph-font;
+        font-weight: $regular;
+    }
 
     .navbar {
         @include navbar-font;
@@ -42,10 +58,13 @@ body {
     }
 
     .page-header {
-        @include title-large;
         border-bottom: 0;
         padding-bottom: 0;
         margin-bottom: 10px;
+    }
+
+    .section-header {
+        font-weight: $bold;
     }
 
     .separator {
@@ -57,13 +76,18 @@ body {
     .portfolio-items {
         display: flex;
         flex-flow: row wrap;
-        a { @include title-medium; }
+        a {
+            font-family: $paragraph-font;
+            font-weight: $bold;
+            font-size: 1.15em;
+        }
     }
 
     .thumbnail {
         &:hover {
             border-color: #919191;
         }
+        margin-bottom: 0;
     }
 
     .portfolio-item {
@@ -71,11 +95,19 @@ body {
         a { text-decoration: none;}
      }
 
-    .project-title { @include title-medium }
+    .img-responsive {
+        padding: $thumbnail-padding;
+        margin-bottom: 0;
+        border: 1px solid $thumbnail-border;
+        border-radius: $thumbnail-border-radius;
+    }
 
     .caption {
         p {
-            font-size: 1.12em; }
+            font-size: 1.12em;
+            font-style: italic;
+            font-weight: $light;
+            }
         }
 
     .well {
