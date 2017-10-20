@@ -1,0 +1,15 @@
+include ../_includes/_mixins
+
+.container
+    +project_title("Earth Images")
+    p Not only does the data captured by NASA's earth observing satellites offer 
+        | great opportunities for analysis, it also makes for some beautiful images. 
+        | I used Landsat-8 data and GIMP, an open source image editing software, to 
+        | create the statellite images seen below, and I think placing these images 
+        | next to ground photos taken in those locations on the ground offers a 
+        | really interesting perspective.
+    hr
+    
+    each image in public.projects._data['earth-img']['images']
+        .col-md-6.col-xs-12
+            +image(image.file, image.title, image.subtitle)
