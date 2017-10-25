@@ -1,10 +1,6 @@
 .container
 
-    .row
-        .col-lg-12
-              h1.page-header Welcome
-              p.separator >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-          
+    .row  
         .col-md-12.col-xs-12
           p 
             | Thanks for stopping by! I’m Kayla and I’m a geospatial analyst/developer/person 
@@ -12,35 +8,31 @@
             | interested in maps. In April 2016, my master’s research was published in 
             i Extractive Industries and Society 
             | as an original research paper. 
-            br
-            br
-            
-            !=partial("_includes/_contact.jade")
     
     a(name="projects")
      
     .row
         .col-lg-12
-            h1.page-header Maps and Projects
-            p.separator >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            h1.page-header Selected Projects
             
     .section.portfolio-items
         .col-lg-12
         
         each project, slug in public.projects._data            
-            .col-md-6.portfolio-item
+            .col-md-12.portfolio-item
                 
                 //- Display image if available
             
-                if project.thumb
-                    .img-responsive.thumbnail
-                        a(href="/projects/" + slug)
-                            img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
+                // if project.thumb
+                    // .img-responsive.thumbnail
+                        // a(href="/projects/" + slug)
+                            // img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
                 
-                h4.project-title
-                        a(href="/projects/" + slug)=project.title
+                //h4.project-title
+                p=project.title
+                        //a(href="/projects/" + slug)=project.title
                 
-                p=project.subtitle
+                //p=project.subtitle
                 
                 
   

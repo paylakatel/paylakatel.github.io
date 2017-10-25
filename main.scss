@@ -1,11 +1,16 @@
 @import "_components/_bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,700|Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:300,300i,400,400i,700,900');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
-$display-font: 'Pacifico', sans-serif;
-$paragraph-font: "Source Sans Pro", sans-serif;
+$display-font: "Roboto", sans-serif;
+$paragraph-font: "Roboto", sans-serif;
 $light: 300;
 $regular: 400;
 $black: 900;
