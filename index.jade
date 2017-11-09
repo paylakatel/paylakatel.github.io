@@ -1,39 +1,42 @@
-.container
+include ./_includes/_mixins
 
-    .row  
-        .col-md-12.col-xs-12
-          p 
-            | Thanks for stopping by! I’m Kayla and I’m a geospatial analyst/developer/person 
-            | focused on getting government to work better and deeply 
-            | interested in maps. In April 2016, my master’s research was published in 
-            i Extractive Industries and Society 
-            | as an original research paper. 
+div.header
+  img(src="logo_capecod.png", width="200", height="150")
+  div.header-text
+    h2.welcome
+      | Thanks for stopping by!
+    p 
+      | I’m Kayla and I’m a geospatial analyst/developer/person 
+      | focused on getting government to work better and deeply 
+      | interested in maps. In April 2016, my master’s research was published in 
+      i Extractive Industries and Society 
+      | as an original research paper. 
     
-    a(name="projects")
+a(name="projects")
      
-    .row
-        .col-lg-12
-            h1.page-header Selected Projects
-            
-    .section.portfolio-items
-        .col-lg-12
+div.flex-container
+    .col-lg-12
+        h1.page-header Selected Projects
         
-        each project, slug in public.projects._data            
-            .col-md-12.portfolio-item
-                
-                //- Display image if available
+.section.portfolio-items
+    .col-lg-12
+    
+    each project, slug in public.projects._data            
+        .col-md-12.portfolio-item
             
-                // if project.thumb
-                    // .img-responsive.thumbnail
-                        // a(href="/projects/" + slug)
-                            // img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
-                
-                //h4.project-title
-                p=project.title
-                        //a(href="/projects/" + slug)=project.title
-                
-                //p=project.subtitle
-                
+            //- Display image if available
+        
+            // if project.thumb
+                // .img-responsive.thumbnail
+                    // a(href="/projects/" + slug)
+                        // img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
+            
+            //h4.project-title
+            p=project.title
+                    //a(href="/projects/" + slug)=project.title
+            
+            //p=project.subtitle
+            
                 
   
     
