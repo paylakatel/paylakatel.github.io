@@ -1,50 +1,85 @@
 @import "_components/_bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Source+Sans+Pro:300');
-@import url('https://fonts.googleapis.com/css?family=Catamaran:100,800');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,400');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
-$display-font: "Grand Hotel", sans-serif;
+$display-font: "Permanent Marker", sans-serif;
 $paragraph-font: "Catamaran", sans-serif;
-$light: 300;
+$light: 100;
 $regular: 400;
 $black: 900;
 $bold: 700;
 $blue: #0097ff;
 //$blue: #eda371;
-$grey: #d0d0d0;
+$grey: #404040;
+$dark-grey: #404040;
 
 
 body {
 
     @include background;
 
-    h1 {
-      font-size: 3em;
-    }
-
     h1, h2, h3 {
       font-family: $display-font;
       font-weight: lighter;
+      color: $dark-grey;
     }
 
     .container {
         margin: 5%;
 
+        .navbar {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+
+          -webkit-flex-flow: row wrap;
+          justify-content: flex-start;
+
+          li {
+            a {
+              text-decoration: none;
+              padding-right: 30px;
+            }
+          }
+        }
+
         .header {
           display: flex;
           flex: wrap;
 
+
           .header-text {
-            margin-left: 2%;
             display: flex;
             flex-direction: column;
           }
+        }
 
         .lists {
-            display:flex;
-            flex: wrap;
-        }
+          padding: 0;
+          margin: 0;
+          list-style: none;
+
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+
+          -webkit-flex-flow: row wrap;
+          justify-content: flex-start;      
+
+          .job-details {
+            font-style: italic;
+          }
 
         }
 
@@ -58,19 +93,9 @@ body {
 
     p { @include paragraph }
 
-    ul { @include paragraph }
+    li { @include paragraph }
 
     a { @include links }
-
-    .navbar {
-        @include navbar-font;
-        background-color: transparent;
-        border: 0;
-
-        .navbar-brand { @include brand }
-
-        .navbar-nav { li { a { @include navbar-links } } }
-    }
 
     .fa {
         padding: 1px;
@@ -137,6 +162,6 @@ body {
 
     footer {
         margin: 50px 0;
-        text-align: center;
+        //text-align: center;
     }
 }

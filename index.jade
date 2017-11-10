@@ -1,25 +1,46 @@
+div
+  ul.navbar
+    li 
+      a(href="/") Home
+    li 
+      a(href="/") About
+    
 div.header
-
-  img(src="logo_denali.png", width="150", height="150")
   
   div.header-text
     h1.welcome
-      | Thanks for stopping by!
+      | Thanks for stopping by !
     p 
       | I’m Kayla and I’m a geospatial analyst/developer/person 
       | focused on getting government to work better and deeply 
       | interested in maps. In April 2016, my master’s research was published in 
       i Extractive Industries and Society 
       | as an original research paper. 
-     
+
+br 
+
 div.lists
-  h2
-    | Selected Projects
-        
-div
-    each project, slug in public.projects._data            
-      p=project.title
-            
+  div.section
+    h2
+      | Selected Projects
+          
+    each project, slug in public.projects._data
+      div
+        ul
+          li=project.title
+  
+  div.section
+    h2
+      | Work 
+    
+    each job, slug in public.work._data
+      div
+        ul
+          li.job-place=job.place 
+            p.job-details=job.title + ", " + job.time
+  
+      
+              
                 
   
     
