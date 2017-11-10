@@ -1,10 +1,11 @@
 @import "_components/_bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Source+Sans+Pro:300');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,800');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
 $display-font: "Grand Hotel", sans-serif;
-$paragraph-font: "Source Sans Pro", sans-serif;
+$paragraph-font: "Catamaran", sans-serif;
 $light: 300;
 $regular: 400;
 $black: 900;
@@ -18,6 +19,15 @@ body {
 
     @include background;
 
+    h1 {
+      font-size: 3em;
+    }
+
+    h1, h2, h3 {
+      font-family: $display-font;
+      font-weight: lighter;
+    }
+
     .container {
         margin: 5%;
 
@@ -26,14 +36,20 @@ body {
           flex: wrap;
 
           .header-text {
+            margin-left: 2%;
             display: flex;
             flex-direction: column;
           }
+
+        .lists {
+            display:flex;
+            flex: wrap;
+        }
+
         }
 
         .welcome {
             font-family: $display-font;
-            font-size: 3em;
             font-weight: lighter;
         }
     }
@@ -45,21 +61,6 @@ body {
     ul { @include paragraph }
 
     a { @include links }
-
-    h1 {
-        font-family: $display-font;
-        font-size: 1.8em;
-    }
-
-    h2 {
-        font-family: $paragraph-font;
-        font-weight: $bold;
-    }
-
-    h3 {
-        font-family: $paragraph-font;
-        font-weight: $regular;
-    }
 
     .navbar {
         @include navbar-font;

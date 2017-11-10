@@ -1,9 +1,9 @@
-include ./_includes/_mixins
-
 div.header
-  img(src="logo_capecod.png", width="200", height="150")
+
+  img(src="logo_denali.png", width="150", height="150")
+  
   div.header-text
-    h2.welcome
+    h1.welcome
       | Thanks for stopping by!
     p 
       | I’m Kayla and I’m a geospatial analyst/developer/person 
@@ -11,31 +11,14 @@ div.header
       | interested in maps. In April 2016, my master’s research was published in 
       i Extractive Industries and Society 
       | as an original research paper. 
-    
-a(name="projects")
      
-div.flex-container
-    .col-lg-12
-        h1.page-header Selected Projects
+div.lists
+  h2
+    | Selected Projects
         
-.section.portfolio-items
-    .col-lg-12
-    
+div
     each project, slug in public.projects._data            
-        .col-md-12.portfolio-item
-            
-            //- Display image if available
-        
-            // if project.thumb
-                // .img-responsive.thumbnail
-                    // a(href="/projects/" + slug)
-                        // img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
-            
-            //h4.project-title
-            p=project.title
-                    //a(href="/projects/" + slug)=project.title
-            
-            //p=project.subtitle
+      p=project.title
             
                 
   
