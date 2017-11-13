@@ -13,7 +13,7 @@
 
         &:hover {
             color: $blue;
-            text-decoration: none;
+            text-decoration: underline;
         }
     }
 }
@@ -21,7 +21,7 @@
 // navbar link style
 @mixin navbar-links {
     & {
-        text-decoration: none;
+        text-decoration: underline;
         font-size: .87em;
 
         &:hover {

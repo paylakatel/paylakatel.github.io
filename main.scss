@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Source+Sans+Pro:300');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,400');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
 $display-font: "Permanent Marker", sans-serif;
-$paragraph-font: "Catamaran", sans-serif;
-$light: 100;
+$paragraph-font: "Barlow Semi Condensed", sans-serif;
+$light: 200;
 $regular: 400;
 $black: 900;
 $bold: 700;
@@ -46,8 +47,16 @@ body {
 
           li {
             a {
-              text-decoration: none;
+              text-decoration: underline;
+              text-decoration-color: #dbdbdb;
               padding-right: 30px;
+              color: black;
+
+              &:hover {
+                text-decoration: underline;
+                text-decoration-color: #49b6ff;
+                color: $blue;
+              }
             }
           }
         }
@@ -60,6 +69,11 @@ body {
           .header-text {
             display: flex;
             flex-direction: column;
+          }
+
+          .welcome {
+              font-family: $display-font;
+              font-weight: lighter;
           }
         }
 
@@ -75,7 +89,7 @@ body {
           display: flex;
 
           -webkit-flex-flow: row wrap;
-          justify-content: flex-start;      
+          justify-content: flex-start;
 
           .job-details {
             font-style: italic;
@@ -83,10 +97,7 @@ body {
 
         }
 
-        .welcome {
-            font-family: $display-font;
-            font-weight: lighter;
-        }
+
     }
 
 
@@ -95,7 +106,7 @@ body {
 
     li { @include paragraph }
 
-    a { @include links }
+    //a { @include links }
 
     .fa {
         padding: 1px;
@@ -138,7 +149,7 @@ body {
 
     .portfolio-item {
         margin-bottom: 25px;
-        a { text-decoration: none;}
+        a { text-decoration: underline;}
      }
 
     .img-responsive {
