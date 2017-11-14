@@ -1,21 +1,23 @@
 // paragraph font style
 @mixin paragraph {
     font-family: $paragraph-font;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: $light;
 }
 
 // paragraph link style
 @mixin links {
-    & {
-        color: black;
-        text-decoration: underline;
+  & {
+    text-decoration: underline;
+    text-decoration-color: #dbdbdb;
+    color: black;
 
-        &:hover {
-            color: $blue;
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: #49b6ff;
+      color: black;
     }
+  }
 }
 
 // navbar link style

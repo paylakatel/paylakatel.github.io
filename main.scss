@@ -28,6 +28,8 @@ body {
       color: $dark-grey;
     }
 
+    a { @include links }
+
     .container {
         margin: 5%;
 
@@ -46,18 +48,8 @@ body {
           justify-content: flex-start;
 
           li {
-            a {
-              text-decoration: underline;
-              text-decoration-color: #dbdbdb;
-              padding-right: 30px;
-              color: black;
-
-              &:hover {
-                text-decoration: underline;
-                text-decoration-color: #49b6ff;
-                color: $blue;
-              }
-            }
+            a { @include links;
+              padding-right: 30px; }
           }
         }
 
@@ -91,8 +83,13 @@ body {
           -webkit-flex-flow: row wrap;
           justify-content: flex-start;
 
+          .section {
+            padding-right: 20px;
+          }
+
           .job-details {
             font-style: italic;
+            font-size: 20px;
           }
 
         }

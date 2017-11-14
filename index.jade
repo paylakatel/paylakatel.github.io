@@ -4,6 +4,8 @@ div
       a(href="/") Home
     li 
       a(href="/") About
+    li
+      a(href="/") Resume
     
 div.header
   
@@ -27,7 +29,8 @@ div.lists
     each project, slug in public.projects._data
       div
         ul
-          li=project.title
+          li
+            a(href=project.slug) #{ project.title }
   
   div.section
     h2
@@ -36,9 +39,20 @@ div.lists
     each job, slug in public.work._data
       div
         ul
-          li.job-place=job.place 
-            p.job-details=job.title + ", " + job.time
+          li.job-place=job.title 
+            p.job-details=job.place + ", " + job.time
+            
+  div.section
+    h2
+      | Contact 
+    
+    each item in contact
+      div
+        ul
+          li
+            a(href=item.link) #{ item.text }
   
+      
       
               
                 
