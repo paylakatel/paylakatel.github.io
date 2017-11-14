@@ -1,8 +1,5 @@
 @import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Source+Sans+Pro:300');
-@import url('https://fonts.googleapis.com/css?family=Catamaran:100,400');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Barlow+Semi+Condensed:100,200');
 @import "_components/mixins";
 
 // $display-font: "Pacifico", sans-serif;
@@ -13,6 +10,7 @@ $regular: 400;
 $black: 900;
 $bold: 700;
 $blue: #0097ff;
+$light-blue: #49b6ff;
 //$blue: #eda371;
 $grey: #404040;
 $dark-grey: #404040;
@@ -29,6 +27,8 @@ body {
     }
 
     a { @include links }
+
+    p, li { @include paragraph }
 
     .container {
         margin: 5%;
@@ -94,82 +94,18 @@ body {
 
         }
 
+        footer {
+            margin: 10px 0;
 
-    }
+            .fa {
+              padding: 4px;
+              font-size: 1.2em;
+              text-decoration: none;
 
-
-
-    p { @include paragraph }
-
-    li { @include paragraph }
-
-    //a { @include links }
-
-    .fa {
-        padding: 1px;
-        font-size: 1.5em;
-        text-decoration: none;
-    }
-
-    .page-header {
-        border-bottom: 0;
-        padding-bottom: 0;
-        margin-bottom: 10px;
-    }
-
-    .section-header {
-        font-weight: $bold;
-    }
-
-    .separator {
-        font-family: $display-font;
-        font-size: .7em;
-        color: $grey;
-    }
-
-    .portfolio-items {
-        display: flex;
-        flex-flow: row wrap;
-        a {
-            font-family: $paragraph-font;
-            font-weight: $bold;
-            font-size: 1.15em;
-        }
-    }
-
-    .thumbnail {
-        &:hover {
-            border-color: #919191;
-        }
-        margin-bottom: 0;
-    }
-
-    .portfolio-item {
-        margin-bottom: 25px;
-        a { text-decoration: underline;}
-     }
-
-    .img-responsive {
-        padding: $thumbnail-padding;
-        margin-bottom: 0;
-        border: 1px solid $thumbnail-border;
-        border-radius: $thumbnail-border-radius;
-    }
-
-    .caption {
-        p {
-            font-size: 1.12em;
-            font-style: italic;
-            font-weight: $light;
+              &:hover {
+                color: $light-blue;
+              }
             }
         }
-
-    .well {
-        p { font-size: 1.15em; }
-    }
-
-    footer {
-        margin: 50px 0;
-        //text-align: center;
     }
 }

@@ -14,23 +14,10 @@
 
     &:hover {
       text-decoration: underline;
-      text-decoration-color: #49b6ff;
+      text-decoration-color: $light-blue;
       color: black;
     }
   }
-}
-
-// navbar link style
-@mixin navbar-links {
-    & {
-        text-decoration: underline;
-        font-size: .87em;
-
-        &:hover {
-            color: $blue;
-            text-decoration: none;
-        }
-    }
 }
 
 @mixin background {
