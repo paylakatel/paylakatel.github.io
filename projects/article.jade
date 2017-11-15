@@ -39,6 +39,7 @@ div.project-title
         | miners can help stakeholders implement more effective policy solutions.
   hr
   
-  each image in public.projects._data['article']['images']
-      .col-md-6.col-xs-12.caption
-          +image(image.file, image.title, image.subtitle)
+  div.images
+    each image in public.projects._data['article']['images']
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
