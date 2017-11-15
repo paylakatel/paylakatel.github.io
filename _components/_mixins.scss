@@ -1,11 +1,31 @@
-// paragraph font style
-@mixin paragraph {
-    font-family: $paragraph-font;
-    font-size: 22px;
-    font-weight: $light;
+@mixin background {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, #F6F6F6 1px, transparent 1px), linear-gradient(to bottom, #F6F6F6 1px, transparent 1px);
 }
 
-// paragraph link style
+@mixin flexbox {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+@mixin paragraph {
+    font-family: $paragraph-font;
+    font-size: $font-size-base;
+    font-weight: $light;
+    margin: 10px 0 10px 0;
+    line-height: 1.4;
+}
+
 @mixin links {
   & {
     text-decoration: underline;
@@ -20,7 +40,18 @@
   }
 }
 
-@mixin background {
-    background-size: 20px 20px;
-    background-image: linear-gradient(to right, #F6F6F6 1px, transparent 1px), linear-gradient(to bottom, #F6F6F6 1px, transparent 1px);
+@mixin well {
+  min-height: 20px;
+  padding: 9px;
+  margin-bottom: 20px;
+  background-color: $well-bg;
+  border: 1px solid $well-border;
+  border-radius: 4px;
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+  p {
+    font-size: 22px;
+  }
 }

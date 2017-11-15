@@ -1,26 +1,15 @@
-@import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Barlow+Semi+Condensed:100,200');
+//@import "_components/_bootstrap/scss/bootstrap";
+@import "_components/variables";
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Barlow+Semi+Condensed:200,400,700');
 @import "_components/mixins";
-
-// $display-font: "Pacifico", sans-serif;
-$display-font: "Permanent Marker", sans-serif;
-$paragraph-font: "Barlow Semi Condensed", sans-serif;
-$light: 200;
-$regular: 400;
-$black: 900;
-$bold: 700;
-$blue: #0097ff;
-$light-blue: #49b6ff;
-//$blue: #eda371;
-$grey: #404040;
-$dark-grey: #404040;
-
+@import "_components/type";
 
 body {
 
+    // general updates
     @include background;
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: $display-font;
       font-weight: lighter;
       color: $dark-grey;
@@ -30,22 +19,13 @@ body {
 
     p, li { @include paragraph }
 
+    // container
     .container {
         margin: 5%;
 
+        // navbar
         .navbar {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-
-          -webkit-flex-flow: row wrap;
-          justify-content: flex-start;
+          @include flexbox;
 
           li {
             a { @include links;
@@ -53,6 +33,7 @@ body {
           }
         }
 
+        //header
         .header {
           display: flex;
           flex: wrap;
@@ -69,19 +50,9 @@ body {
           }
         }
 
+        // project and work lists
         .lists {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-
-          -webkit-flex-flow: row wrap;
-          justify-content: flex-start;
+          @include flexbox;
 
           .section {
             padding-right: 20px;
@@ -94,18 +65,42 @@ body {
 
         }
 
+        // project styles
+        .project-title {
+          h2 {
+            font-family: $paragraph-font;
+            font-size: 32px;
+            font-weight: $bold;
+            margin-bottom: 10px;
+          }
+
+          h4 {
+            font-family: $paragraph-font;
+            font-size: 24px;
+            font-weight: $regular;
+            margin-top: 10px;
+          }
+
+        }
+
+        // wells
+        .well {
+          @include well
+        }
+
+        // footer
         footer {
-            margin: 10px 0;
+          margin: 10px 0;
 
-            .fa {
-              padding: 4px;
-              font-size: 1.2em;
-              text-decoration: none;
+          .fa {
+            padding: 4px;
+            font-size: 1.2em;
+            text-decoration: none;
 
-              &:hover {
-                color: $light-blue;
-              }
+            &:hover {
+              color: $light-blue;
             }
+          }
         }
     }
 }

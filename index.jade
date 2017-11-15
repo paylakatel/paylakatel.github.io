@@ -2,7 +2,7 @@
 div.header
   
   div.header-text
-    h1.welcome
+    h3.welcome
       | Thanks for stopping by !
     p 
       | I’m Kayla and I’m a geospatial analyst/developer/person 
@@ -15,17 +15,17 @@ br
 
 div.lists
   div.section
-    h2
+    h4
       | Selected Projects
           
     each project, slug in public.projects._data
       div
         ul
           li
-            a(href=project.slug) #{ project.title }
+            a(href="/projects/" + slug) #{ project.title }
   
   div.section
-    h2
+    h4
       | Recent Work 
     
     each job in work
@@ -33,16 +33,6 @@ div.lists
         ul
           li.job-place=job.title 
             p.job-details=job.place + ", " + job.time
-            
-  //- div.section
-  //-   h2
-  //-     | Contact 
-  //- 
-  //-   each item in contact
-  //-     div
-  //-       ul
-  //-         li
-  //-           a(href=item.link) #{ item.text }
   
       
       

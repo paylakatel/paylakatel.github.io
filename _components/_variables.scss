@@ -1,0 +1,33 @@
+// fonts
+$display-font: "Permanent Marker", sans-serif;
+$paragraph-font: "Barlow Semi Condensed", sans-serif;
+
+// font sizes
+$font-size-base: 22px !default;
+
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// line height
+$line-height-base: 1.428571429 !default; // 20/14
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+// font weights
+$light: 200;
+$regular: 400;
+$black: 900;
+$bold: 700;
+
+// colors
+$blue: #0097ff;
+$light-blue: #49b6ff;
+$grey: #404040;
+$dark-grey: #404040;
+
+// well colors
+$well-bg: #f5f5f5 !default;
+$well-border: darken($well-bg, 7%) !default;
