@@ -1,0 +1,32 @@
+{
+    "cob": {
+      "title": "Data and Performance Analyst",
+      "time" : "Aug 2016 - Present",
+      "place" : "City of Boston"
+    },
+
+    "foss4g" : {
+      "title" : "Volunteer Commitee Chair",
+      "time" : "Jan 2017 - Aug 2017",
+      "place" : "FOSS4G Local Organizing Commitee"
+    },
+
+    "acton_3": {
+      "title": "Webmaster/GIS Technician",
+      "time" : "Sept 2015 - Aug 2016",
+      "place" : "Town of Acton"
+    },
+
+    "acton_2": {
+      "title": "GIS Assistant",
+      "time" : "Aug 2014 - Sept 2015",
+      "place" : "Town of Acton"
+    },
+
+    "acton_1": {
+      "title": "GIS Intern",
+      "time" : "June 2014 - Aug 2014",
+      "place" : "Town of Acton"
+    }
+
+}

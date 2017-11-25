@@ -1,15 +1,8 @@
-header
-    nav.navbar.navbar-default(role="navigation")
-      .container
-        a.navbar-brand.navbar-right(href="#") #{sitename}
-        .navbar-header
-          button.navbar-toggle(type="button", data-toggle="collapse", data-target="#nav1")
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        #nav1.collapse.navbar-collapse
-          ul.nav.navbar-nav
-              each item in navigation
-                  li
-                      a(href=item.link)=item.title
+div
+  ul.navbar
+    li 
+      a(href="/") Home
+    li 
+      a(href="/") About
+    li
+      a(href="/") Resume

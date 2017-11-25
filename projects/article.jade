@@ -1,47 +1,46 @@
-include ../_includes/_mixins
-
-.container
-
-  div
-    h2 Evaluating conflict surrounding mineral extraction in Ghana: Assessing 
-        | the spatial interactions of large and small-scale mining    
-    h4
-      i The Extractive Industries and Society,
-      |  Volume 3, Issue 2, April 2016, Pages 450-463, ISSN 2214-790X
-      hr
-      
-    p In January 2016 my master's thesis work looking at the spatial overlaps 
-        | of small and large-scale mining in south-central Ghana was accepted to 
-        i Extractive Industries and Society. 
-        | The work was published in Volume 3, Issue 2 in April of that year. The 
-        | abstract and figures from the paper are below, and the full text can 
-        | be found 
-        a(href="http://www.sciencedirect.com/science/article/pii/S2214790X16300065", target="_blank")
-            u online.
-       
-    .well.well-sm
-      p Since implementation of its Economic Recovery Program in 1983, Ghana’s 
-          | extractive industries have come to account for 40% of the total value 
-          | of the country’s exports. An adverse impact of this increase, however, 
-          | has been increased extraction-related conflict due to heightened 
-          | competition between large and small-scale operators over mineral-rich 
-          | ands. This paper characterizes these conflicts in the south-central 
-          | section of the country by mapping the spatial overlaps between large and 
-          | small-scale miners. Classification tree analysis of 2013 and 2015 
-          | Landsat- 7 and -8 imagery was used to identify small-scale mine sites. 
-          | The overlaps between these sites and large-scale concessions are 
-          | examined in the context of reported mining conflicts. Results reveal 
-          | that there is a large amount of resource competition between the two 
-          | parties, specifically, more than half (i.e., 52%) of the identified 
-          | small-scale mining activity occurs within the boundaries of large-scale 
-          | concessions. The northwest corner of the study area contains 50% of the 
-          | identified overlaps; the southwest corner contains 40%; and the 
-          | northeast corner contains 10%. In most cases, these overlaps take place 
-          | on prospecting concessions. The work illustrates how mapping and 
-          | quantifying areas of spatial overlap between large and small-scale 
-          | miners can help stakeholders implement more effective policy solutions.
+div.project-title
+  h3 Evaluating conflict surrounding mineral extraction in Ghana: Assessing 
+     | the spatial interactions of large and small-scale mining    
+  h4
+    i The Extractive Industries and Society,
+    |  Volume 3, Issue 2, April 2016, Pages 450-463, ISSN 2214-790X
     hr
     
-    each image in public.projects._data['article']['images']
-        .col-md-6.col-xs-12.caption
-            +image(image.file, image.title, image.subtitle)
+p In January 2016 my master's thesis work looking at the spatial overlaps 
+    | of small and large-scale mining in south-central Ghana was accepted to 
+    i Extractive Industries and Society. 
+    | The abstract and figures from the paper are below, and the 
+    a(href="http://www.sciencedirect.com/science/article/pii/S2214790X16300065", target="_blank") full text
+    |  can be found online.
+   
+.well
+  p Since implementation of its Economic Recovery Program in 1983, Ghana’s 
+      | extractive industries have come to account for 40% of the total value 
+      | of the country’s exports. An adverse impact of this increase, however, 
+      | has been increased extraction-related conflict due to heightened 
+      | competition between large and small-scale operators over mineral-rich 
+      | ands. This paper characterizes these conflicts in the south-central 
+      | section of the country by mapping the spatial overlaps between large and 
+      | small-scale miners. Classification tree analysis of 2013 and 2015 
+      | Landsat- 7 and -8 imagery was used to identify small-scale mine sites. 
+      | The overlaps between these sites and large-scale concessions are 
+      | examined in the context of reported mining conflicts. Results reveal 
+      | that there is a large amount of resource competition between the two 
+      | parties, specifically, more than half (i.e., 52%) of the identified 
+      | small-scale mining activity occurs within the boundaries of large-scale 
+      | concessions. The northwest corner of the study area contains 50% of the 
+      | identified overlaps; the southwest corner contains 40%; and the 
+      | northeast corner contains 10%. In most cases, these overlaps take place 
+      | on prospecting concessions. The work illustrates how mapping and 
+      | quantifying areas of spatial overlap between large and small-scale 
+      | miners can help stakeholders implement more effective policy solutions.
+hr
+
+h4.section-header Article Figures
+div.images
+  each image in public.projects._data['article']['images']
+    div.img
+      img(src="../projects/img/" + image.file alt=image.subtitle)
+      p.img-title=image.title
+      p.img-details=image.subtitle
+      

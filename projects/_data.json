@@ -74,22 +74,64 @@
             }
     },
 
-    "acton": {
-        "title": "Town of Acton Website Redesign",
-        "subtitle" : "Updating Town of Acton website.",
-        "thumb": "acton.jpg"
-    },
-
     "demo-ssm": {
         "title": "Demographics of small-scale mining in Ghana",
         "subtitle" : "Examining how the demographics of districts are correlated with the presence of small-scale mining in south-central Ghana.",
-        "thumb": "demo-ssm.png"
+        "thumb" : "demo-ssm.png",
+        "images" :
+            {
+                "figure_1": {
+                    "title" : "Figure 1",
+                    "subtitle" : "The study area used in the analysis is shown with the districts that were analyzed highlighted in orange. The Landsat-8 footprint that defined the study area for the land cover analysis is shown as well.",
+                    "file" : "demo-ssm_study_area.png"
+                },
+
+                "figure_2": {
+                    "title" : "Figure 2",
+                    "subtitle" : "The area in square kilometers of small-scale mining happening with in each district is shown here. The land cover classification data only went as far as the bounds of the Landsat scene, therefore there is likely an underestimation of the amount of small-scale mining occuring within the border districts.",
+                    "file" : "demo-ssm_ssm.png"
+                },
+
+                "figure_3": {
+                    "title" : "Figure 3",
+                    "subtitle" : "The output maps for percent male, percent female, and over 65 are shown.",
+                    "file" : "demo-ssm_output_maps_1.png"
+                },
+
+                "figure_4": {
+                    "title" : "Figure 4",
+                    "subtitle" : "The output maps for percent monolingual, percent enrolled in education, and percent illterate are shown.",
+                    "file" : "demo-ssm_output_maps_2.png"
+                }
+
+            }
     },
 
     "nasa_develop": {
         "title": "NASA Develop",
         "subtitle" : "Looking at wetland health in the Albemarle-Pamlico watershed over ten weeks with the NASA Develop program.",
-        "thumb": "nasa_develop.jpg"
+        "thumb": "nasa_develop.jpg",
+        "images" :
+            {
+                "figure_1": {
+                    "title" : "Figure 1",
+                    "subtitle" : "The study area of the project in North Carolina and southern Virginia.",
+                    "file" : "nasa-develop_studyarea.png"
+                },
+
+                "figure_2": {
+                    "title" : "Figure 2",
+                    "subtitle" : "This area showed now change in wetland extent over the years, the vegetation health in the wetlands decreased over the course of the study period.",
+                    "file" : "nasa-develop_area_1.jpg"
+                },
+
+                "figure_3": {
+                    "title" : "Figure 3",
+                    "subtitle" : "This area experienced a decline in wetland extent thoughout the years as well changes in the overall vegetation health within the study area.",
+                    "file" : "nasa-develop_area_2.jpg"
+                }
+
+            }
     },
 
     "earth-img": {

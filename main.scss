@@ -1,121 +1,161 @@
-@import "_components/_bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,700|Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:300,300i,400,400i,700,900');
+//@import "_components/_bootstrap/scss/bootstrap";
+@import "_components/variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
 @import "_components/mixins";
-
-// $display-font: "Pacifico", sans-serif;
-$display-font: 'Pacifico', sans-serif;
-$paragraph-font: "Source Sans Pro", sans-serif;
-$light: 300;
-$regular: 400;
-$black: 900;
-$bold: 700;
-$blue: #0097ff;
-//$blue: #eda371;
-$grey: #d0d0d0;
-
+@import "_components/type";
 
 body {
-    font-family: $paragraph-font;
 
+    // general updates
     @include background;
 
-    p { @include paragraph }
+    // set font color for whole site
+    color: $gray-dark;
 
-    ul { @include paragraph }
+    h1, h2, h3, h4 {
+      font-family: $display-font;
+      font-weight: $bold;
+    }
 
     a { @include links }
 
-    h1 {
-        font-family: $display-font;
-        font-size: 1.8em;
+    p, li { @include paragraph }
+
+    img {
+      width: 100%;
+      height: auto;
     }
 
-    h2 {
-        font-family: $paragraph-font;
-        font-weight: $bold;
+    hr {
+       border-top: 1px solid $gray-light;
     }
 
-    h3 {
-        font-family: $paragraph-font;
-        font-weight: $regular;
-    }
+    // container
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
 
-    .navbar {
-        @include navbar-font;
-        background-color: transparent;
-        border: 0;
+        // images
+        .images {
+          display: inline-grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 20px;
+          @media only screen and (max-width: $break-small) {
+            grid-template-columns: 1fr;
+          }
 
-        .navbar-brand { @include brand }
-
-        .navbar-nav { li { a { @include navbar-links } } }
-    }
-
-    .fa {
-        padding: 1px;
-        font-size: 1.5em;
-        text-decoration: none;
-    }
-
-    .page-header {
-        border-bottom: 0;
-        padding-bottom: 0;
-        margin-bottom: 10px;
-    }
-
-    .section-header {
-        font-weight: $bold;
-    }
-
-    .separator {
-        font-family: $display-font;
-        font-size: .7em;
-        color: $grey;
-    }
-
-    .portfolio-items {
-        display: flex;
-        flex-flow: row wrap;
-        a {
-            font-family: $paragraph-font;
-            font-weight: $bold;
-            font-size: 1.15em;
         }
-    }
 
-    .thumbnail {
-        &:hover {
-            border-color: #919191;
+        // navbar
+        .navbar {
+          @include flexbox;
+          width: 30%;
         }
-        margin-bottom: 0;
-    }
 
-    .portfolio-item {
-        margin-bottom: 25px;
-        a { text-decoration: none;}
-     }
+        // thumbsnails
+        // .thumbs {
+        //   @include flexbox;
+        //   flex-direction: row;
+        //   align-content: space-between;
+        //   justify-content: space-between;
+        //   display: inline-grid;
+        //   grid-template-columns: 1fr 1fr 1fr;
+        //   grid-column-gap: 5px;
+        //   @media only screen and (max-width: $break-medium) {
+        //     grid-template-columns: 1fr 1fr;
+        //   }
+        //   @media only screen and (max-width: $break-small) {
+        //     grid-template-columns: 1fr;
+        //   }
+        //
+        //   .thumb-img {
+        //     max-width: 90%;
+        //     border: 1px solid $gray-light;
+        //     border-radius: 2px;
+        //     padding: 5px;
+        //     &:hover {
+        //       border-color: $gray;
+        //     }
+        //
+        //   }
+        // }
 
-    .img-responsive {
-        padding: $thumbnail-padding;
-        margin-bottom: 0;
-        border: 1px solid $thumbnail-border;
-        border-radius: $thumbnail-border-radius;
-    }
+        // project and work lists
+        .lists {
+          @include flexbox;
+          width: 90%;
 
-    .caption {
-        p {
-            font-size: 1.12em;
-            font-style: italic;
-            font-weight: $light;
+          .jobs {
+            .job-title {
+              margin: 0px;
+              padding: 0px;
             }
+
+            .job-details {
+              font-style: italic;
+              font-size: floor(($font-size-base * 0.85));
+              margin: 0px;
+              padding: 0px;
+            }
+          }
         }
 
-    .well {
-        p { font-size: 1.15em; }
-    }
+        // project styles
+        .project-title {
+          h3 {
+            font-weight: $bold;
+            font-family: $paragraph-font;
+          }
+          h4 {
+            font-weight: $regular;
+          }
+        }
 
-    footer {
-        margin: 50px 0;
-        text-align: center;
+        .section-header {
+          font-weight: $regular;
+        }
+
+        .img-title {
+          font-family: $display-font;
+          font-weight: $bold;
+          //font-size: floor(($font-size-base * 0.85));
+          margin: 0px;
+          padding: 0px;
+        }
+
+        .img-details {
+          font-size: floor(($font-size-base * 0.85));
+          margin: 0px;
+          padding: 0px;
+          padding-bottom: 20px;
+        }
+
+
+        // wells
+        .well {
+          @include well
+        }
+
+        // footer
+        footer {
+          margin-top: 50px;
+
+          .fa {
+            padding: 4px;
+            font-size: 1.2em;
+            text-decoration: none;
+            background-image: none;
+
+            &:hover {
+              color: $purple;
+              background-image: none;
+            }
+          }
+        }
     }
 }
