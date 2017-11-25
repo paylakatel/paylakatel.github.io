@@ -1,4 +1,4 @@
-div.project_title
+div.project-title
   h3 Earth Images
   
 p Not only does the data captured by NASA's earth observing satellites offer 
@@ -13,4 +13,5 @@ div.images
   each image in public.projects._data['earth-img']['images']
     div.img
       img(src="../projects/img/" + image.file alt=image.title)
-      p=image.title + ": " + image.subtitle
+      p.img-title=image.title 
+      p.img-details=image.subtitle

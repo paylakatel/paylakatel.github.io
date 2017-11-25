@@ -1,9 +1,7 @@
-div.project_title
-  h3
-    a(href="", target="_blank")
-      | Demographics of small-scale mining in south-central Ghana
-    h4 GIS for International Development, Spring 2015
-      hr
+div.project-title
+  h3 Demographics of small-scale mining in south-central Ghana
+  h4 GIS for International Development, Spring 2015
+    hr
     
 p In this analysis, I used the previously completed land cover classification 
     | from my master's thesis with demographic data to assess the 46 districts 
@@ -24,10 +22,11 @@ div.images
   each image in public.projects._data['demo-ssm']['images']
     if (image.title == "Figure 1" | image.title == "Figure 2")
       div.img
-        img(src="../projects/img/" + image.file alt=image.title)
-        p=image.title + ": " + image.subtitle
+        img(src="../projects/img/" + image.file alt=image.subtitle)
+        p.img-title=image.title
+        p.img-details=image.subtitle
 hr
-    
+  
 p Figures 3 and 4 show the results of the analysis. Each variable is in a 
     | separate column, the first map shows the variable displayed in each 
     | district separated into six classes using natural breaks. The second 
@@ -55,4 +54,5 @@ div.images
     if (image.title == "Figure 3" | image.title == "Figure 4")
       div.img
         img(src="../projects/img/" + image.file alt=image.title)
-        p=image.title + ": " + image.subtitle
+        p.img-title=image.title 
+        p.img-details=image.subtitle

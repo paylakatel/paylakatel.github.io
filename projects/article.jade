@@ -1,8 +1,6 @@
 div.project-title
-  h3 
-      a(href="http://www.sciencedirect.com/science/article/pii/S2214790X16300065", target="_blank")
-        | Evaluating conflict surrounding mineral extraction in Ghana: Assessing 
-        | the spatial interactions of large and small-scale mining    
+  h3 Evaluating conflict surrounding mineral extraction in Ghana: Assessing 
+     | the spatial interactions of large and small-scale mining    
   h4
     i The Extractive Industries and Society,
     |  Volume 3, Issue 2, April 2016, Pages 450-463, ISSN 2214-790X
@@ -11,9 +9,9 @@ div.project-title
 p In January 2016 my master's thesis work looking at the spatial overlaps 
     | of small and large-scale mining in south-central Ghana was accepted to 
     i Extractive Industries and Society. 
-    | The abstract and figures from the paper are below, and the full text can 
-    | be found 
-    a(href="http://www.sciencedirect.com/science/article/pii/S2214790X16300065", target="_blank") online.
+    | The abstract and figures from the paper are below, and the 
+    a(href="http://www.sciencedirect.com/science/article/pii/S2214790X16300065", target="_blank") full text
+    |  can be found online.
    
 .well
   p Since implementation of its Economic Recovery Program in 1983, Ghana’s 
@@ -38,8 +36,11 @@ p In January 2016 my master's thesis work looking at the spatial overlaps
       | miners can help stakeholders implement more effective policy solutions.
 hr
 
+h4.section-header Article Figures
 div.images
   each image in public.projects._data['article']['images']
     div.img
-      img(src="../projects/img/" + image.file alt=image.title)
-      p=image.title + ": " + image.subtitle
+      img(src="../projects/img/" + image.file alt=image.subtitle)
+      p.img-title=image.title
+      p.img-details=image.subtitle
+      

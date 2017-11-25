@@ -1,4 +1,4 @@
-div.project_title
+div.project-title
   h3 NASA Develop - North Carolina Ecological Forcasting
   h4 Summer, 2015
 
@@ -15,8 +15,9 @@ div
   each image in public.projects._data['nasa_develop']['images']
     if (image.title == "Figure 1")
       div.img
-        img(src="../projects/img/" + image.file alt=image.title)
-        p=image.title + ": " + image.subtitle
+        img(src="../projects/img/" + image.file alt=image.subtitle)
+        p.img-title=image.title
+        p.img-details=image.subtitle
 hr
 
 p 56 Landsat scenes were used in the analysis because we wanted an image 
@@ -34,4 +35,5 @@ div.images
     if (image.title == "Figure 2" | image.title == "Figure 3")
       div.img
         img(src="../projects/img/" + image.file alt=image.title)
-        p=image.title + ": " + image.subtitle
+        p.img-title=image.title 
+        p.img-details=image.subtitle
