@@ -1,0 +1,45 @@
+{
+    "globals": {
+        "sitename" : "Kayla A. Patel",
+
+        "navigation" : [
+            { "title" : "Home", "link" : "/" },
+            { "title" : "Maps and Projects", "link" : "/#projects" },
+            { "title" : "Resume", "link" : "/"}
+        ],
+
+        "contact" : [
+            { "title" : "email",
+                "link": "paylakatel@gmail.com",
+                "icon" : " fa fa-envelope-o" ,
+                "text" : "paylakatel@gmail.com" },
+            { "title" : "twitter",
+                "link" : "https://twitter.com/paylakatel",
+                "icon" : "fa fa-twitter",
+                "text" : "@paylakatel" },
+            { "title" : "linkedin",
+                "link" : "https://www.linkedin.com/in/kaylapatel",
+                "icon" : "fa fa-linkedin",
+                "text" : "linkedin.com/in/kaylapatel" },
+            { "title" : "github",
+                "link" : "https://github.com/paylakatel",
+                "icon" : "fa fa-github",
+                "text" : "github.com/paylakatel" }
+        ],
+
+        "work" : [
+          { "title": "Data and Performance Analyst",
+              "time" : "Aug 2016 - Present",
+              "place" : "City of Boston" },
+          { "title" : "Volunteer Commitee Chair",
+              "time" : "Jan 2017 - Aug 2017",
+              "place" : "FOSS4G Local Organizing Commitee" },
+          { "title" : "Participant",
+              "time" : "March 2017 - Sept 2017",
+              "place" : "Applied Data Analytics Training Program"},
+          { "title": "Webmaster/GIS Technician",
+              "time" : "Sept 2015 - Aug 2016",
+              "place" : "Town of Acton" }
+        ]
+    }
+}

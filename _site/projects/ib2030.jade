@@ -1,0 +1,41 @@
+div.project-title
+  h3 
+    a(href="https://imagine.boston.gov/metrics-dashboard/", target="_blank") 
+      | Imagine Boston 2030 Metrics Dashboard    
+  h4 City of Boston, Summer 2017
+    hr
+
+p The Imagine Boston 2030 
+    a(href="https://imagine.boston.gov/metrics-dashboard/") plan
+    |  was released in July 2017 as the City of Boston’s 
+    | first long-term plan in 50 years. After hearing from more than 15,000 
+    | residents, five major goals were outlined in the plan each of which are 
+    | tracked through a series of different metrics: 
+ul 
+    li Encourage affordability, reduce displacement, and improve 
+        | quality of life
+    li Increase access to opportunity
+    li Drive inclusive economic growth
+    li Promote a healthy environment and prepare for climate change  
+    li Invest in open space, arts & culture, transportation, and 
+        | infrastructure 
+
+p  
+    | Using R-Shiny, I developed a  
+    a(href="https://analytics.boston.gov/app/imagine-boston") public-facing dashboard
+    |  that interactively 
+    | displays data associated with each of the goals and metrics allowing 
+    | users to quickly gain an understanding of how close we are to achieving 
+    | the goals laid out in the plan. 
+    
+p 
+    | The data for the dashboard was provided by the Boston Redevelopment Authority's 
+    | research division and is updated yearly or as more data becomes available. 
+
+hr
+
+h4.section-header Press Coverage
+
+each i in public.projects._data['ib2030']['press']
+  p 
+    a(href=i.link)=i.title 

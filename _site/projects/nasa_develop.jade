@@ -1,0 +1,39 @@
+div.project-title
+  h3 NASA Develop - North Carolina Ecological Forcasting
+  h4 Summer, 2015
+
+p My team worked with APNEP, Albemarle-Pamlico National Estuary Partnership, 
+    | to try and develop a methodology that would allow the organization to 
+    | more rapidly and consistently detect changes in wetlands throughout the 
+    | watershed. We used Landsat-5, -7, and -8 data to analyze wetland health 
+    | from 2000-2015 using a series of vegetation indicies. Image preprocessing 
+    | and analysis was performed through a python script I wrote. Images and 
+    | code snippets from the project are shown below.
+    hr
+
+div
+  each image in public.projects._data['nasa_develop']['images']
+    if (image.title == "Figure 1")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.subtitle)
+        p.img-title=image.title
+        p.img-details=image.subtitle
+hr
+
+p 56 Landsat scenes were used in the analysis because we wanted an image 
+    | from each season for each of the 15 years. The script calculates top 
+    | of atmosphere reflectance and three vegetation indices on each Landsat 
+    | scene to gain and understanding of wetland health across the region.
+
+p The final maps show study areas that identify changes in wetland health 
+    | over the time series. NOAA C-CAP data is used to define wetland extent 
+    | within the area of interest and then changes in the NDPI index are 
+    | displayed below.
+
+div.images
+  each image in public.projects._data['nasa_develop']['images']
+    if (image.title == "Figure 2" | image.title == "Figure 3")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
+        p.img-title=image.title 
+        p.img-details=image.subtitle
