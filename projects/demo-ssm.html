@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/><link rel="stylesheet" href="/main.css"/></head></head><body><div class="container"><div><ul class="navbar"><li> <a href="/">Home</a></li><li> <a href="/">About</a></li><li><a href="/">Resume</a></li></ul></div><div class="project-title"><h3>Demographics of small-scale mining in south-central Ghana</h3><h4>GIS for International Development, Spring 2015<hr></h4></div><p>In this analysis, I used the previously completed land cover classification 
+from my master's thesis with demographic data to assess the 46 districts 
+in south-central Ghana. I located clusters of different variables using 
+univariate and bivariate Local Indicators of Spatial Autocorrelation (LISA). 
+The output maps from the project are shown below.</p><p>The demographic groups I focused on were the percent male, female, over 65, 
+enrolled in education, monolingual, and illiterate populations within each 
+district. I found that areas with a longer history of mining tend to have 
+slightly more men than women, younger populations, low participation in 
+education, more illiterate populations, and bilingual populations, while 
+newer areas of mining tend to have older populations, more literate 
+populations, and mono-lingual populations.<hr></p><div class="images"><div class="img"><img src="../projects/img/demo-ssm_study_area.png" alt="The study area used in the analysis is shown with the districts that were analyzed highlighted in orange. The Landsat-8 footprint that defined the study area for the land cover analysis is shown as well."><p class="img-title">Figure 1</p><p class="img-details">The study area used in the analysis is shown with the districts that were analyzed highlighted in orange. The Landsat-8 footprint that defined the study area for the land cover analysis is shown as well.</p></div><div class="img"><img src="../projects/img/demo-ssm_ssm.png" alt="The area in square kilometers of small-scale mining happening with in each district is shown here. The land cover classification data only went as far as the bounds of the Landsat scene, therefore there is likely an underestimation of the amount of small-scale mining occuring within the border districts."><p class="img-title">Figure 2</p><p class="img-details">The area in square kilometers of small-scale mining happening with in each district is shown here. The land cover classification data only went as far as the bounds of the Landsat scene, therefore there is likely an underestimation of the amount of small-scale mining occuring within the border districts.</p></div></div><hr><p>Figures 3 and 4 show the results of the analysis. Each variable is in a 
+separate column, the first map shows the variable displayed in each 
+district separated into six classes using natural breaks. The second 
+map is the output of the univariate analysis, and the third map is the 
+output of the bivariate analysis incorporating the area of small-scale 
+mining in each district.</p><p>When interpreting outputs from the LISA analyses, bright red areas are
+the centers of clusters with high-high relationships. In the univariate 
+analysis this means the highlighted polygon has a high value of the 
+variable of interest and is surrounded by other districts with high 
+values of the same variable. In the bivariate analysis, a polygon 
+highlighted in red means the district has a high area of small-scale 
+mining surrounded by high values of the variable of interest. </p><p>Light red areas indicate high-low relationships, a low value surrounding 
+by high ones. Bright blue indicate low values surrounded by other low 
+values, a low-low relationship, and light blue areas indicate a low-high 
+relationship, low values surrounded by high ones.</p><hr><div class="images"><div class="img"><img src="../projects/img/demo-ssm_output_maps_1.png" alt="Figure 3"><p class="img-title">Figure 3</p><p class="img-details">The output maps for percent male, percent female, and over 65 are shown.</p></div><div class="img"><img src="../projects/img/demo-ssm_output_maps_2.png" alt="Figure 4"><p class="img-title">Figure 4</p><p class="img-details">The output maps for percent monolingual, percent enrolled in education, and percent illterate are shown.</p></div></div><!-- jQuery--><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- bootstrap js--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><footer> <p><a href="paylakatel@gmail.com" class=" fa fa-envelope-o"></a><a href="https://twitter.com/paylakatel" class="fa fa-twitter"></a><a href="https://www.linkedin.com/in/kaylapatel" class="fa fa-linkedin"></a><a href="https://github.com/paylakatel" class="fa fa-github"></a></p></footer></div></body></html>
