@@ -1,58 +1,58 @@
-include ../_includes/_mixins
+div.project_title
+  h3
+    a(href="", target="_blank")
+      | Demographics of small-scale mining in south-central Ghana
+    h4 GIS for International Development, Spring 2015
+      hr
+    
+p In this analysis, I used the previously completed land cover classification 
+    | from my master's thesis with demographic data to assess the 46 districts 
+    | in south-central Ghana. I located clusters of different variables using 
+    | univariate and bivariate Local Indicators of Spatial Autocorrelation (LISA). 
+    | The output maps from the project are shown below.
 
-.container
-    +project_title("Demographics of small-scale mining in south-central Ghana", 
-    "GIS for International Development, Spring 2015")
-    
-    p In this analysis, I used the previously completed land cover classification 
-        | from my master's thesis with demographic data to assess the 46 districts 
-        | in south-central Ghana. I located clusters of different variables using 
-        | univariate and bivariate Local Indicators of Spatial Autocorrelation (LISA). 
-        | The output maps from the project are shown below.
-        br
-        br
-        | The demographic groups I focused on were the percent male, female, over 65, 
-        | enrolled in education, monolingual, and illiterate populations within each 
-        | district. I found that areas with a longer history of mining tend to have 
-        | slightly more men than women, younger populations, low participation in 
-        | education, more illiterate populations, and bilingual populations, while 
-        | newer areas of mining tend to have older populations, more literate 
-        | populations, and mono-lingual populations.
-        hr
-    
-    .col-md-6.col-xs-12.caption
-        +image("demo-ssm_study_area.png", "Figure 1", 
-        "The study area used in the analysis is shown with the districts that were analyzed highlighted in orange. The Landsat-8 footprint that defined the study area for the land cover analysis is shown as well.")
-        
-    .col-md-6.col-xs-12.caption
-        +image("demo-ssm_ssm.png", "Figure 2", "The area in square kilometers of small-scale mining happening with in each district is shown here. The land cover classification data only went as far as the bounds of the Landsat scene, therefore there is likely an underestimation of the amount of small-scale mining occuring within the border districts.")
-        hr
-        
-    p Figures 3 and 4 show the results of the analysis. Each variable is in a 
-        | separate column, the first map shows the variable displayed in each 
-        | district separated into six classes using natural breaks. The second 
-        | map is the output of the univariate analysis, and the third map is the 
-        | output of the bivariate analysis incorporating the area of small-scale 
-        | mining in each district.
-    br
-
-    p When interpreting outputs from the LISA analyses, bright red areas are
-        | the centers of clusters with high-high relationships. In the univariate 
-        | analysis this means the highlighted polygon has a high value of the 
-        | variable of interest and is surrounded by other districts with high 
-        | values of the same variable. In the bivariate analysis, a polygon 
-        | highlighted in red means the district has a high area of small-scale 
-        | mining surrounded by high values of the variable of interest. 
-    br
-    
-    p
-        | Light red areas indicate high-low relationships, a low value surrounding 
-        | by high ones. Bright blue indicate low values surrounded by other low 
-        | values, a low-low relationship, and light blue areas indicate a low-high 
-        | relationship, low values surrounded by high ones.
+p The demographic groups I focused on were the percent male, female, over 65, 
+    | enrolled in education, monolingual, and illiterate populations within each 
+    | district. I found that areas with a longer history of mining tend to have 
+    | slightly more men than women, younger populations, low participation in 
+    | education, more illiterate populations, and bilingual populations, while 
+    | newer areas of mining tend to have older populations, more literate 
+    | populations, and mono-lingual populations.
     hr
-    .col-sm-6.col-xs-12.caption
-        +image("demo-ssm_output_maps_1.png", "Figure 3", "The output maps for percent male, percent female, and over 65 are shown.")
 
-    .col-md-6.col-xs-12.caption
-        +image("demo-ssm_output_maps_2.png", "Figure 4", "The output maps for percent monolingual, percent enrolled in education, and percent illterate are shown.")
+div.images
+  each image in public.projects._data['demo-ssm']['images']
+    if (image.title == "Figure 1" | image.title == "Figure 2")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
+        p=image.title + ": " + image.subtitle
+hr
+    
+p Figures 3 and 4 show the results of the analysis. Each variable is in a 
+    | separate column, the first map shows the variable displayed in each 
+    | district separated into six classes using natural breaks. The second 
+    | map is the output of the univariate analysis, and the third map is the 
+    | output of the bivariate analysis incorporating the area of small-scale 
+    | mining in each district.
+
+p When interpreting outputs from the LISA analyses, bright red areas are
+    | the centers of clusters with high-high relationships. In the univariate 
+    | analysis this means the highlighted polygon has a high value of the 
+    | variable of interest and is surrounded by other districts with high 
+    | values of the same variable. In the bivariate analysis, a polygon 
+    | highlighted in red means the district has a high area of small-scale 
+    | mining surrounded by high values of the variable of interest. 
+
+p
+    | Light red areas indicate high-low relationships, a low value surrounding 
+    | by high ones. Bright blue indicate low values surrounded by other low 
+    | values, a low-low relationship, and light blue areas indicate a low-high 
+    | relationship, low values surrounded by high ones.
+hr
+
+div.images
+  each image in public.projects._data['demo-ssm']['images']
+    if (image.title == "Figure 3" | image.title == "Figure 4")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
+        p=image.title + ": " + image.subtitle

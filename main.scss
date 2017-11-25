@@ -1,6 +1,9 @@
 //@import "_components/_bootstrap/scss/bootstrap";
 @import "_components/variables";
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Barlow+Semi+Condensed:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
 @import "_components/mixins";
 @import "_components/type";
 
@@ -9,10 +12,12 @@ body {
     // general updates
     @include background;
 
+    // set font color for whole site
+    color: $gray-dark;
+
     h1, h2, h3, h4 {
       font-family: $display-font;
-      font-weight: lighter;
-      color: $dark-grey;
+      font-weight: $bold;
     }
 
     a { @include links }
@@ -24,9 +29,16 @@ body {
       height: auto;
     }
 
+    hr {
+       border-top: 1px solid $gray-light;
+    }
+
     // container
     .container {
-        margin: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
 
         // images
         .images {
@@ -39,14 +51,14 @@ body {
 
         }
 
-
         // navbar
         .navbar {
           @include flexbox;
+          width: 30%;
 
           li {
             a { @include links;
-              padding-right: 30px; }
+            }
           }
         }
 
@@ -60,44 +72,68 @@ body {
             display: flex;
             flex-direction: column;
           }
+        }
 
-          .welcome {
-              font-family: $display-font;
-              font-weight: lighter;
+        // thumbsnails
+        .thumbs {
+          @include flexbox;
+          flex-direction: row;
+          align-content: space-between;
+          justify-content: space-between;
+          display: inline-grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 5px;
+          @media only screen and (max-width: $break-medium) {
+            grid-template-columns: 1fr 1fr;
+          }
+          @media only screen and (max-width: $break-small) {
+            grid-template-columns: 1fr;
+          }
+
+          .thumb-img {
+            max-width: 90%;
+            border: 1px solid $gray-light;
+            border-radius: 2px;
+            padding: 5px;
+            &:hover {
+              border-color: $gray;
+            }
+
           }
         }
 
         // project and work lists
         .lists {
           @include flexbox;
+          width: 90%;
 
           .section {
-            padding-right: 20px;
+            //padding-right: 20px;
+
           }
 
-          .job-details {
-            font-style: italic;
-            font-size: 20px;
+          .jobs {
+            .job-title {
+              margin: 0px;
+              padding: 0px;
+            }
+
+            .job-details {
+              font-style: italic;
+              font-size: floor(($font-size-base * 0.85));
+              margin: 0px;
+              padding: 0px;
+            }
           }
+
 
         }
 
         // project styles
         .project-title {
-          h2 {
-            font-family: $paragraph-font;
-            font-size: 32px;
-            font-weight: $bold;
-            margin-bottom: 10px;
-          }
-
           h4 {
-            font-family: $paragraph-font;
-            font-size: 24px;
             font-weight: $regular;
-            margin-top: 10px;
           }
-
         }
 
         // wells
@@ -107,15 +143,17 @@ body {
 
         // footer
         footer {
-          margin: 10px 0;
+          margin-top: 50px;
 
           .fa {
             padding: 4px;
             font-size: 1.2em;
             text-decoration: none;
+            background-image: none;
 
             &:hover {
-              color: $light-blue;
+              color: $purple;
+              background-image: none;
             }
           }
         }

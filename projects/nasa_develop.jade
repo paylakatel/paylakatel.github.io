@@ -1,37 +1,37 @@
-include ../_includes/_mixins
+div.project_title
+  h3 NASA Develop - North Carolina Ecological Forcasting
+  h4 Summer, 2015
 
-.container
-    +project_title("NASA Develop - North Carolina Ecological Forcasting", 
-                   "Summer, 2015")
-    
-    p My team worked with APNEP, Albemarle-Pamlico National Estuary Partnership, 
-        | to try and develop a methodology that would allow the organization to 
-        | more rapidly and consistently detect changes in wetlands throughout the 
-        | watershed. We used Landsat-5, -7, and -8 data to analyze wetland health 
-        | from 2000-2015 using a series of vegetation indicies. Image preprocessing 
-        | and analysis was performed through a python script I wrote. Images and 
-        | code snippets from the project are shown below.
-        hr
-        
-    .col-xs-12.caption
-        +image("nasa-develop_studyarea.png", "Figure 1", 
-               "The study area of the project in North Carolina and southern Virginia.")
+p My team worked with APNEP, Albemarle-Pamlico National Estuary Partnership, 
+    | to try and develop a methodology that would allow the organization to 
+    | more rapidly and consistently detect changes in wetlands throughout the 
+    | watershed. We used Landsat-5, -7, and -8 data to analyze wetland health 
+    | from 2000-2015 using a series of vegetation indicies. Image preprocessing 
+    | and analysis was performed through a python script I wrote. Images and 
+    | code snippets from the project are shown below.
     hr
-    
-    p 56 Landsat scenes were used in the analysis because we wanted an image 
-        | from each season for each of the 15 years. The script calculates top 
-        | of atmosphere reflectance and three vegetation indices on each Landsat 
-        | scene to gain and understanding of wetland health across the region.
-    
-    p The final maps show study areas that identify changes in wetland health 
-        | over the time series. NOAA C-CAP data is used to define wetland extent 
-        | within the area of interest and then changes in the NDPI index are 
-        | displayed below.
-    
-    .col-sm-6.col-xs-12.caption
-        +image("nasa-develop_area_1.jpg", "Figure 1", 
-               "This area showed now change in wetland extent over the years, the vegetation health in the wetlands decreased over the course of the study period.")
-    
-    .col-sm-6.col-xs-12.caption
-        +image("nasa-develop_area_2.jpg", "Figure 2", 
-               "This area experienced a decline in wetland extent thoughout the years as well changes in the overall vegetation health within the study area.")
+
+div
+  each image in public.projects._data['nasa_develop']['images']
+    if (image.title == "Figure 1")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
+        p=image.title + ": " + image.subtitle
+hr
+
+p 56 Landsat scenes were used in the analysis because we wanted an image 
+    | from each season for each of the 15 years. The script calculates top 
+    | of atmosphere reflectance and three vegetation indices on each Landsat 
+    | scene to gain and understanding of wetland health across the region.
+
+p The final maps show study areas that identify changes in wetland health 
+    | over the time series. NOAA C-CAP data is used to define wetland extent 
+    | within the area of interest and then changes in the NDPI index are 
+    | displayed below.
+
+div.images
+  each image in public.projects._data['nasa_develop']['images']
+    if (image.title == "Figure 2" | image.title == "Figure 3")
+      div.img
+        img(src="../projects/img/" + image.file alt=image.title)
+        p=image.title + ": " + image.subtitle

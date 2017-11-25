@@ -3,7 +3,7 @@ div.header
   
   div.header-text
     h3.welcome
-      | Thanks for stopping by !
+      | Thanks for stopping by!
     p 
       | I’m Kayla and I’m a geospatial analyst/developer/person 
       | focused on getting government to work better and deeply 
@@ -14,25 +14,29 @@ div.header
 br 
 
 div.lists
+  //- div.thumbs
+  //-   each project, slug in public.projects._data
+  //-     div
+  //-       img.thumb-img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
+  //-       p
+  //-         a(href="/projects/" + slug) #{ project.title }
   div.section
     h4
       | Selected Projects
-          
     each project, slug in public.projects._data
       div
-        ul
-          li
-            a(href="/projects/" + slug) #{ project.title }
-  
+        //img.thumb-img(src="/projects/img/thumbs/" + project.thumb alt=project.title)
+        p
+          a(href="/projects/" + slug) #{ project.title }
+    
   div.section
     h4
       | Recent Work 
-    
     each job in work
-      div
-        ul
-          li.job-place=job.title 
-            p.job-details=job.place + ", " + job.time
+      div.jobs
+        p.job-title=job.title 
+        p.job-details=job.place + ", " + job.time
+        br
   
       
       

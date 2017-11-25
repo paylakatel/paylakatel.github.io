@@ -1,6 +1,6 @@
 // fonts
-$display-font: "Permanent Marker", sans-serif;
-$paragraph-font: "Barlow Semi Condensed", sans-serif;
+$display-font: "Inconsolata", sans-serif;
+$paragraph-font: "Source Sans Pro", sans-serif;
 
 // font sizes
 $font-size-base: 22px !default;
@@ -17,16 +17,21 @@ $line-height-base: 1.428571429 !default; // 20/14
 $line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 // font weights
-$light: 200;
+$light: 300;
 $regular: 400;
 $black: 900;
-$bold: 700;
+$bold: 600;
 
 // colors
 $blue: #0097ff;
+$purple: #E99DFF;
 $light-blue: #49b6ff;
 $grey: #404040;
-$dark-grey: #404040;
+$gray-darker: lighten(#000, 13.5%) !default; // #222
+$gray-dark: lighten(#000, 20%) !default;   // #333
+$gray: lighten(#000, 33.5%) !default; // #555
+$gray-light: lighten(#000, 60%) !default;   // #999
+$gray-lighter: lighten(#000, 93.5%) !default; // #eee
 
 // well colors
 $well-bg: #f5f5f5 !default;
@@ -34,3 +39,4 @@ $well-border: darken($well-bg, 7%) !default;
 
 // screen size breaks
 $break-small: 768px;
+$break-medium: 1000px;
