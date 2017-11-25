@@ -74,12 +74,6 @@
             }
     },
 
-    "acton": {
-        "title": "Town of Acton Website Redesign",
-        "subtitle" : "Updating Town of Acton website.",
-        "thumb": "acton.jpg"
-    },
-
     "demo-ssm": {
         "title": "Demographics of small-scale mining in Ghana",
         "subtitle" : "Examining how the demographics of districts are correlated with the presence of small-scale mining in south-central Ghana.",
