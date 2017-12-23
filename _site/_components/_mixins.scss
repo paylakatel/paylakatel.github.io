@@ -44,17 +44,6 @@
 }
 
 @mixin links {
-  // & {
-  //   text-decoration: underline;
-  //   color: $gray-dark;
-  //   //text-decoration-color: $gray-light;
-  //   text-decoration-color: $blue;
-  //
-  //   &:hover {
-  //     text-decoration: underline;
-  //     text-decoration-color: $light-blue;
-  //   }
-  // }
     text-decoration: none;
     color: $gray-dark;
     background-image: linear-gradient( $light-blue 0%, $purple 100%);
@@ -62,6 +51,7 @@
     background-size: 100% 0.15em;
     background-position: 0 88%;
     transition: background-size 0.25s ease-in;
+    
     &:hover {
       background-size: 100% 88%;
       text-decoration: none;
