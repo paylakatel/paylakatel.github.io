@@ -1,9 +1,5 @@
-//@import "_components/_bootstrap/scss/bootstrap";
 @import "_components/variables";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
-@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Inconsolata:400,700');
 @import "_components/mixins";
 @import "_components/type";
 
@@ -15,9 +11,13 @@ body {
     // set font color for whole site
     color: $gray-dark;
 
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5 {
       font-family: $display-font;
       font-weight: $bold;
+    }
+
+    h5 {
+      font-weight: $regular;
     }
 
     a { @include links }
@@ -56,34 +56,6 @@ body {
           @include flexbox;
           width: 30%;
         }
-
-        // thumbsnails
-        // .thumbs {
-        //   @include flexbox;
-        //   flex-direction: row;
-        //   align-content: space-between;
-        //   justify-content: space-between;
-        //   display: inline-grid;
-        //   grid-template-columns: 1fr 1fr 1fr;
-        //   grid-column-gap: 5px;
-        //   @media only screen and (max-width: $break-medium) {
-        //     grid-template-columns: 1fr 1fr;
-        //   }
-        //   @media only screen and (max-width: $break-small) {
-        //     grid-template-columns: 1fr;
-        //   }
-        //
-        //   .thumb-img {
-        //     max-width: 90%;
-        //     border: 1px solid $gray-light;
-        //     border-radius: 2px;
-        //     padding: 5px;
-        //     &:hover {
-        //       border-color: $gray;
-        //     }
-        //
-        //   }
-        // }
 
         // project and work lists
         .lists {
@@ -135,12 +107,61 @@ body {
           padding-bottom: 20px;
         }
 
-
         // wells
         .well {
           @include well
         }
 
+        //resume styles
+        .resume-job {
+          @include flexbox;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 20px;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          margin-bottom: 20px;
+          @media only screen and (max-width: $break-small) {
+            flex-wrap: wrap;
+          }
+
+          img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+          }
+
+          .job-text {
+            margin-left: 20px;
+            @media only screen and (max-width: 500px) {
+              margin-left: 0px;
+            }
+            h4 {
+              margin-top: 5px;
+              margin-bottom: 5px;
+            }
+            .job-details {
+              .job-title {
+                margin: 0px;
+                font-weight: $regular;
+                font-family: $display-font;
+              }
+              .job-time {
+                margin: 0px;
+                font-family: $display-font;
+                font-size: floor(($font-size-base * 0.85));
+                p {
+                  margin: 0px;
+                  padding: 0px;
+                }
+              }
+            }
+          }
+        }
+        .nasa {
+          img {
+            height: 100px;
+          }
+        }
         // footer
         footer {
           margin-top: 50px;
