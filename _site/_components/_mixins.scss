@@ -47,8 +47,6 @@
 @mixin links {
     text-decoration: none;
     color: $gray-dark;
-    //background-image: linear-gradient( #FC5C7D 0%, #6A82FB 100%);
-    //background-image: linear-gradient( rgba(0,242,96,0.2) 0%, rgba(5,117,230,0.4) 100%);
     background-image: linear-gradient( rgba(0, 191, 255,0.2) 0%, rgba(0, 191, 255,0.2) 100%);
     background-repeat: no-repeat;
     background-size: 100% 35%;
