@@ -4,7 +4,7 @@ import tachyons from "tachyons"
 import siteTheme from "./siteTheme"
 
 const PageTitle = styled.h1.attrs({
-    className: "pa3 f1 lh-title pa6-ns",
+    className: "pa2 ph4 f1 lh-title ph6-ns",
 })`
     @font-face {
         font-family: ${props => props.theme.displayFont};
@@ -20,4 +20,3 @@ const Punctuation = styled.span`
 `
 
 module.exports = { PageTitle, Punctuation }
-//export default PageTitle

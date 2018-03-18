@@ -11,12 +11,11 @@ const TemplateWrapper = ({ children }) => (
             <title>Kayla A. Patel</title>
         </Helmet>
         <ThemeProvider theme={siteTheme}>
-        <div>
-            {children()}
-        </div>
+            <div>
+                {children()}
+            </div>
         </ThemeProvider>
     </div>
-
 )
 
 TemplateWrapper.propTypes = {
