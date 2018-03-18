@@ -1,18 +1,22 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
 import styled, { ThemeProvider } from "styled-components"
-import siteTheme from "../components/Theme"
-
-// const theme = {
-//     accentColor: 'dodgerblue',
-// }
+import siteTheme from "../components/siteTheme"
 
 const TemplateWrapper = ({ children }) => (
-    <ThemeProvider theme={siteTheme}>
+    <div>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Kayla A. Patel</title>
+        </Helmet>
+        <ThemeProvider theme={siteTheme}>
         <div>
             {children()}
         </div>
-    </ThemeProvider>
+        </ThemeProvider>
+    </div>
+
 )
 
 TemplateWrapper.propTypes = {
