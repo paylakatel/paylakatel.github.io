@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import styled, { ThemeProvider } from "styled-components"
 import siteTheme from "../components/siteTheme"
 
+// we create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (
     <div>
         <Helmet>
