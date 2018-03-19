@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import styled, { ThemeProvider } from "styled-components"
+import { ThemeProvider } from "styled-components"
 import siteTheme from "../components/siteTheme"
+import "./global.css"
 
 // we create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (

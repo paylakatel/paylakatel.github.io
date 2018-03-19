@@ -5,19 +5,6 @@ import Paragraph from "../components/Paragraph"
 import Nav from "../components/Nav"
 import { NavLink, ParagraphLink } from "../components/Links"
 
-// we query for folder names to populate the navigation
-export const navQuery = graphql`
-    query navQuery { 
-        allDirectory {
-        edges {
-            node {
-            name
-            }
-          }
-        }
-    }
-`
-
 const IndexPage = () => (  
     <div>
         <PageTitle alignRight>Welcome<Punctuation>!</Punctuation></PageTitle>
