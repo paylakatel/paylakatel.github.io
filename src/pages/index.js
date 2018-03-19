@@ -16,7 +16,6 @@ const IndexPage = () => (
             <NavLink to="projects.js">Notes</NavLink>
         </Nav>
     </div>
-    
 )
 
 export default IndexPage

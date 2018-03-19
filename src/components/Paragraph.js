@@ -5,7 +5,7 @@ import siteTheme from "./siteTheme"
 
 // we create styled paragraph element with alignRight property
 const Paragraph = styled.p.attrs({
-    className: "pa2 ph4 f4",
+    className: "pa2 mh4 f4 f3git-ns mh6-ns",
 })`
     @font-face {
         font-family: ${props => props.theme.paragraphFont};

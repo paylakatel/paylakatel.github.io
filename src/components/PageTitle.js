@@ -4,7 +4,7 @@ import tachyons from "tachyons"
 import siteTheme from "./siteTheme"
 
 const PageTitle = styled.h1.attrs({
-    className: "mt6 ph4 f1 ph6-ns",
+    className: "mt6 mh4 f1 f-subheadline-ns mh6-ns mt6-ns",
 })`
     @font-face {
         font-family: ${props => props.theme.displayFont};
