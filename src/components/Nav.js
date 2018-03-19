@@ -1,8 +1,9 @@
 import React from "react"
-import Link from "gatsby-link"
+import { NavLink } from "./Links"
 
-const StlyedNav = styled.div`
-    text-align: center;
+const StlyedNav = styled.div.attrs({
+    className="pa2"
+})`
 `
 
 const Nav = ({ children }) => {

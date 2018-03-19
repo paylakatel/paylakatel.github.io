@@ -5,7 +5,6 @@ const siteTheme = {
     accentColor: "dodgerblue",
     displayFont: "Playfair Display",
     displayFontWeight: 700,
-    linkFontWeight: 400,
     paragraphFont: "Lato",
     paragraphFontWeight: 300,
     fontsURL: "https://fonts.googleapis.com/css?family=Lato:300|Playfair+Display:700,400",

@@ -12,7 +12,7 @@ const NavLink = styled(Link).attrs({
         src: url('${props => props.theme.fontsURL}');
     }
     font-family: ${props => props.theme.displayFont};
-    font-weight: ${props => props.theme.linkFontWeight};
+    font-weight: 400;
     display: inline-block;
     position: relative;
 
@@ -42,8 +42,15 @@ const NavLink = styled(Link).attrs({
     }
 `
 
-const ParagraphLink = NavLink.extend`
-    color: purple;
+const ParagraphLink = NavLink.extend.attrs({
+    className: "f4"
+})`
+    @font-face {
+        font-family: ${props => props.theme.paragraphFont};
+        src: url('${props => props.theme.fontsURL}');
+    }
+    font-family: ${props => props.theme.paragraphFont};
+    font-weight: 300;
 `
 
 module.exports = { NavLink, ParagraphLink }
