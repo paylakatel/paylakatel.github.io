@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import styled from "styled-components"
 
 const NavLink = styled(Link).attrs({
-    className: "f3 lh-copy ma3"
+    className: "f3 lh-copy ml4"
 })`
     color: ${props => props.theme.accentColor};
     text-decoration: none;

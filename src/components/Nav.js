@@ -1,15 +1,12 @@
-import React from "react"
-import { NavLink } from "./Links"
+import React from 'react'
+import styled from 'styled-components'
 
-const StlyedNav = styled.div.attrs({
-    className="pa2"
+// we add an aligned right property to move the Nav to the right of the page
+const Nav = styled.div.attrs({
+    className:"pa2 ph4"
 })`
+    text-align: ${props => props.alignRight ? 'right;' : 'left;'};
 `
 
-const Nav = ({ children }) => {
-    return (
-        <StlyedNav>
-            {children}
-        </StlyedNav>
-    )
-}
+export default Nav
+//text-align: ${props => props.alignRight ? 'right;' : 'left;'};
