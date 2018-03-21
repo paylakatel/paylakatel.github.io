@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import styled from "styled-components"
 
 const NavLink = styled(Link).attrs({
-    className: "f3 lh-copy ml4"
+    className: "f3 lh-copy ml5"
 })`
     color: ${props => props.theme.accentColor};
     text-decoration: none;
@@ -53,4 +53,12 @@ const ParagraphLink = NavLink.extend.attrs({
     font-weight: 300;
 `
 
-module.exports = { NavLink, ParagraphLink }
+const IconLink = styled(Link)`
+    color: black;
+
+    &:hover {
+        color: black;
+    }
+`
+
+module.exports = { NavLink, ParagraphLink, IconLink }
