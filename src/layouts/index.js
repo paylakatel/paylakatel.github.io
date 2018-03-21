@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { ThemeProvider } from "styled-components"
-import siteTheme from "../components/siteTheme"
+import siteTheme from "../components/utils/siteTheme"
 import "./global.css"
 
 // we create a wrapper for index.html content

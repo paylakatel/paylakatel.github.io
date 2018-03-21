@@ -53,7 +53,9 @@ const ParagraphLink = NavLink.extend.attrs({
     font-weight: 300;
 `
 
-const IconLink = styled(Link)`
+const IconLink = styled(Link).attrs({
+    className: "ml3"
+})`
     color: black;
 
     &:hover {

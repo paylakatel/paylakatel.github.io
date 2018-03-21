@@ -9,4 +9,3 @@ const Nav = styled.div.attrs({
 `
 
 export default Nav
-//text-align: ${props => props.alignRight ? 'right;' : 'left;'};
