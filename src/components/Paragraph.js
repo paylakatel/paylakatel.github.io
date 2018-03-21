@@ -16,4 +16,10 @@ const Paragraph = styled.p.attrs({
     text-align: ${props => props.alignRight ? 'right;' : 'left;'};
 `
 
-export default Paragraph
+const Highlight = styled.span`
+    color: ${props => props.theme.accentColorLight};
+    margin: 0;
+    padding: 0;
+`
+
+module.exports = { Paragraph, Highlight }
