@@ -7,6 +7,7 @@ import { Mail, Twitter, Github } from "react-feather"
 import { ThemeProvider } from "styled-components"
 import siteTheme from "../components/utils/siteTheme"
 import "./global.css"
+import favicon from '../favicon.ico';
 
 // create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (
@@ -14,6 +15,7 @@ const TemplateWrapper = ({ children }) => (
         <Helmet>
             <meta charSet="utf-8" />
             <title>Kayla A. Patel</title>
+            <link rel="icon" href={favicon} type="image/x-icon" />
         </Helmet>
         <ThemeProvider theme={siteTheme}>
             <div>
@@ -25,9 +27,9 @@ const TemplateWrapper = ({ children }) => (
                     <NavLink to="projects.js">Resume</NavLink> 
                 </Nav>
                 <Footer alignRight>
-                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Mail></Mail></IconLink>
-                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Twitter></Twitter></IconLink>
-                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Github></Github></IconLink>
+                    <IconLink to="https://twitter.com/paylakatel" target="_blank"><Mail></Mail></IconLink>
+                    <IconLink to="https://twitter.com/paylakatel" target="_blank"><Twitter></Twitter></IconLink>
+                    <IconLink to="https://twitter.com/paylakatel" target="_blank"><Github></Github></IconLink>
             </Footer>
             </div>
         </ThemeProvider>
