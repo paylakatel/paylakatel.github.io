@@ -2,16 +2,16 @@ import React from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 
-const NavLink = styled(Link).attrs({
-    className: "f3 lh-copy ml5"
+const ParagraphLink = styled(Link).attrs({
+    className: "f4"
 })`
     color: ${props => props.theme.accentColor};
     text-decoration: none;
     @font-face {
-        font-family: ${props => props.theme.displayFont};
+        font-family: ${props => props.theme.paragraphFont};
         src: url('${props => props.theme.fontsURL}');
     }
-    font-family: ${props => props.theme.displayFont};
+    font-family: ${props => props.theme.paragraphFont};
     font-weight: 400;
     display: inline-block;
     position: relative;
@@ -42,25 +42,4 @@ const NavLink = styled(Link).attrs({
     }
 `
 
-const ParagraphLink = NavLink.extend.attrs({
-    className: "f4"
-})`
-    @font-face {
-        font-family: ${props => props.theme.paragraphFont};
-        src: url('${props => props.theme.fontsURL}');
-    }
-    font-family: ${props => props.theme.paragraphFont};
-    font-weight: 300;
-`
-
-const IconLink = styled(Link).attrs({
-    className: "ml3"
-})`
-    color: black;
-
-    &:hover {
-        color: black;
-    }
-`
-
-module.exports = { NavLink, ParagraphLink, IconLink }
+export default ParagraphLink

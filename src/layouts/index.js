@@ -1,15 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { NavLink } from "../components/utils/Links"
-import Nav from "../components/Nav"
+import { Nav, NavLink } from "../components/Nav"
+import { Footer, IconLink } from "../components/Footer";
+import { Mail, Twitter, Github } from "react-feather"
 import { ThemeProvider } from "styled-components"
 import siteTheme from "../components/utils/siteTheme"
 import "./global.css"
-import Footer from "../components/Footer";
 
-
-// we create a wrapper for index.html content
+// create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (
     <div>
         <Helmet>
@@ -19,10 +18,18 @@ const TemplateWrapper = ({ children }) => (
         <ThemeProvider theme={siteTheme}>
             <div>
                 {children()}
-                <Nav alignRight></Nav>
-                <Footer></Footer>
+                <Nav alignRight>
+                    <NavLink to="projects.js">Projects</NavLink>
+                    <NavLink to="about.js">About</NavLink>
+                    <NavLink to="projects.js">Notes</NavLink>
+                    <NavLink to="projects.js">Resume</NavLink> 
+                </Nav>
+                <Footer alignRight>
+                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Mail></Mail></IconLink>
+                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Twitter></Twitter></IconLink>
+                    <IconLink href="https://twitter.com/paylakatel" target="_blank"><Github></Github></IconLink>
+            </Footer>
             </div>
-
         </ThemeProvider>
     </div>
 )

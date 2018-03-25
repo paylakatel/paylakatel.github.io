@@ -1,23 +1,23 @@
-import React from 'react'
-import styled from 'styled-components'
-import { NavLink } from "./utils/Links"
+import React from "react"
+import styled from "styled-components"
+import ParagraphLink from "./utils/ParagraphLink"
+import tachyons from "tachyons"
 
-// we add an aligned right property to move the Nav to the right of the page
-const StyledNav = styled.div.attrs({
-    className:"pa2 mh4 mh6-ns"
+const NavLink = ParagraphLink.extend.attrs({
+    className: "f3 lh-copy ml5"
 })`
-    text-align: ${props => props.alignRight ? 'right;' : 'left;'};
+    @font-face {
+        font-family: ${props => props.theme.displayFont};
+        src: url('${props => props.theme.fontsURL}');
+    }
+    font-family: ${props => props.theme.displayFont};
+    font-weight: 300;
 `
 
-const Nav = () => {
-    return(
-        <StyledNav>
-            <NavLink to="projects.js">Projects</NavLink>
-            <NavLink to="about.js">About</NavLink>
-            <NavLink to="projects.js">Notes</NavLink>
-            <NavLink to="projects.js">Resume</NavLink> 
-        </StyledNav>
-    )
-}
+const Nav = styled.div.attrs({
+    className: "pa2 mh4 mt4 f4 ml7-l f3-ns mh6-ns"
+})`
+    text-align: ${props => props.alignRight ? "right" : "center"};
+`
 
-export default Nav
+module.exports = { Nav, NavLink }

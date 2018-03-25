@@ -1,23 +1,20 @@
 import React from "react"
-import { IconLink } from "../components/utils/Links"
+import Link from "gatsby-link"
 import styled from "styled-components"
-import { Mail, Twitter, Github } from "react-feather"
 
-// add an aligned right property to move the Nav to the right of the page
-const StyledFooter = styled.div.attrs({
-    className: "pa2 mh4 mt4 f4 ml7-l f3-ns mh6-ns"
+const IconLink = styled(Link).attrs({
+    className: "ml3"
 })`
-    text-align: ${props => props.alignCenter ? 'center' : 'right'};
+    color: black;
+
+    &:hover {
+        color: black;
+    }
 `
 
-const Footer = () => {
-    return(
-        <StyledFooter>
-            <IconLink href="https://twitter.com/paylakatel" target="_blank"><Mail></Mail></IconLink>
-            <IconLink href="https://twitter.com/paylakatel" target="_blank"><Twitter></Twitter></IconLink>
-            <IconLink href="https://twitter.com/paylakatel" target="_blank"><Github></Github></IconLink> 
-        </StyledFooter>
-    )
-}
-
-export default Footer
+const Footer = styled.div.attrs({
+    className: "pa2 mh4 mt4 f4 mb6 ml7-l f3-ns mh6-ns"
+})`
+    text-align: ${props => props.alignRight ? 'right' : 'center'};
+`
+module.exports = { Footer, IconLink }
