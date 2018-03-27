@@ -20,13 +20,11 @@ const TemplateWrapper = ({ children }) => (
         <ThemeProvider theme={siteTheme}>
             <div>
                 {children()}
-                <Nav alignRight>
-                    <NavLink to="projects.js">Projects</NavLink>
-                    <NavLink to="about.js">About</NavLink>
-                    <NavLink to="projects.js">Notes</NavLink>
-                    <NavLink to="projects.js">Resume</NavLink> 
+                <Nav>
+                    <NavLink to="projects">Projects</NavLink>
+                    <NavLink to="projects">Resume</NavLink> 
                 </Nav>
-                <Footer alignRight>
+                <Footer>
                     <IconLink to="https://twitter.com/paylakatel" target="_blank"><Mail></Mail></IconLink>
                     <IconLink to="https://twitter.com/paylakatel" target="_blank"><Twitter></Twitter></IconLink>
                     <IconLink to="https://twitter.com/paylakatel" target="_blank"><Github></Github></IconLink>

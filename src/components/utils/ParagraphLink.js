@@ -12,7 +12,7 @@ const ParagraphLink = styled(Link).attrs({
         src: url('${props => props.theme.fontsURL}');
     }
     font-family: ${props => props.theme.paragraphFont};
-    font-weight: 400;
+    font-weight: 300;
     display: inline-block;
     position: relative;
 

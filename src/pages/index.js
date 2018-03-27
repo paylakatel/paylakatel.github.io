@@ -1,15 +1,13 @@
 import React from "react"
-import Link from "gatsby-link"
 import { PageTitle, Punctuation } from "../components/utils/PageTitle"
 import { Paragraph, Highlight } from "../components/utils/Paragraph"
-import { Nav, NavLink } from "../components/Nav"
 
 
 const IndexPage = () => (  
     <div>
-        <PageTitle alignRight>Welcome<Punctuation>!</Punctuation></PageTitle>
-        <Paragraph alignRight>I’m Kayla, and I build solutions that help governments and organizations better serve their users.</Paragraph>
-        <Paragraph alignRight>My academic background is in geospatial science, and my career: <Highlight>public sector tech.</Highlight></Paragraph>
+        <PageTitle>Welcome<Punctuation>!</Punctuation></PageTitle>
+        <Paragraph>I’m Kayla, and I build solutions that help governments and organizations better serve their users.</Paragraph>
+        <Paragraph>My academic background is in geospatial science, and my career: <Highlight>public sector tech.</Highlight></Paragraph>
     </div>
 )
 
