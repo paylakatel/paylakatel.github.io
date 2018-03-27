@@ -1,6 +1,6 @@
 //@import "_components/_bootstrap/scss/bootstrap";
 @import "_components/variables";
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Cousine:400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Playfair+Display:700');
 @import "_components/mixins";
 @import "_components/type";
 
@@ -53,7 +53,7 @@ body {
         // navbar
         .navbar {
           @include flexbox;
-          width: 30%;
+          width: 50%;
         }
 
         // thumbsnails
@@ -106,12 +106,15 @@ body {
 
         // project styles
         .project-title {
-          h3 {
+          h4 {
             font-weight: $bold;
             font-family: $paragraph-font;
+            font-size: $font-size-h5;
           }
-          h4 {
+          h3 {
+            font-family: $display-font;
             font-weight: $regular;
+            font-size: $font-size-h4;
           }
         }
 
@@ -143,15 +146,17 @@ body {
         // footer
         footer {
           margin-top: 50px;
-
+        
           .fa {
             padding: 4px;
             font-size: 1.2em;
             text-decoration: none;
             background-image: none;
+            color: $gray-dark;
+
 
             &:hover {
-              color: $purple;
+              color: black;
               background-image: none;
             }
           }
