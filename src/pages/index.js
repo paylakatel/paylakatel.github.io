@@ -1,6 +1,6 @@
 import React from "react"
-import { PageTitle, Punctuation } from "../components/utils/PageTitle"
-import { Paragraph, Highlight } from "../components/utils/Paragraph"
+import { PageTitle, Punctuation } from "../components/PageTitle"
+import { Paragraph, Highlight } from "../components/Paragraph"
 
 
 const IndexPage = () => (  

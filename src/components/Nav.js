@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ParagraphLink from "./utils/ParagraphLink"
+import ParagraphLink from "./ParagraphLink"
 import tachyons from "tachyons"
 
 const NavLink = ParagraphLink.extend.attrs({

@@ -1,28 +1,46 @@
-import React from "react";
-import Link from "gatsby-link";
-import Helmet from "react-helmet";
-import Img from "gatsby-image";
+import React from "react"
+import Link from "gatsby-link"
+import Helmet from "react-helmet"
+import Img from "gatsby-image"
+import tachyons from "tachyons"
+import ParagraphLink from "../components/ParagraphLink"
+import styled from "styled-components"
+import { PageTitle, Punctuation } from "../components/PageTitle"
 
-// import '../css/index.css'; // add some style if you want!
+const ProjectsWrapper = styled.div.attrs({
+  className: "flex flex-wrap pa2 ma3 ml6-ns"
+})`
+`
+
+const Project = styled.div.attrs({
+  className: "mr3 mb3"
+})`
+`
+
+const ProjectImg = styled(Img).attrs({
+  className: "ba b--black-10 br1"
+})`
+  max-width: 100%;
+`
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <div className="blog-posts">
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
-          return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>git s
-              <Img resolutions={post.frontmatter.image.childImageSharp.resolutions}></Img>
-              <h2>{post.frontmatter.date}</h2>
-              <p>{post.excerpt}</p>
-            </div>
-          );
-        })}
+    <div>
+      <PageTitle>Projects<Punctuation>.</Punctuation></PageTitle>
+      <ProjectsWrapper>
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => {
+            return (
+              
+              <Project key={post.id}>
+                  <Link to={post.frontmatter.path}><ProjectImg resolutions={post.frontmatter.image.childImageSharp.resolutions} ></ProjectImg></Link>
+                  <ParagraphLink to={post.frontmatter.path}>{post.frontmatter.title}</ParagraphLink>
+              </Project>
+            );
+          })}
+      </ProjectsWrapper>
     </div>
   );
 }
@@ -33,12 +51,12 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            id
             title
-            date(formatString: "MMMM DD, YYYY")
             path
             image {
               childImageSharp {
-                resolutions(width: 150) {
+                resolutions(width: 300) {
                   ...GatsbyImageSharpResolutions
                 } 
               }

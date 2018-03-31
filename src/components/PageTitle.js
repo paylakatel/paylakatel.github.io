@@ -6,12 +6,8 @@ import siteTheme from "./siteTheme"
 const PageTitle = styled.h1.attrs({
     className: "pa2 ma3 mt6 f1 f-subheadline-ns ml6-ns",
 })`
-    @font-face {
-        font-family: ${props => props.theme.displayFont};
-        src: url('${props => props.theme.fontsURL}');
-    }
     font-family: ${props => props.theme.displayFont};
-    font-weight: ${props => props.theme.displayFontWeight}
+    font-weight: ${props => props.theme.displayFontWeight};
     text-align: ${props => props.alignRight ? 'right;' : 'left;'};
 `
 

@@ -5,9 +5,18 @@ import { Nav, NavLink } from "../components/Nav"
 import { Footer, IconLink } from "../components/Footer";
 import { Mail, Twitter, Github } from "react-feather"
 import { ThemeProvider } from "styled-components"
-import siteTheme from "../components/utils/siteTheme"
+import siteTheme from "../components/siteTheme"
 import "./global.css"
 import favicon from '../favicon.ico';
+
+import { injectGlobal } from 'styled-components'
+
+
+injectGlobal`
+    @font-face {
+        src: url('${props => props.theme.fontsURL}');
+    }
+`
 
 // create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (
