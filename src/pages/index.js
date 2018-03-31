@@ -13,4 +13,6 @@ const IndexPage = () => (
 
 export default IndexPage
 
-// TODO: make nav default to two columns when bigger
+// TODO: make nav default to two columns when smaller screen
+// TODO: fonts
+// TODO: use catch links plugin

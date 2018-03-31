@@ -1,22 +1,51 @@
-import React from "react"
-import { PageTitle, Punctuation } from "../components/utils/PageTitle"
-import ProjectsWrapper from "../components/ProjectsWrapper";
-import { Paragraph, Highlight } from "../components/utils/Paragraph"
-import Thumb from "../components/utils/Thumb"
+import React from "react";
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
-const ProjectsPage = () => (  
-    <div>
-        <PageTitle>Projects<Punctuation>.</Punctuation></PageTitle>
-        <ProjectsWrapper>
-            <Paragraph>
-                <Thumb name="Extraction in Ghana" link="./projects"></Thumb>
-                <Thumb name="Imagine Boston 2030"></Thumb>
-                <Thumb name="Town of Acton"></Thumb>
-                <Thumb name="NASA Develop"></Thumb>
-                <Thumb name="Earth Images"></Thumb>
-            </Paragraph>
-        </ProjectsWrapper>
+// import '../css/index.css'; // add some style if you want!
+
+export default function Index({ data }) {
+  const { edges: posts } = data.allMarkdownRemark;
+  return (
+    <div className="blog-posts">
+      {posts
+        .filter(post => post.node.frontmatter.title.length > 0)
+        .map(({ node: post }) => {
+          return (
+            <div className="blog-post-preview" key={post.id}>
+              <h1>
+                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+              </h1>git s
+              <Img resolutions={post.frontmatter.image.childImageSharp.resolutions}></Img>
+              <h2>{post.frontmatter.date}</h2>
+              <p>{post.excerpt}</p>
+            </div>
+          );
+        })}
     </div>
-)
+  );
+}
 
-export default ProjectsPage
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            path
+            image {
+              childImageSharp {
+                resolutions(width: 150) {
+                  ...GatsbyImageSharpResolutions
+                } 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

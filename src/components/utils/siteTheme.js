@@ -2,10 +2,8 @@ import React from "react";
 import { ThemeProvider } from "styled-components"
 
 const siteTheme = {
-    //accentColor: "#2979ff",
-    //accentColorLight: "#75a7ff",
-    accentColor: "#f50057",
-    accentColorLight: "#ff5983",
+    accentColor: "#2979ff",
+    accentColorLight: "#75a7ff",
     displayFont: "Playfair Display",
     displayFontWeight: 700,
     paragraphFont: "Lato",

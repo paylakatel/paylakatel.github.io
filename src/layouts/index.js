@@ -21,6 +21,7 @@ const TemplateWrapper = ({ children }) => (
             <div>
                 {children()}
                 <Nav>
+                    <NavLink to="/">About</NavLink>
                     <NavLink to="projects">Projects</NavLink>
                     <NavLink to="projects">Resume</NavLink> 
                 </Nav>
