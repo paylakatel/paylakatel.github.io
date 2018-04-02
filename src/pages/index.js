@@ -5,7 +5,7 @@ import { Paragraph, Highlight } from "../components/Paragraph"
 
 const IndexPage = () => (  
     <div>
-        <PageTitle>Welcome<Punctuation>!</Punctuation></PageTitle>
+        <PageTitle TopMargin>Welcome<Punctuation>!</Punctuation></PageTitle>
         <Paragraph>I’m Kayla, and I build solutions that help governments and organizations better serve their users.</Paragraph>
         <Paragraph>My academic background is in geospatial science, and my career: <Highlight>public sector tech.</Highlight></Paragraph>
     </div>

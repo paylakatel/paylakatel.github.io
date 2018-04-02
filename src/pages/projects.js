@@ -13,7 +13,7 @@ const ProjectsWrapper = styled.div.attrs({
 `
 
 const Project = styled.div.attrs({
-  className: "mr3 mb3"
+  className: "mr4 mb4"
 })`
 `
 
@@ -47,7 +47,7 @@ export default function Index({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___id]}) {
       edges {
         node {
           frontmatter {

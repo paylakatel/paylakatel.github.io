@@ -13,6 +13,9 @@ const NavLink = ParagraphLink.extend.attrs({
     font-family: ${props => props.theme.displayFont};
     font-weight: 300;
     font-size: 1.75rem;
+    &:before {
+        height: 2px;
+    }
 `
 
 const Nav = styled.div.attrs({

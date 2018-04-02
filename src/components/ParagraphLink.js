@@ -20,14 +20,14 @@ const ParagraphLink = styled(Link).attrs({
         content: "";
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 1px;
         bottom: -1px;
         left: 0;
         background-color: ${props => props.theme.accentColor};
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        -webkit-transition: all 0.2s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
         transition: all 0.2s ease-in-out 0s;
     }
       
