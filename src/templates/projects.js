@@ -1,5 +1,12 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { PageTitle, Punctuation } from "../components/PageTitle"
+import { Paragraph, Highlight } from "../components/Paragraph"
+import styled from "styled-components"
+
+const ProjectParagraph = styled(Paragraph).attrs({
+  className: "f4 f4-ns mr6-ns"
+})``
 
 export default function ProjectTemplate({
   data 
@@ -8,11 +15,9 @@ export default function ProjectTemplate({
   return (
     <div>
      <Helmet title={`${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+      <div>
+        <PageTitle>{post.frontmatter.title}<Punctuation>.</Punctuation></PageTitle>
+        <ProjectParagraph noMaxWidth dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </div>
   );
