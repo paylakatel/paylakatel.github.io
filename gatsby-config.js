@@ -18,14 +18,21 @@ module.exports = {
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-                plugins: []
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 600,
+                        }
+                    }
+                ]
             }
         },
         {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `Source Sans Pro\:300`,
+                    `Source Sans Pro\:300,400,600`,
                     `Playfair Display\:700,400`
                 ]
             }

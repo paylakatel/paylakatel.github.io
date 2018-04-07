@@ -3,7 +3,7 @@ const path = require('path');
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const blogPostTemplate = path.resolve(`src/templates/projects.js`);
+  const projectTemplate = path.resolve(`src/templates/projects.js`);
 
   return graphql(`{
       allMarkdownRemark(
@@ -33,7 +33,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             .forEach(({ node }) => {
               createPage({
                 path: node.frontmatter.path,
-                component: blogPostTemplate,
+                component: projectTemplate,
                 context: {} // additional data can be passed via context
               });
             });

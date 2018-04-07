@@ -9,15 +9,6 @@ import siteTheme from "../components/siteTheme"
 import "./global.css"
 import favicon from '../favicon.ico';
 
-import { injectGlobal } from 'styled-components'
-
-
-injectGlobal`
-    @font-face {
-        src: url('${props => props.theme.fontsURL}');
-    }
-`
-
 // create a wrapper for index.html content
 const TemplateWrapper = ({ children }) => (
     <div>

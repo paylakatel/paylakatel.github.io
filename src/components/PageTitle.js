@@ -17,4 +17,11 @@ const Punctuation = styled.span`
     color: ${props => props.theme.accentColor};
 `
 
-module.exports = { PageTitle, Punctuation }
+const SectionHeader = styled.h3.attrs({
+    className: "f3 f3-ns",
+})`
+    font-family: ${props => props.theme.displayFont};
+    font-weight: ${props => props.theme.displayFontWeight};
+`
+
+module.exports = { PageTitle, Punctuation, SectionHeader }
