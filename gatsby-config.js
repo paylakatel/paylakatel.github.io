@@ -21,5 +21,14 @@ module.exports = {
                 plugins: []
             }
         },
+        {
+            resolve: `gatsby-plugin-google-fonts`,
+            options: {
+                fonts: [
+                    `Source Sans Pro\:300`,
+                    `Playfair Display\:700,400`
+                ]
+            }
+        },
     ],
 }

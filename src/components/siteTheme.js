@@ -8,7 +8,7 @@ const siteTheme = {
     accentColorLight: "#75a7ff",
     displayFont: "Playfair Display",
     displayFontWeight: 700,
-    paragraphFont: "Lato",
+    paragraphFont: "Source Sans Pro",
     paragraphFontWeight: 300,
     fontsURL: "https://fonts.googleapis.com/css?family=Lato:300|Playfair+Display:700,400",
     

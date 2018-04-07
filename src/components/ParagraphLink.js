@@ -7,10 +7,6 @@ const ParagraphLink = styled(Link).attrs({
 })`
     color: ${props => props.theme.accentColor};
     text-decoration: none;
-    @font-face {
-        font-family: ${props => props.theme.paragraphFont};
-        src: url('${props => props.theme.fontsURL}');
-    }
     font-family: ${props => props.theme.paragraphFont};
     font-weight: 300;
     display: inline-block;

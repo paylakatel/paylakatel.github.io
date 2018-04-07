@@ -6,12 +6,7 @@ import tachyons from "tachyons"
 const NavLink = ParagraphLink.extend.attrs({
     className: "lh-copy mr4"
 })`
-    @font-face {
-        font-family: ${props => props.theme.displayFont};
-        src: url('${props => props.theme.fontsURL}');
-    }
     font-family: ${props => props.theme.displayFont};
-    font-weight: 300;
     font-size: 1.75rem;
     &:before {
         height: 2px;
