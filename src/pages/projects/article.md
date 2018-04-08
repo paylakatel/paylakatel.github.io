@@ -10,7 +10,8 @@ id: "1"
 <span style="font-size:1.15rem">*The Extractive Industries and Society, Volume 3, Issue 2, April 2016, Pages 450-463, ISSN 2214-790X*</span>
 
 <hr>
-In January of 2016, the journal *Extractive Industries and Society* accepted my master's thesis as an original research article. The work examines the spatial interactions of small and large-scale miners in south-central Ghana. A random forest classifier was used to identify small-scale mining in Landsat imagery, and these areas were then compared to the locations of large-scale mining concessions. 
+
+In January of 2016, the journal _Extractive Industries and Society_ accepted my master's thesis as an original research article. The work examines the spatial interactions of small and large-scale miners in south-central Ghana. A random forest classifier was used to identify small-scale mining in Landsat imagery, and these areas were then compared to the locations of large-scale mining concessions. 
 
 The abstract and figures from the paper are below, and the <paragraph-link to="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">full text</paragraph-link> can be found online.
 
