@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
 const ImgWrapper = styled.div.attrs({
-    className: "flex flex-wrap"
+    className: "flex flex-wrap justify-between f5"
   })``
   
 const ImgDiv = styled.div.attrs({
-    className: "mr4 mb4 w-100 w-40-l"
+    className: "pa1 w-100 w-50-l"
     })``
 
 const ImgTitle = styled.span.attrs({
