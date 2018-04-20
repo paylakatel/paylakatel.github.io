@@ -1,6 +1,26 @@
 import React from "react"
-import Link from "gatsby-link"
+// import Link from "gatsby-link"
 import styled from "styled-components"
+import GatsbyLink from "gatsby-link";
+
+const Link = ({ children, to, ...other }) => {
+
+  const internal = /^\/(?!\/)/.test(to);
+
+  // Use gatsby-link for internal links, and <a> for others
+  if (internal) {
+    return (
+      <GatsbyLink to={to} {...other}>
+        {children}
+      </GatsbyLink>
+    );
+  }
+  return (
+    <a href={to} {...other}>
+      {children}
+    </a>
+  );
+};
 
 const ParagraphLink = styled(Link).attrs({
     className: "f5 f4-ns"
