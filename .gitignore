@@ -1,6 +1,9 @@
 # DS_Store
 .DS_Store
 
+# VS code stuff
+.vscode/
+
 # Logs
 logs
 *.log
