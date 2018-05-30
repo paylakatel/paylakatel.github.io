@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 // create styled paragraph element with alignRight property
 const Paragraph = styled.p.attrs({
-  className: 'f3 lh-copy',
+  className: 'lh-copy',
 })`
   font-family: ${props => props.theme.paragraphFont};
   font-weight: ${props => props.theme.paragraphFontWeight};
+  font-size: ${props => (props.smallFont ? '1.15rem' : '1.35rem')}
   text-align: ${props => (props.alignRight ? 'right;' : 'left;')};
   max-width: ${props => (props.maxWidth ? '40rem' : 'none')};
 `;

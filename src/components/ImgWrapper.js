@@ -19,4 +19,10 @@ const ImgDiv = styled.div.attrs({
 //   font-size: 1.1rem;
 // `;
 
+// const StyledImage = styled(Img).attrs({
+//   className: 'ba b--black-10 br1',
+// })`
+//   max-width: 100%;
+// `;
+
 module.exports = { ImgWrapper, ImgDiv };

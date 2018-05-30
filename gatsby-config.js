@@ -7,6 +7,21 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1080,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -16,22 +31,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 650,
-            },
-          },
-        ],
+        name: `img`,
+        path: `${__dirname}/src/pages/img`,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Source Sans Pro\:300,400,600`, `Playfair Display\:700,400`],
+        fonts: [`Source Sans Pro:300,400,600`, `Playfair Display:700,400`],
       },
     },
     {

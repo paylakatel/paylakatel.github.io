@@ -1,11 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { PageTitle, Punctuation, SectionHeader } from '../components/PageTitle';
-import { Paragraph, Highlight } from '../components/Paragraph';
+//import { Paragraph, Highlight } from '../components/Paragraph';
 import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
 import ParagraphLink from '../components/ParagraphLink';
 import { ImgWrapper, ImgDiv } from '../components/ImgWrapper';
+import Img from 'gatsby-image';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -26,6 +27,7 @@ const ProjectParagraph = styled.div.attrs({
 
 class ProjectTemplate extends React.Component {
   render() {
+    // eslint-disable-next-line
     const post = this.props.data.markdownRemark;
     return (
       <div>
@@ -35,7 +37,7 @@ class ProjectTemplate extends React.Component {
             {post.frontmatter.title}
             <Punctuation>.</Punctuation>
           </PageTitle>
-          <Paragraph> {renderAst(post.htmlAst)} </Paragraph>
+          <ProjectParagraph> {renderAst(post.htmlAst)} </ProjectParagraph>
         </div>
       </div>
     );
@@ -44,8 +46,9 @@ class ProjectTemplate extends React.Component {
 
 export default ProjectTemplate;
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query BlogPostByPath_PostImages($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
       frontmatter {

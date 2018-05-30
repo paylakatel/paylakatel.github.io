@@ -19,56 +19,56 @@ const ProjectImg = styled(Img).attrs({
   max-width: 100%;
 `;
 
-export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  return (
-    <div>
-      <PageTitle>
-        Projects<Punctuation>.</Punctuation>
-      </PageTitle>
-      <ProjectsWrapper>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <Project key={post.id}>
-                <Link to={post.frontmatter.path}>
-                  <ProjectImg
-                    resolutions={
-                      post.frontmatter.image.childImageSharp.resolutions
-                    }
-                  />
-                </Link>
-                <ParagraphLink to={post.frontmatter.path}>
-                  {post.frontmatter.title}
-                </ParagraphLink>
-              </Project>
-            );
-          })}
-      </ProjectsWrapper>
-    </div>
-  );
+class ProjectList extends React.Component {
+  render() {
+    return (
+      <div>
+        <PageTitle>
+          Projects<Punctuation>.</Punctuation>
+        </PageTitle>
+
+        <ProjectsWrapper>
+          <Project>
+            <Link to="projects/article">
+              <ProjectImg
+                resolutions={this.props.data.articleThumb.resolutions}
+              />
+            </Link>
+            <ParagraphLink to="/projects/article">
+              Extraction in Ghana
+            </ParagraphLink>
+          </Project>
+
+          <Project>
+            <Link to="projects/earth-images/">
+              <ProjectImg
+                resolutions={this.props.data.earthImgThumb.resolutions}
+              />
+            </Link>
+            <ParagraphLink to="projects/earth-images/">
+              Earth Images
+            </ParagraphLink>
+          </Project>
+        </ProjectsWrapper>
+      </div>
+    );
+  }
 }
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___id] }) {
-      edges {
-        node {
-          frontmatter {
-            id
-            title
-            path
-            image {
-              childImageSharp {
-                resolutions(width: 300) {
-                  ...GatsbyImageSharpResolutions
-                }
-              }
-            }
-          }
-        }
+  query ProjectsThumbsQuery {
+    articleThumb: imageSharp(id: { regex: "/article.png/" }) {
+      resolutions(width: 300) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    earthImgThumb: imageSharp(id: { regex: "/earth_images.jpg/" }) {
+      resolutions(width: 300) {
+        ...GatsbyImageSharpResolutions
       }
     }
   }
 `;
+
+export default ProjectList;
