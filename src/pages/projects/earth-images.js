@@ -12,14 +12,10 @@ class EarthImagesPage extends React.Component {
           Earth Images<Punctuation>.</Punctuation>
         </PageTitle>
         <Paragraph>
-          Not only does the data captured by NASA s earth observing satellites
-          offer great opportunities for analysis, it also makes for some
-          beautiful images.
+          A few images I took next to the same location captured by one of our
+          hard working Earth-observing satellites. How I put these together.
         </Paragraph>
-        <Paragraph>
-          I used Landsat-8 data and GIMP, an open source image editing software,
-          to create the statellite images seen below.
-        </Paragraph>
+        <Paragraph />
 
         <hr />
 
@@ -27,49 +23,58 @@ class EarthImagesPage extends React.Component {
           <ImgDiv>
             <Img sizes={this.props.data.venice.sizes} />
             <Paragraph smallFont>
-              <span style={{ fontWeight: '600' }}>Venice, Italy</span> Left:
-              Landsat-8 564 false color image captured 4/19/2015; Right: Photo
-              taken in August 2008.
+              <span style={{ fontWeight: '600' }}>
+                Venice, Italy <br />
+              </span>
+              Left: Landsat-8 564 false color image captured 4/19/2015; Right:
+              me 08/2015 right after I got pooped on by a pigeon.
             </Paragraph>
           </ImgDiv>
 
           <ImgDiv>
             <Img sizes={this.props.data.denali.sizes} />
             <Paragraph smallFont>
-              <span style={{ fontWeight: '600' }}>Denali, AK</span> True color
-              composite (432). Landsat 8 OLI; July 22, 2017. Denali from the
-              Southern view point on July 23, 2017.
+              <span style={{ fontWeight: '600' }}>
+                Denali, AK<br />
+              </span>
+              A typically cloud-covered Denali from up there and down here. Top:
+              a very luck me on 07/23/2017 Bottom: a similarly lucky Landsat-8
+              on 07/22/2017.
             </Paragraph>
           </ImgDiv>
 
           <ImgDiv>
             <Img sizes={this.props.data.boston.sizes} />
             <Paragraph smallFont>
-              <span style={{ fontWeight: '600' }}>Boston, MA</span> True color
-              composite (432). Landsat 8 OLI; August 30, 2016. Boston from a
-              statellite and a plane - the top shows the city from Landsat-8's
-              point of view, and the bottom image was taken from a plane.
+              <span style={{ fontWeight: '600' }}>
+                Boston, MA<br />
+              </span>
+              Hometown from far from the ground and farther from the ground.
+              Top: true color composite (432) courtesy of Landsat 8 OLI on
+              August 30, 2016. Bottom: me from a plane.
             </Paragraph>
           </ImgDiv>
 
           <ImgDiv>
-            <Img sizes={this.props.data.provincetown.sizes} />
+            <Img sizes={this.props.data.plumbisland.sizes} />
             <Paragraph smallFont>
-              <span style={{ fontWeight: '600' }}>Provincetown, MA</span> True
-              color composite (432). Landsat 8 OLI; October 8, 2015. The very
-              tip of Cape Cod, MA can be seen in this image in true color.
+              <span style={{ fontWeight: '600' }}>
+                Plumb Island, MA<br />
+              </span>
+              OH those summer nights Top: me late summer 2017 Bottom: False
+              color composite (652) captured by Sentinel-2 on September 27,
+              2017.
             </Paragraph>
           </ImgDiv>
 
           <ImgDiv>
-            <Img sizes={this.props.data.athens.sizes} />
+            <Img sizes={this.props.data.leondormido.sizes} />
             <Paragraph smallFont>
-              <span style={{ fontWeight: '600' }}>Athens, Greece</span> Left:
-              Landsat 8 natural color image (753) captured 9.11.2015; Right -
-              view of Lykavittos Hill from the Acropolis captured late August
-              2015. The image on right shows a burn scar (red patch) in the
-              lower right portion of the image due to July 2015 fires throughout
-              southern Mount Ymittos.
+              <span style={{ fontWeight: '600' }}>
+                Leon Dormido, Ecuador<br />
+              </span>
+              Top: Leon Dormido sitting off the coast of San Cristóbal Island,
+              Galapagos as viewed by Landsat-8. Bottom: me from a boat.
             </Paragraph>
           </ImgDiv>
         </ImgWrapper>
@@ -96,12 +101,12 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    provincetown: imageSharp(id: { regex: "/earth-img_provincetown/" }) {
+    plumbisland: imageSharp(id: { regex: "/earth-img_plumbIsland/" }) {
       sizes(maxWidth: 900) {
         ...GatsbyImageSharpSizes
       }
     }
-    athens: imageSharp(id: { regex: "/earth-img_athens/" }) {
+    leondormido: imageSharp(id: { regex: "/earth-img_leonDormido/" }) {
       sizes(maxWidth: 900) {
         ...GatsbyImageSharpSizes
       }

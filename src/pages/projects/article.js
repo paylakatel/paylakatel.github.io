@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageTitle, Punctuation } from '../../components/PageTitle';
 import { Paragraph } from '../../components/Paragraph';
-import { ParagraphLink } from '../../components/ParagraphLink';
+//import { ParagraphLink } from '../../components/ParagraphLink';
 import { ImgDiv, ImgWrapper } from '../../components/ImgWrapper';
 import Img from 'gatsby-image';
 

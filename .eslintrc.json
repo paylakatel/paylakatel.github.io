@@ -11,11 +11,7 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "import",
-    "react",
-    "prettier"
-  ],
+  "plugins": ["import", "react", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -23,6 +19,7 @@
     "prettier/react"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/prop-types": 0
   }
 }
