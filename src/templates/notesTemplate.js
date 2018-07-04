@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import rehypeReact from 'rehype-react';
 import ParagraphLink from '../components/ParagraphLink';
 import { ImgWrapper, ImgDiv } from '../components/ImgWrapper';
-import Img from 'gatsby-image';
+//import Img from 'gatsby-image';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,

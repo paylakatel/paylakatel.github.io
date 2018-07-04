@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageTitle, Punctuation } from '../../components/PageTitle';
 import { Paragraph } from '../../components/Paragraph';
-//import { ParagraphLink } from '../../components/ParagraphLink';
+import ParagraphLink from '../../components/ParagraphLink';
 import { ImgDiv, ImgWrapper } from '../../components/ImgWrapper';
 import Img from 'gatsby-image';
 
@@ -28,10 +28,10 @@ class ArticlePage extends React.Component {
           south-central Ghana. A random forest classifier was used to identify
           small-scale mining in Landsat imagery, and these areas were then
           compared to the locations of large-scale mining concessions. The
-          abstract and figures from the paper are below, and the
-          {/* <ParagraphLink to="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">
+          abstract and figures from the paper are below, and the{' '}
+          <ParagraphLink to="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">
             full text
-          </ParagraphLink> */}
+          </ParagraphLink>{' '}
           can be found online.
         </Paragraph>
         <hr />

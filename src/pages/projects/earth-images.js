@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageTitle, Punctuation } from '../../components/PageTitle';
 import { Paragraph } from '../../components/Paragraph';
+import ParagraphLink from '../../components/ParagraphLink';
 import { ImgDiv, ImgWrapper } from '../../components/ImgWrapper';
 import Img from 'gatsby-image';
 
@@ -13,7 +14,10 @@ class EarthImagesPage extends React.Component {
         </PageTitle>
         <Paragraph>
           A few images I took next to the same location captured by one of our
-          hard working Earth-observing satellites. How I put these together.
+          hard working Earth-observing satellites.{' '}
+          <ParagraphLink to="/notes/making-of-earth-images">
+            How I put these together
+          </ParagraphLink>.
         </Paragraph>
         <Paragraph />
 
