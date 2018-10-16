@@ -1,74 +1,73 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import ParagraphLink from '../components/ParagraphLink';
-import styled from 'styled-components';
-import { PageTitle, Punctuation } from '../components/PageTitle';
+import { Link, graphql } from 'gatsby';
+//import { Link } from 'gatsby';
 
-const ProjectsWrapper = styled.div.attrs({
-  className: 'flex flex-wrap',
-})``;
+import Layout from '../components/Layout';
 
-const Project = styled.div.attrs({
-  className: 'mr4 mb4',
-})``;
-
-const ProjectImg = styled(Img).attrs({
-  className: 'ba b--black-10 br1',
-})`
-  max-width: 100%;
-`;
-
-class ProjectList extends React.Component {
-  render() {
-    return (
+const ProjectsPage = props => (
+  <Layout>
+    <h1>Projects.</h1>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gridGap: '1em',
+      }}
+    >
       <div>
-        <PageTitle>
-          Projects<Punctuation>.</Punctuation>
-        </PageTitle>
-
-        <ProjectsWrapper>
-          <Project>
-            <Link to="projects/article">
-              <ProjectImg
-                resolutions={this.props.data.articleThumb.resolutions}
-              />
-            </Link>
-            <ParagraphLink to="/projects/article">
-              Extraction in Ghana
-            </ParagraphLink>
-          </Project>
-
-          <Project>
-            <Link to="projects/earth-images/">
-              <ProjectImg
-                resolutions={this.props.data.earthImgThumb.resolutions}
-              />
-            </Link>
-            <ParagraphLink to="projects/earth-images/">
-              Earth Images
-            </ParagraphLink>
-          </Project>
-        </ProjectsWrapper>
+        <Link to="/article">
+          <Img fluid={props.data.article.childImageSharp.fluid} />
+          <p>Extraction in Ghana</p>
+        </Link>
       </div>
-    );
-  }
-}
+      <div>
+        <Link to="vision-zero">
+          <Img fluid={props.data.visionZero.childImageSharp.fluid} />
+          <p>Vision Zero</p>
+        </Link>
+      </div>
+      <div>
+        <Link to="earth-img">
+          <Img fluid={props.data.earthImg.childImageSharp.fluid} />
+          <p>Earth Images</p>
+        </Link>
+      </div>
+      <div>
+        <Link to="longreads">
+          <Img fluid={props.data.longreads.childImageSharp.fluid} />
+          <p>Longreads</p>
+        </Link>
+      </div>
+    </div>
+  </Layout>
+);
 
-// eslint-disable-next-line
-export const pageQuery = graphql`
-  query ProjectsThumbsQuery {
-    articleThumb: imageSharp(id: { regex: "/article.png/" }) {
-      resolutions(width: 300) {
-        ...GatsbyImageSharpResolutions
-      }
-    }
-    earthImgThumb: imageSharp(id: { regex: "/earth_images.jpg/" }) {
-      resolutions(width: 300) {
-        ...GatsbyImageSharpResolutions
+export default ProjectsPage;
+
+export const ImgQuery = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
 `;
 
-export default ProjectList;
+export const ProjectImgs = graphql`
+  query {
+    article: file(relativePath: { eq: "article.png" }) {
+      ...fluidImage
+    }
+    earthImg: file(relativePath: { eq: "earth_images.jpg" }) {
+      ...fluidImage
+    }
+    visionZero: file(relativePath: { eq: "visionZero.jpg" }) {
+      ...fluidImage
+    }
+    longreads: file(relativePath: { eq: "visionZero.jpg" }) {
+      ...fluidImage
+    }
+  }
+`;

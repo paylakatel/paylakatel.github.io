@@ -1,19 +1,28 @@
-import Link from 'gatsby-link';
-import styled from 'styled-components';
+import React from 'react';
+//import { Link } from 'gatsby';
+import './global.css';
+import { Mail, Twitter, GitHub } from 'react-feather';
 
-const IconLink = styled(Link).attrs({
-  className: 'pr3',
-})`
-  color: black;
+const Footer = () => (
+  <div
+    style={{
+      left: 0,
+      bottom: 0,
+      textAlign: 'left',
+    }}
+  >
+    <div>
+      <li>
+        <Mail />
+      </li>{' '}
+      <li>
+        <Twitter />
+      </li>
+      <li>
+        <GitHub />
+      </li>
+    </div>
+  </div>
+);
 
-  &:hover {
-    color: black;
-  }
-`;
-
-const Footer = styled.div.attrs({
-  className: 'mt4',
-})`
-  text-align: ${props => (props.alignRight ? 'right' : 'left')};
-`;
-module.exports = { Footer, IconLink };
+export default Footer;

@@ -1,56 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Kayla A. Patel`,
+    title: 'Kayla A. Patel',
+    siteUrl: 'https://www.paylakatel.github.io',
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1080,
-              linkImagesToOriginal: false,
-              backgroundColor: 'transparent',
-            },
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-catch-links`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: 'Kayla A. Patel',
+        short_name: 'paylakatel',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `img`,
-        path: `${__dirname}/src/pages/img`,
+        path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Source Sans Pro:300,400,600`, `Playfair Display:700,400`],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-119666601-1',
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
   ],
 };
