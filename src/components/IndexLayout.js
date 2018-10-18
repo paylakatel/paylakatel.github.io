@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-
-//import './global.css';
+import 'typeface-playfair-display';
+import 'typeface-source-sans-pro';
 
 const IndexLayout = ({ children }) => (
   <>

@@ -6,7 +6,10 @@ import Layout from '../components/Layout';
 
 const VisionZeroPage = props => (
   <Layout>
-    <h1>Vision Zero Crash Map.</h1>
+    <h1>
+      Vision Zero Crash Map
+      <span className="punctuation">.</span>
+    </h1>
     <div>
       <p>hub bub</p>
       <hr />

@@ -4,24 +4,58 @@ import { Link } from 'gatsby';
 import IndexLayout from '../components/IndexLayout';
 import { Mail, Twitter, GitHub } from 'react-feather';
 
+import '../components/global.css';
+
 const IndexPage = () => (
   <IndexLayout>
-    <h1>Welcome!</h1>
+    <h1>
+      Welcome
+      <span className="punctuation">!</span>
+    </h1>
     <p>
       I’m Kayla, and I build solutions that help governments and organizations
       better serve their users.
     </p>
     <p>
-      My academic background is in geospatial science, and my career: public
-      sector tech.
+      My academic background is in geospatial science, and my career:{' '}
+      <span className="text-highlight">public sector tech.</span>
     </p>
-    <div>
-      <Link to="/projects">Projects</Link> <Link to="/">Resume</Link>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+      }}
+    >
+      <ul
+        style={{
+          listStyleType: 'none',
+          margin: 0,
+          padding: 0,
+          float: 'left',
+        }}
+      >
+        <li>
+          <Link to="/projects">
+            <h4>Projects</h4>
+          </Link>
+        </li>{' '}
+        <li>
+          <Link to="/">
+            <h4>Resume</h4>
+          </Link>
+        </li>
+      </ul>{' '}
     </div>
-    <div style={{ padding: '.5em 0px' }}>
-      <Mail />
-      <Twitter />
-      <GitHub />
+    <div className="icons">
+      <a className="icon" href="mailto:paylakatel@gmail.com">
+        <Mail />
+      </a>
+      <a className="icon" href="https://twitter.com/paylakatel">
+        <Twitter />
+      </a>
+      <a className="icon" href="https://github.com/paylakatel">
+        <GitHub />
+      </a>
     </div>
   </IndexLayout>
 );

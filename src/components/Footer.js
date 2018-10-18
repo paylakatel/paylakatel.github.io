@@ -4,25 +4,25 @@ import './global.css';
 import { Mail, Twitter, GitHub } from 'react-feather';
 
 const Footer = () => (
-  <div
-    style={{
-      left: 0,
-      bottom: 0,
-      textAlign: 'left',
-    }}
-  >
+  <footer className="footer">
     <div>
       <li>
-        <Mail />
+        <a className="icon" href="mailto:paylakatel@gmail.com">
+          <Mail />
+        </a>
       </li>{' '}
       <li>
-        <Twitter />
+        <a className="icon" href="https://twitter.com/paylakatel">
+          <Twitter />
+        </a>
       </li>
       <li>
-        <GitHub />
+        <a className="icon" href="https://github.com/paylakatel">
+          <GitHub />
+        </a>
       </li>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

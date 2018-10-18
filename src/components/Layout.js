@@ -2,7 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-//import './global.css';
+import 'typeface-playfair-display';
+import 'typeface-source-sans-pro';
 
 const Layout = ({ children }) => (
   <>
@@ -20,6 +21,8 @@ const Layout = ({ children }) => (
       style={{
         margin: '0 auto',
         padding: '0.7em',
+        minHeight: 'calc(100vh - 120px)',
+        maxWidth: 900,
       }}
     >
       {children}

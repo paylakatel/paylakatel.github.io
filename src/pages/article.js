@@ -1,20 +1,22 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { Link, graphql } from 'gatsby';
-//import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 
 const ArticlePage = props => (
   <Layout>
-    <h1>Extraction in Ghana.</h1>
+    <h1>
+      Extraction in Ghana
+      <span className="punctuation">.</span>
+    </h1>
     <div>
-      <h4>
+      <h5>
         Evaluating conflict surrounding mineral extraction in Ghana: Assessing
         the spatial interactions of large and small-scale mining. The Extractive
         Industries and Society, Volume 3, Issue 2, April 2016, Pages 450-463,
         ISSN 2214-790X
-      </h4>
+      </h5>
       <hr />
       <p>
         In January of 2016, the journal{' '}

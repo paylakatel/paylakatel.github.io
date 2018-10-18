@@ -6,7 +6,10 @@ import Layout from '../components/Layout';
 
 const EarthImgPage = props => (
   <Layout>
-    <h1>Earth Images.</h1>
+    <h1>
+      Earth Images
+      <span className="punctuation">.</span>
+    </h1>
     <div>
       <p>hub bub</p>
       <hr />

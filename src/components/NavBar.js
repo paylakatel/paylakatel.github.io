@@ -3,28 +3,17 @@ import { Link } from 'gatsby';
 import './global.css';
 
 const NavBar = () => (
-  <nav
-    style={{
-      marginBottom: '1.45rem',
-    }}
-  >
+  <nav>
     <div
       style={{
-        margin: '.5em',
         display: 'flex',
         justifyContent: 'space-between',
       }}
     >
-      <h3 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        />
-        Kayla A. Patel
+      <h3 className="site-title">
+        <Link to="/">Kayla A. Patel</Link>
       </h3>
+
       <ul
         style={{
           listStyleType: 'none',

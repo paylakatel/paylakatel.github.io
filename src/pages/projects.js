@@ -7,7 +7,10 @@ import Layout from '../components/Layout';
 
 const ProjectsPage = props => (
   <Layout>
-    <h1>Projects.</h1>
+    <h1>
+      Projects
+      <span className="punctuation">.</span>
+    </h1>
     <div
       style={{
         display: 'grid',
@@ -33,12 +36,12 @@ const ProjectsPage = props => (
           <p>Earth Images</p>
         </Link>
       </div>
-      <div>
+      {/* <div>
         <Link to="longreads">
           <Img fluid={props.data.longreads.childImageSharp.fluid} />
           <p>Longreads</p>
         </Link>
-      </div>
+      </div> */}
     </div>
   </Layout>
 );
