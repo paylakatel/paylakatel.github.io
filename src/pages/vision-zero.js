@@ -11,7 +11,47 @@ const VisionZeroPage = props => (
       <span className="punctuation">.</span>
     </h1>
     <div>
-      <p>hub bub</p>
+      <p>
+        Vision Zero is an international road saftey effort with the goal of
+        ending fatalities and serious injuries related to road traffic.{' '}
+        <a href="https://www.boston.gov/transportation/vision-zero">
+          Vision Zero Boston
+        </a>{' '}
+        is the City’s local program addressing road safety in Boston. As part of
+        that effort, the City tracks traffic crashes and fatalities on the{' '}
+        <a href="https://apps.boston.gov/vision-zero/">Vision Zero Crash Map</a>
+        .
+      </p>
+
+      <p>
+        In Summer 2018, we re-built the crash map to bring it inline with{' '}
+        <a href="https://www.boston.gov/departments/innovation-and-technology/brand-guidelines">
+          Boston’s branding
+        </a>
+        , modernize the technology stack, and automate the updating process. The
+        map now leverages <a href="https://postgis.net/">PostGIS</a>,{' '}
+        <a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a>, and{' '}
+        <a herf="https://nextjs.org/">React/NextJS</a>.
+      </p>
+
+      <p>
+        The{' '}
+        <a href="https://data.boston.gov/dataset/vision-zero-crash-records">
+          crash
+        </a>{' '}
+        and{' '}
+        <a href="https://data.boston.gov/dataset/vision-zero-fatality-records">
+          fatality
+        </a>{' '}
+        data can be found on{' '}
+        <a href="https://data.boston.gov/">Analyze Boston</a>, the City’s open
+        data portal.
+      </p>
+
+      <p>
+        The code for the map can be found on{' '}
+        <a href="https://github.com/CityOfBoston/vision-zero">github</a>.
+      </p>
       <hr />
     </div>
     <div
@@ -22,8 +62,10 @@ const VisionZeroPage = props => (
       }}
     >
       <div>
-        <Img fluid={props.data.visionZero.childImageSharp.fluid} />
-        <p>raa tata</p>
+        <a href="https://apps.boston.gov/vision-zero/">
+          <Img fluid={props.data.visionZero.childImageSharp.fluid} />
+        </a>
+        <hr />
       </div>
     </div>
   </Layout>
