@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 
@@ -11,31 +11,29 @@ const ArticlePage = props => (
       <span className="punctuation">.</span>
     </h1>
     <div>
-      <h5>
-        Evaluating conflict surrounding mineral extraction in Ghana: Assessing
-        the spatial interactions of large and small-scale mining. The Extractive
-        Industries and Society, Volume 3, Issue 2, April 2016, Pages 450-463,
-        ISSN 2214-790X
-      </h5>
-      <hr />
       <p>
         In January of 2016, the journal{' '}
         <span style={{ fontStyle: 'italic' }}>
           Extractive Industries and Society
         </span>{' '}
-        accepted my masters thesis as an original research article. The work
-        examines the spatial interactions of small and large-scale miners in
-        south-central Ghana. A random forest classifier was used to identify
-        small-scale mining in Landsat imagery, and these areas were then
-        compared to the locations of large-scale mining concessions. The
-        abstract and figures from the paper are below, and the{' '}
-        <Link to="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">
-          full text
-        </Link>{' '}
-        can be found online.
+        accepted my masters thesis as an original research article:{' '}
+        <a href="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">
+          Evaluating conflict surrounding mineral extraction in Ghana: Assessing
+          the spatial interactions of large and small-scale mining.
+          <i>The Extractive Industries and Society</i>, Volume 3, Issue 2, April
+          2016, Pages 450-463, ISSN 2214-790X
+        </a>
+        .
       </p>
-      <hr />
       <p>
+        The work examines the spatial interactions of small and large-scale
+        miners in south-central Ghana. A random forest classifier was used to
+        identify small-scale mining in Landsat imagery, and these areas were
+        then compared to the locations of large-scale mining concessions.
+      </p>
+      <p>Below are are the abstract and figures from the paper.</p>
+      <hr />
+      <p className="well">
         Since implementation of its Economic Recovery Program in 1983, Ghana’s
         extractive industries have come to account for 40% of the total value of
         the country’s exports. An adverse impact of this increase, however, has
@@ -57,7 +55,6 @@ const ArticlePage = props => (
         spatial overlap between large and small-scale miners can help
         stakeholders implement more effective policy solutions.
       </p>
-      <hr />
     </div>
     <div
       style={{
@@ -67,7 +64,7 @@ const ArticlePage = props => (
       }}
     >
       <div>
-        <Img fluid={props.data.fig1.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig1.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 1:</span> Study area is
           shown along with large-scale mines, regional borders, rivers, and the
@@ -75,7 +72,7 @@ const ArticlePage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.fig2.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig2.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 2:</span> Locations of high
           spatial resolution imagery from GeoEye-1, WorldView-1, and WorldView-2
@@ -84,7 +81,7 @@ const ArticlePage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.fig3.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig3.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 3:</span> Map of
           small-scale mining (SSM) activity derived from the classification of
@@ -94,7 +91,7 @@ const ArticlePage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.fig4.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig4.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 4:</span> Northwest region
           of the study area shown with the small-scale mining (SSM) derived from
@@ -105,7 +102,7 @@ const ArticlePage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.fig5.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig5.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 5:</span> Southwest region
           of the study area shown with the small-scale mining (SSM) derived from
@@ -116,7 +113,7 @@ const ArticlePage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.fig6.childImageSharp.fluid} />
+        <Img className="image" fluid={props.data.fig6.childImageSharp.fluid} />
         <p>
           <span style={{ fontWeight: '600' }}>Figure 6:</span> Northeast region
           of the study area shown with the small-scale mining (SSM) derived from

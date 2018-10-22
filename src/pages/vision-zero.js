@@ -17,8 +17,8 @@ const VisionZeroPage = props => (
         <a href="https://www.boston.gov/transportation/vision-zero">
           Vision Zero Boston
         </a>{' '}
-        is the City’s local program addressing road safety in Boston. As part of
-        that effort, the City tracks traffic crashes and fatalities on the{' '}
+        is the City’s local program. As part of that effort, the City tracks
+        traffic crashes and fatalities on the{' '}
         <a href="https://apps.boston.gov/vision-zero/">Vision Zero Crash Map</a>
         .
       </p>
@@ -63,7 +63,10 @@ const VisionZeroPage = props => (
     >
       <div>
         <a href="https://apps.boston.gov/vision-zero/">
-          <Img fluid={props.data.visionZero.childImageSharp.fluid} />
+          <Img
+            className="image"
+            fluid={props.data.visionZero.childImageSharp.fluid}
+          />
         </a>
         <hr />
       </div>

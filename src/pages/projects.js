@@ -20,19 +20,28 @@ const ProjectsPage = props => (
     >
       <div>
         <Link to="/article">
-          <Img fluid={props.data.article.childImageSharp.fluid} />
+          <Img
+            className="image"
+            fluid={props.data.article.childImageSharp.fluid}
+          />
           <p>Extraction in Ghana</p>
         </Link>
       </div>
       <div>
         <Link to="vision-zero">
-          <Img fluid={props.data.visionZero.childImageSharp.fluid} />
+          <Img
+            className="image"
+            fluid={props.data.visionZero.childImageSharp.fluid}
+          />
           <p>Vision Zero</p>
         </Link>
       </div>
       <div>
         <Link to="earth-img">
-          <Img fluid={props.data.earthImg.childImageSharp.fluid} />
+          <Img
+            className="image"
+            fluid={props.data.earthImg.childImageSharp.fluid}
+          />
           <p>Earth Images</p>
         </Link>
       </div>

@@ -6,6 +6,7 @@ h4 {
 
 h1 {
   font-weight: 700;
+  font-size: 2.5em;
 }
 
 h4 {
@@ -19,6 +20,8 @@ li,
 h5 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+  line-height: 1.25em;
+  font-size: 1.05em;
 }
 
 li {
@@ -50,6 +53,11 @@ nav {
   padding: 0 0.7em 0 0.7em;
 }
 
+.image {
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+}
+
 .punctuation {
   color: #2979ff;
 }
@@ -75,6 +83,15 @@ h3 {
 
 .site-title a:hover {
   text-decoration: none;
+}
+
+.well {
+  padding: 0.75em;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
 }
 
 .footer {

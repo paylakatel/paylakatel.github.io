@@ -11,7 +11,26 @@ const EarthImgPage = props => (
       <span className="punctuation">.</span>
     </h1>
     <div>
-      <p>hub bub</p>
+      <p>
+        Below are a series of images I’ve taken next to the same location
+        captured by one of our Earth observing satellites, mainly{' '}
+        <a href="">Landsat-8</a> or <a href="">Sentinel-2</a>. I make these for
+        no other reason than to enjoy the difference in perspective they offer
+        and play around with satellite imagery.
+      </p>
+      <p />
+      <p>
+        In putting them together, I mainly follow the workflow laid out in this{' '}
+        <a href="https://medium.com/@robsimmon/making-sense-of-satellite-data-an-open-source-workflow-accessing-data-8f7f3c30f151">
+          series of articles
+        </a>{' '}
+        written by <a href="https://twitter.com/rsimmon">Rob Simmon</a>. It
+        involves using <a href="">GDAL</a>, a library for working with
+        geospatial data, to process the raw satellite data, and{' '}
+        <a href="">GIMP</a>, and open-source image editing software, to further
+        enhance the image. I then use Instagram to stick them next to an image
+        I’ve taken.
+      </p>
       <hr />
     </div>
     <div
@@ -22,7 +41,10 @@ const EarthImgPage = props => (
       }}
     >
       <div>
-        <Img fluid={props.data.venice.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.venice.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Venice, Italy <br />
@@ -32,7 +54,10 @@ const EarthImgPage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.denali.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.denali.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Denali, AK
@@ -44,7 +69,10 @@ const EarthImgPage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.boston.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.boston.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Boston, MA
@@ -56,7 +84,10 @@ const EarthImgPage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.plumbIsland.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.plumbIsland.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Plumb Island, MA
@@ -67,7 +98,10 @@ const EarthImgPage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.leonDormido.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.leonDormido.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Leon Dormido, Ecuador
@@ -78,7 +112,10 @@ const EarthImgPage = props => (
         </p>
       </div>
       <div>
-        <Img fluid={props.data.capeCod.childImageSharp.fluid} />
+        <Img
+          className="image"
+          fluid={props.data.capeCod.childImageSharp.fluid}
+        />
         <p>
           <span style={{ fontWeight: '600' }}>
             Cape Cod, MA
