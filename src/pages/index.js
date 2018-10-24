@@ -40,9 +40,9 @@ const IndexPage = () => (
           </Link>
         </li>{' '}
         <li>
-          <Link to="/">
+          <a href="/static/KPatel_Resume-d13f867c222192812c8b6de1b9363f24.pdf">
             <h4>Resume</h4>
-          </Link>
+          </a>
         </li>
       </ul>{' '}
     </div>
