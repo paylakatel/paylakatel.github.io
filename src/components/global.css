@@ -46,10 +46,9 @@ a:hover {
 }
 
 nav {
-  margin-bottom: 1.45rem;
+  margin: 1em auto 1em auto;
   max-width: 900px;
   align-content: center;
-  margin: auto;
   padding: 0 0.7em 0 0.7em;
 }
 
