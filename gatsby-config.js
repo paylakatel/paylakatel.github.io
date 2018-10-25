@@ -27,5 +27,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-119666601-1',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 };
