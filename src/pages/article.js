@@ -16,20 +16,23 @@ const ArticlePage = props => (
         <span style={{ fontStyle: 'italic' }}>
           Extractive Industries and Society
         </span>{' '}
-        accepted my masters thesis as an original research article:{' '}
+        accepted my masters thesis as an{' '}
         <a href="https://www.sciencedirect.com/science/article/pii/S2214790X16300065">
-          Evaluating conflict surrounding mineral extraction in Ghana: Assessing
-          the spatial interactions of large and small-scale mining.
-          <i>The Extractive Industries and Society</i>, Volume 3, Issue 2, April
-          2016, Pages 450-463, ISSN 2214-790X
-        </a>
-        .
+          original research article
+        </a>{' '}
+        titled “Evaluating conflict surrounding mineral extraction in Ghana:
+        Assessing the spatial interactions of large and small-scale mining.”
       </p>
       <p>
         The work examines the spatial interactions of small and large-scale
-        miners in south-central Ghana. A random forest classifier was used to
-        identify small-scale mining in Landsat imagery, and these areas were
-        then compared to the locations of large-scale mining concessions.
+        miners in south-central Ghana. I used a{' '}
+        <a href="https://clarklabs.org/classification-tree-analysis/">
+          random forest classifier
+        </a>{' '}
+        to identify small-scale mining in{' '}
+        <a href="https://landsat.gsfc.nasa.gov/">Landsat</a> imagery and
+        examined them in the context of ther large-scale mining conncessions
+        throughout the country.
       </p>
       <p>Below are are the abstract and figures from the paper.</p>
       <hr />

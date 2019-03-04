@@ -29,7 +29,9 @@ const NavBar = () => (
           <Link to="/projects">Projects</Link>
         </li>{' '}
         <li>
-          <a href="/static/KPatel_Resume-d13f867c222192812c8b6de1b9363f24.pdf">Resume</a>
+          <a href="/static/KPatel_Resume-d13f867c222192812c8b6de1b9363f24.pdf">
+            Resume
+          </a>
         </li>
       </ul>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Link } from 'gatsby';
 import './global.css';
 import { Mail, Twitter, GitHub } from 'react-feather';
 

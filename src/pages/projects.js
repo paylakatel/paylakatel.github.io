@@ -14,72 +14,80 @@ const ProjectsPage = props => (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
         gridGap: '1em',
       }}
     >
-      <div>
-        <Link to="/article">
-          <Img
-            className="image"
-            fluid={props.data.article.childImageSharp.fluid}
-          />
-          <p>Extraction in Ghana</p>
-        </Link>
-      </div>
-      <div>
-        <Link to="vision-zero">
-          <Img
-            className="image"
-            fluid={props.data.visionZero.childImageSharp.fluid}
-          />
-          <p>Vision Zero</p>
-        </Link>
-      </div>
-      <div>
-        <Link to="earth-img">
-          <Img
-            className="image"
-            fluid={props.data.earthImg.childImageSharp.fluid}
-          />
-          <p>Earth Images</p>
-        </Link>
-      </div>
-      {/* <div>
-        <Link to="longreads">
-          <Img fluid={props.data.longreads.childImageSharp.fluid} />
-          <p>Longreads</p>
-        </Link>
-      </div> */}
+      {props.data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Link to={node.frontmatter.path} className="projectLink">
+            <Img
+              fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+              style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
+            />
+            <h2>{node.frontmatter.title}</h2>
+            <h3>{node.frontmatter.myRole}</h3>
+          </Link>
+        </div>
+      ))}
     </div>
   </Layout>
 );
 
 export default ProjectsPage;
 
-export const ImgQuery = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
+export const query = graphql`
+  {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
+      totalCount
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            myRole
+            path
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 `;
 
-export const ProjectImgs = graphql`
-  query {
-    article: file(relativePath: { eq: "article.png" }) {
-      ...fluidImage
-    }
-    earthImg: file(relativePath: { eq: "earth_images.jpg" }) {
-      ...fluidImage
-    }
-    visionZero: file(relativePath: { eq: "visionZero.jpg" }) {
-      ...fluidImage
-    }
-    longreads: file(relativePath: { eq: "visionZero.jpg" }) {
-      ...fluidImage
-    }
-  }
-`;
+// export const ImgQuery = graphql`
+//   fragment fluidImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `;
+
+// export const ProjectImgs = graphql`
+//   query {
+//     article: file(relativePath: { eq: "article.png" }) {
+//       ...fluidImage
+//     }
+//     earthImg: file(relativePath: { eq: "earth_images.jpg" }) {
+//       ...fluidImage
+//     }
+//     visionZero: file(relativePath: { eq: "visionZero.jpg" }) {
+//       ...fluidImage
+//     }
+//     thisSite: file(relativePath: { eq: "thisSite.jpg" }) {
+//       ...fluidImage
+//     }
+//     longreads: file(relativePath: { eq: "visionZero.jpg" }) {
+//       ...fluidImage
+//     }
+//   }
+// `;

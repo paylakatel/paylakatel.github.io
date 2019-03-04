@@ -20,6 +20,11 @@ const IndexPage = () => (
       My academic background is in geospatial science, and my career:{' '}
       <span className="text-highlight">public sector tech.</span>
     </p>
+    <p>
+      Currently, I work for the City of Boston, MA as a Product Manager on our{' '}
+      <a href="https://www.boston.gov/departments/digital-team">Digital Team</a>
+      .
+    </p>
     <div
       style={{
         display: 'flex',
