@@ -14,14 +14,7 @@ const NavBar = () => (
         <Link to="/">Kayla A. Patel</Link>
       </h3>
 
-      <ul
-        style={{
-          listStyleType: 'none',
-          margin: 0,
-          padding: 0,
-          float: 'right',
-        }}
-      >
+      <ul className="navBar">
         <li>
           <Link to="/">About</Link>
         </li>{' '}

@@ -6,13 +6,11 @@ h4 {
 
 h1 {
   font-size: 2.9em;
-  font-weight: 900;
-  /* font-style: italic */
+  font-weight: 700;
 }
 
 h2 {
   font-weight: 700;
-  font-style: italic;
 }
 
 h3 {
@@ -24,8 +22,7 @@ h4 {
   font-weight: 400;
   margin: 0;
   display: inline;
-  font-style: italic;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 500;
 }
 
@@ -38,11 +35,10 @@ h5 {
 }
 
 li {
-  display: inline;
-  margin: 0px 0.5em 0px 0px;
   font-family: 'Lato';
-  font-style: italic;
-  font-size: 1.1em;
+  font-size: 1.15em;
+  line-height: 1.5em;
+  font-weight: 300;
 }
 
 hr {
@@ -61,16 +57,48 @@ a:hover {
   text-decoration-color: #2979ff;
 }
 
+.navBar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.navBar li {
+  display: inline; 
+  margin: 0px 0.5em 0px 0px;
+  font-size: 1.1em;
+}
+
 nav {
   margin: 1em auto 1em auto;
-  max-width: 900px;
+  max-width: 850px;
   align-content: center;
   padding: 0 0.7em 0 0.7em;
+}
+
+blockquote {
+  font-size: .95em;
+  margin: 10px;
+}
+
+.intro p {
+  font-size: 1.2em;
 }
 
 .image {
   border: 1px solid #e3e3e3;
   border-radius: 3px;
+}
+
+.imageBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+.imageBlock p {
+  font-size: 1em;
 }
 
 .punctuation {
@@ -79,7 +107,6 @@ nav {
 
 .text-highlight {
   color: #75a7ff;
-  font-style: italic;
 }
 
 .icons {
@@ -96,8 +123,7 @@ h3 {
   margin: 0;
   color: black;
   font-size: 1.1em;
-  font-style: italic;
-  font-weight: 400
+  font-weight: 300;
 }
 
 .site-title a:hover {
@@ -116,7 +142,7 @@ h3 {
 .projectLink h2 {
   margin-bottom: 0px;
   margin-top: 5px;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .projectLink h3 {
@@ -135,7 +161,7 @@ a.projectLink {
   bottom: 0;
   text-align: left;
   margin: auto;
-  max-width: 900px;
+  max-width: 850px;
   height: 25px;
 }
 

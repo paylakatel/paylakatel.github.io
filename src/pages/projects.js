@@ -61,33 +61,3 @@ export const query = graphql`
     }
   }
 `;
-
-// export const ImgQuery = graphql`
-//   fragment fluidImage on File {
-//     childImageSharp {
-//       fluid(maxWidth: 1000) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `;
-
-// export const ProjectImgs = graphql`
-//   query {
-//     article: file(relativePath: { eq: "article.png" }) {
-//       ...fluidImage
-//     }
-//     earthImg: file(relativePath: { eq: "earth_images.jpg" }) {
-//       ...fluidImage
-//     }
-//     visionZero: file(relativePath: { eq: "visionZero.jpg" }) {
-//       ...fluidImage
-//     }
-//     thisSite: file(relativePath: { eq: "thisSite.jpg" }) {
-//       ...fluidImage
-//     }
-//     longreads: file(relativePath: { eq: "visionZero.jpg" }) {
-//       ...fluidImage
-//     }
-//   }
-// `;
