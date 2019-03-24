@@ -14,7 +14,7 @@ From a technical stand point, we leveraged [web components](https://github.com/C
 <div class="imageBlock">
     <div>
         <a href="https://www.boston.gov/news/building-better-maps-bostongov">
-            <img src="./images/maps-blog-post.png" class="image" alt="Figure 1"/>
+            <img src="./images/maps-blog-post.png" class="image" alt="Building better maps for boston.gov"/>
         </a>
     </div>
 </div>

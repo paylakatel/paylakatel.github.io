@@ -24,7 +24,7 @@ In putting them together, I mainly follow the workflow laid out in this [series 
             </p>
         </div>
     <div>
-        <img src="./images/earth-img-boston.jpb" class="image" alt="Boston, MA"/>
+        <img src="./images/earth-img-boston.jpg" class="image" alt="Boston, MA"/>
             <p>
                 <span style="font-weight: 600">Boston, MA</span> Hometown from far from the ground and farther from the ground. Top: true color composite (432) courtesy of Landsat 8 OLI on August 30, 2016. Bottom: me from a plane.
             </p>
