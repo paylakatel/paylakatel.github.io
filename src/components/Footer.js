@@ -1,11 +1,10 @@
 import React from 'react';
-//import { Link } from 'gatsby';
 import './global.css';
 import { Mail, Twitter, GitHub } from 'react-feather';
 
 const Footer = () => (
   <footer className="footer">
-    <div>
+    <div className="navBar" style={{ float: 'left' }}>
       <li>
         <a className="icon" href="mailto:paylakatel@gmail.com">
           <Mail />
