@@ -27,8 +27,8 @@ const IndexPage = () => (
             organizations better serve their users.
           </p>
           <p>
-            My academic background is in geospatial science, and my career:{' '}
-            <span className="text-highlight">public sector tech.</span>
+            My academic background is in geospatial science, and my career:
+            public sector tech.
           </p>
           <p>
             Currently, I work for the City of Boston, MA as a Product Manager on

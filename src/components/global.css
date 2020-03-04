@@ -1,7 +1,7 @@
 h1,
 h2,
 h4 {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 h1 {
@@ -14,12 +14,11 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
 
 h4 {
-  font-weight: 400;
   margin: 0;
   display: inline;
   font-size: 1.1em;
@@ -29,7 +28,7 @@ h4 {
 p,
 h5 {
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5em;
   font-size: 1.15em;
 }
@@ -38,7 +37,7 @@ li {
   font-family: 'Lato';
   font-size: 1.15em;
   line-height: 1.5em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 hr {
@@ -123,7 +122,7 @@ h3 {
   margin: 0;
   color: black;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .site-title a:hover {
