@@ -26,7 +26,7 @@ h4 {
 }
 
 p,
-h5 {
+h5, li {
   font-family: 'Lato', sans-serif;
   color: #505050;
   font-weight: 400;
@@ -78,8 +78,12 @@ nav {
 }
 
 blockquote {
-  font-size: .95em;
-  margin: 10px;
+  margin: 1em;
+}
+
+blockquote > p {
+  font-size: 1em;
+  color: #606060;
 }
 
 .intro p {

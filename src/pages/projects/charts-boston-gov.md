@@ -7,16 +7,20 @@ path: "/projects/charts-boston-gov"
 ---
 
 ## Project Overview 
-For the announcement of [yearly budget](https://www.boston.gov/finance/fiscal-year-2020), we wanted to integrated the information and numbers about the City's budget into boston.gov.
+Each year, the City of Boston's Budget Department writes the [Budget Book](https://www.boston.gov/sites/default/files/embed/file/2019-09/1a-volume_1_-_executive_summary.pdf) that outlines and describes the next fiscal year's budget and allocates resources across departments and programs. 
 
-Each year, the [budget department](https://www.boston.gov/departments/budget) write the [Budget Book](https://www.boston.gov/sites/default/files/embed/file/2019-09/1a-volume_1_-_executive_summary.pdf). Before FY2020, our team's role was to take the Budget Book and use its text to automatically build a 1600 page static site. The site was hard to navigate and separate from boston.gov so couldn't leverage the linking and search indexing we have on our main domain. 
-
-I worked with the Budget Department bring down the reading level their content - inline with our [site writing guidlines](https://www.boston.gov/departments/digital-team/city-boston-writing-guide), reduce the number of created pages for the Budget website from 1600 to 27, and build out [interactive charting component](https://www.boston.gov/departments/budget/fy20-operating-budget#revenue) for use throughout boston.gov. 
+For FY2020, I worked with the Budget Department to integrate relevant information about the City's new budget into boston.gov. We:
+* restructured the Fiscal Year Budget content 
+* brought down the reading level of the content to at or near 8th grade bringing it inline with our [site writing guidlines](https://www.boston.gov/departments/digital-team/city-boston-writing-guide)
+*  added three new open datasets to the [City's open data portal](https://data.boston.gov/)
+*  built out [interactive charting component](https://www.boston.gov/departments/budget/fy20-operating-budget#revenue) for use throughout boston.gov. 
 
 ## Tech
+In addition to project managing the content side of this project, I also product managed and developed the interative charting component we created for it. 
+
 The charts component on boston.gov is implemented similarly to our [maps component](/projects/maps-boston-gov/), as a web-component we drop on a boston.gov page when needed. 
 
-The charts leverage the [Vega](https://vega.github.io/vega/) and [VegaLite](https://vega.github.io/vega-lite/) libaries for rendering. Users supply valid Vega/VegaLite json to the components config prop, and we then maniuplate the passed spec and rendered chart a little bit to fit our needs on boston.gov. 
+The charts leverage the [Vega](https://vega.github.io/vega/) and [VegaLite](https://vega.github.io/vega-lite/) libaries for rendering. Users supply valid Vega/VegaLite json to the components config prop, we then maniuplate the passed spec and rendered chart to fit our needs on boston.gov and display it on the page.  
 
 The [code for the charts](https://github.com/CityOfBoston/patterns/blob/develop/web-components/chart/chart.tsx) is on github.
 
