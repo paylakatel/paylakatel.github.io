@@ -7,10 +7,13 @@ const ProjectTemplate = ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>
-          {post.frontmatter.title}
-          <span className="punctuation">.</span>
-        </h1>
+        <div className="projectTitle">
+          <h1>
+            {post.frontmatter.title}
+            <span className="punctuation">.</span>
+          </h1>
+          <h3>{post.frontmatter.myRole}</h3>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>

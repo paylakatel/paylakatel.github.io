@@ -1,7 +1,7 @@
 ---
 title: "PostGIS documentation"
 myRole: "Writer"
-order: 2
+order: 3
 thumbnail: "./images/postGIS.png"
 path: "/projects/postGIS"
 ---
@@ -14,3 +14,13 @@ In an effort to help my colleagues get acquainted with PostGIS, I put together a
 - [PostGIS tips: Working with geometry columns and projection systems](https://medium.com/@paylakatel/part-2-postgis-at-the-city-of-boston-711cf30cf1f3)
 - [PostGIS tips: How to get insights from your data
 ](https://medium.com/@paylakatel/part-3-postgis-at-the-city-of-boston-98b83b0d1503)
+
+---
+
+<div class="imageBlock">
+    <div>
+        <a href="https://medium.com/innovation-and-technology/part-1-postgis-at-the-city-of-boston-9476293d71c2">
+            <img src="./images/postgis-tips-screenshot.png" class="image" alt="PostGIS tips: Where to get started"/>
+        </a>
+    </div>
+</div>
