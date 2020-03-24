@@ -4,6 +4,7 @@ myRole: "Developer"
 order: 2
 thumbnail: "./images/vision-zero.jpg"
 path: "/projects/vision-zero"
+type: "work"
 ---
 
 ## Project Overview

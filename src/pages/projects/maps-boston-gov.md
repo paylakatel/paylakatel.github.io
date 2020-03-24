@@ -4,6 +4,7 @@ myRole: "Product Manager"
 order: 4
 thumbnail: "./images/maps-boston-gov.jpg"
 path: "/projects/maps-boston-gov"
+type: "work"
 ---
 
 ## Project Overview

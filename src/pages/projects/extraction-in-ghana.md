@@ -4,6 +4,7 @@ myRole: "Lead researcher"
 order: 1
 thumbnail: "./images/article.png"
 path: "/projects/extraction-in-ghana"
+type: "work"
 ---
 
 In January of 2016, the journal _Extractive Industries and Society_ accepted my masters thesis as an original research article: [Evaluating conflict surrounding mineral extraction in Ghana: Assessing the spatial interactions of large and small-scale mining](https://www.sciencedirect.com/science/article/pii/S2214790X16300065).

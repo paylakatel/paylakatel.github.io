@@ -4,6 +4,7 @@ myRole: "Developer and Product Manager"
 order: 5
 thumbnail: "./images/charts.jpg"
 path: "/projects/charts-boston-gov"
+type: "work"
 ---
 
 ## Project Overview 
