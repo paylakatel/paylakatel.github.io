@@ -16,18 +16,20 @@ const ProjectsPage = props => (
         gridGap: '1em',
       }}
     >
-      {props.data.work.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node.frontmatter.path} className="projectLink">
-            <Img
-              fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-              style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
-            />
-            <h2>{node.frontmatter.title}</h2>
-            <h3>{node.frontmatter.myRole}</h3>
-          </Link>
-        </div>
-      ))}
+      {props.data.work.edges.map(({ node }) => {
+        return (
+          <div key={node.id}>
+            <Link to={node.frontmatter.path} className="projectLink">
+              <Img
+                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
+              />
+              <h2>{node.frontmatter.title}</h2>
+              <h3>{node.frontmatter.myRole}</h3>
+            </Link>
+          </div>
+        );
+      })}
     </div>
     <h1>
       For fun
@@ -40,18 +42,35 @@ const ProjectsPage = props => (
         gridGap: '1em',
       }}
     >
-      {props.data.fun.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node.frontmatter.path} className="projectLink">
-            <Img
-              fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-              style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
-            />
-            <h2>{node.frontmatter.title}</h2>
-            <h3>{node.frontmatter.myRole}</h3>
-          </Link>
-        </div>
-      ))}
+      {props.data.fun.edges.map(({ node }) => {
+        const isInternalLink = /^\/(?!\/)/.test(node.frontmatter.path);
+        if (isInternalLink) {
+          return (
+            <div key={node.id}>
+              <Link to={node.frontmatter.path} className="projectLink">
+                <Img
+                  fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                  style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
+                />
+                <h2>{node.frontmatter.title}</h2>
+                <h3>{node.frontmatter.myRole}</h3>
+              </Link>
+            </div>
+          );
+        }
+        return (
+          <div key={node.id}>
+            <a href={node.frontmatter.path} className="projectLink">
+              <Img
+                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
+              />
+              <h2>{node.frontmatter.title}</h2>
+              <h3>{node.frontmatter.myRole}</h3>
+            </a>
+          </div>
+        );
+      })}
     </div>
   </Layout>
 );
