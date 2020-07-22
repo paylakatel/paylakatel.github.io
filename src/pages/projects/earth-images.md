@@ -4,6 +4,7 @@ myRole: ""
 order: 6
 thumbnail: "./images/earth-images.jpg"
 path: "/projects/earth-images"
+type: "fun"
 ---
 
 Below are a series of images I’ve taken next to the same location captured by one of our Earth observing satellites, mainly [Landsat-8](https://landsat.gsfc.nasa.gov/landsat-data-continuity-mission/) or [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2). I make these for no other reason than to enjoy the difference in perspective they offer and play around with satellite imagery.

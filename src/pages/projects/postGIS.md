@@ -4,6 +4,7 @@ myRole: "Writer"
 order: 3
 thumbnail: "./images/postGIS.png"
 path: "/projects/postGIS"
+type: "work"
 ---
 
 The City of Boston’s Analytics Team recently implemented a new data warehouse platform built with [Civis Analytics](https://www.civisanalytics.com/). We pushed for Postgres as the backend of the warehouse so that we could leverage its [PostGIS](https://postgis.net/) extension in our data pipelines and analysis.
