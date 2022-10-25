@@ -13,8 +13,7 @@ In an effort to help my colleagues get acquainted with PostGIS, I put together a
 
 - [PostGIS tips: Where to get started](https://medium.com/innovation-and-technology/part-1-postgis-at-the-city-of-boston-9476293d71c2)
 - [PostGIS tips: Working with geometry columns and projection systems](https://medium.com/@paylakatel/part-2-postgis-at-the-city-of-boston-711cf30cf1f3)
-- [PostGIS tips: How to get insights from your data
-](https://medium.com/@paylakatel/part-3-postgis-at-the-city-of-boston-98b83b0d1503)
+- [PostGIS tips: How to get insights from your data](https://medium.com/@paylakatel/part-3-postgis-at-the-city-of-boston-98b83b0d1503)
 
 ---
 
