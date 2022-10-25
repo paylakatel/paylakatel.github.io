@@ -1,11 +1,18 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import 'typeface-playfair-display';
 import 'typeface-pt-serif';
 import 'typeface-lato';
 import { StaticQuery, graphql } from 'gatsby';
+
+const Head = ({ title, description }) => {
+  <>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <html lang="en" />
+  </>;
+};
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -20,15 +27,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
+        <Head
           title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+          description={data.site.siteMetadata.description}
+        />
         <NavBar />
         <div
           style={{
