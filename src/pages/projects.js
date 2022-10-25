@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 
@@ -17,11 +17,12 @@ const ProjectsPage = props => (
       }}
     >
       {props.data.work.edges.map(({ node }) => {
+        const image = getImage(node.frontmatter.thumbnail.childImageSharp);
         return (
           <div key={node.id}>
             <Link to={node.frontmatter.path} className="projectLink">
-              <Img
-                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+              <GatsbyImage
+                image={image}
                 style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
               />
               <h2>{node.frontmatter.title}</h2>
@@ -44,12 +45,13 @@ const ProjectsPage = props => (
     >
       {props.data.fun.edges.map(({ node }) => {
         const isInternalLink = /^\/(?!\/)/.test(node.frontmatter.path);
+        const image = getImage(node.frontmatter.thumbnail.childImageSharp);
         if (isInternalLink) {
           return (
             <div key={node.id}>
               <Link to={node.frontmatter.path} className="projectLink">
-                <Img
-                  fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                <GatsbyImage
+                  image={image}
                   style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
                 />
                 <h2>{node.frontmatter.title}</h2>
@@ -61,8 +63,8 @@ const ProjectsPage = props => (
         return (
           <div key={node.id}>
             <a href={node.frontmatter.path} className="projectLink">
-              <Img
-                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+              <GatsbyImage
+                image={image}
                 style={{ border: '1px solid #cccccc', borderRadius: '3px' }}
               />
               <h2>{node.frontmatter.title}</h2>
@@ -95,9 +97,11 @@ export const query = graphql`
             type
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 400
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }
@@ -120,9 +124,11 @@ export const query = graphql`
             type
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 400
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

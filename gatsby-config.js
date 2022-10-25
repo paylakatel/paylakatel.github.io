@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: 'https://www.paylakatel.github.io',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -50,15 +49,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-119666601-2',
-        head: true,
-        anonymize: true,
-        respectDNT: true,
       },
     },
   ],
