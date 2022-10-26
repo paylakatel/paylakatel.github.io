@@ -6,6 +6,10 @@ import { Mail, Twitter, GitHub } from 'react-feather';
 
 import '../components/global.css';
 
+import PageHead from '../components/PageHead';
+
+export const Head = () => <PageHead />;
+
 const IndexPage = () => (
   <StaticQuery
     query={graphql`

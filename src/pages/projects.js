@@ -2,6 +2,9 @@ import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import PageHead from '../components/PageHead';
+
+export const Head = () => <PageHead />;
 
 const ProjectsPage = props => (
   <Layout>
